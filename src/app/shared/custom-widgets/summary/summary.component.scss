@@ -1,0 +1,54 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+
+div[fxFlexLayout] {
+    font-size: 0.9em;
+    .personal-information {
+        border: 1px solid $table-border;
+        div {
+            >div {
+                width: 50%;
+                float: left;
+                &:nth-child(1) {
+                    clear: both;
+                }
+                padding-bottom: 4px;
+            }
+        }
+    }
+    ul {
+        padding-left: 6%;
+        li {
+            display: list-item;
+            color: $text-color;
+        }
+    }
+    h2 {
+        margin-top: 0;
+        color: $primary-color;
+    }
+    p {
+        margin: 0;
+        color: $primary-color;
+    }
+    .text {
+        color: $text-color;
+    }
+    span {
+        color: $text-color;
+    }
+    div[fxFlex]:first-child {
+        padding: 4% 2%;
+    }
+    div[fxFlex]:last-child {
+        padding: 0 4%;
+    }
+}
+
+div.button-centered {
+    max-width: max-content;
+    margin: 0 auto;
+}

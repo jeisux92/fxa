@@ -1,0 +1,236 @@
+<div [formGroup]=formControl>
+  <h3>Resumen de su crédito</h3>
+  <p>En este cuadro podrás ver y editar tus datos para la solicitud de crédito</p>
+  <div class="table-responsive">
+    <div>
+      <table>
+        <thead>
+          <th>Finalidad del crédito</th>
+          <th>Tipo de solicitud</th>
+          <th>Monto máximo por periodo</th>
+          <th>Periocidad</th>
+          <th>N° de periodos</th>
+          <th>Tasa EA%</th>
+          <th>Tasa mensualidad%</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <select formControlName=Finalidad (change)=updateValues(this) [(ngModel)]=Finalidad required>
+                <option *ngFor="let finalidad of Finalidades" [value]="finalidad.const">{{finalidad.title}}</option>
+              </select>
+            </td>
+            <td>
+              <select formControlName=TipoSolicitud (change)=updateValues(this) [(ngModel)]=TipoSolicitud>
+                <option *ngFor="let solicitud of TipoSolicitudes" [value]="solicitud.const">{{solicitud.title}}</option>
+              </select>
+            </td>
+            <td>
+              <input type=text placeholder="1000000" formControlName=MontoMaximo id="MontoMaximo" [(ngModel)]=MontoMaximo required (keypress)="valid($event)"
+                (keydown)="backspace($event)"  minlength="7">
+            </td>
+            <td>
+              <select formControlName=Periocidad [(ngModel)]=Periocidad name=Periocidad > 
+                <option *ngFor="let periodicidad of Periocidades" [value]=periodicidad.const>{{periodicidad.title}}</option>
+              </select>
+            </td>
+            <td>
+              <input type=text formControlName=NPeriodos id="NPeriodos" [(ngModel)]=NPeriodos required (keypress)="valid($event)">
+            </td>
+            <td>
+              {{TasaEA}}
+            </td>
+            <td>{{TasaM}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+
+    <button mat-raised-button color=primary [disabled]="!formControl.valid" type="button" (click)="search();$event.preventDefault()"
+      type=button>Consultar</button>
+    <br>
+    <h3>Resultado de la simulación de crédito</h3>
+    <mat-tab-group class=demo-tab-group>
+      <mat-tab label="Durante el programa">
+        <div class=ul-container>
+          <div class=split-ul>
+            <div>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Monto préstamo </label>
+                    </li>
+                    <li>
+                      <label>{{ InTime?.amountTotal | currency:'COP':'symbol-narrow' }}</label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <label> % del pago del préstamo
+                      </label>
+                    </li>
+                    <li>
+                      <label>{{ InTime?.percentage | currency:'COP':'symbol-narrow' }}</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class=split-ul>
+            <div>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Plazo préstamo en meses</label>
+                    </li>
+                    <li>
+                      <label [textContent]="InTime?.limit"></label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Cuota mensual
+                      </label>
+                    </li>
+                    <li>
+                      <label [textContent]="InTime?.quota | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Finalizado el programa">
+        <div class=ul-container>
+          <div class=split-ul>
+            <div>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Monto préstamo </label>
+                    </li>
+                    <li>
+                      <label [textContent]="AfterTime?.amountTotal | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <label> % del pago del préstamo
+                      </label>
+                    </li>
+                    <li>
+                      <label [textContent]="AfterTime?.percentage | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class=split-ul>
+            <div>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Plazo préstamo en meses</label>
+                    </li>
+                    <li>
+                      <label [textContent]="AfterTime?.limit"></label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Cuota mensual
+                      </label>
+                    </li>
+                    <li>
+                      <label [textContent]="AfterTime?.quota | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Total préstamo">
+        <div class=ul-container>
+          <div class=split-ul>
+            <div>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Monto préstamo </label>
+                    </li>
+                    <li>
+                      <label [textContent]="Total?.amountTotal | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <label> % del pago del préstamo
+                      </label>
+                    </li>
+                    <li>
+                      <label [textContent]="Total?.percentage | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class=split-ul>
+            <div>
+              <ul>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Plazo préstamo en meses</label>
+                    </li>
+                    <li>
+                      <label [textContent]="Total?.limit"></label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li>
+                      <label> Cuota mensual
+                      </label>
+                    </li>
+                    <li>
+                      <label [textContent]="Total?.quota | currency:'COP':'symbol-narrow'"></label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+    <br>
+
+    <div class="button-centered">
+      <button mat-raised-button color=primary type="button"> Volver </button>
+      <button mat-raised-button color=primary [disabled]="!formControl.valid" type="submit"> Solicitar </button>
+    </div>
+  </div>

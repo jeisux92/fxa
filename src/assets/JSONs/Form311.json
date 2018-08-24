@@ -1,0 +1,2142 @@
+{
+	"breadCrumb": 3,
+	"title": "Formulario único de solicitud de afiliación",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.ApplicantDetails.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"PersonalInformation": {
+					"type": "object",
+					"title": "",
+					"properties": {
+						"FirstName": {
+							"type": "string",
+							"title": "Primer nombre",
+							"placeholder": "Andrés",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"SecondName": {
+							"type": "string",
+							"title": "Segundo nombre",
+							"placeholder": "Jesús",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"FirstLastName": {
+							"type": "string",
+							"title": "Primer apellido",
+							"placeholder": "Romero",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"SecondLastName": {
+							"type": "string",
+							"title": "Segundo apellido",
+							"placeholder": "Suárez",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DocumentType": {
+							"type": "string",
+							"title": "Tipo de documento de identidad",
+							"htmlClass": "double-line",
+							"placeholder": "Cédula de ciudadadanía",
+							"floatPlaceholder": "always",
+							"default": "CC",
+							"oneOf": [
+								{
+									"title": "CEDULA DE CIUDADANIA",
+									"const": "CC"
+								},
+								{
+									"title": "TARJETA DE IDENTIDAD",
+									"const": "TI"
+								},
+								{
+									"title": "NIT PERSONA NATURAL",
+									"const": "NIP"
+								},
+								{
+									"title": "NIT",
+									"const": "NIT"
+								},
+								{
+									"title": "CEDULA DE EXTRANJERIA",
+									"const": "CE"
+								},
+								{
+									"title": "CARNE DIPLOMATICO",
+									"const": "CD"
+								},
+								{
+									"title": "SOCIEDAD EXTRANJERA",
+									"const": "SE"
+								}
+							],
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							}
+						},
+						"DocNumber": {
+							"type": "string",
+							"title": "Número de documento de identidad",
+							"htmlClass": "double-line",
+							"placeholder": "1111111",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 11,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"ZipSimpleid": {
+							"type": "string"
+						},
+						"ZipDocNumber": {
+							"type": "string"
+						},
+						"DateOfExpedition": {
+							"type": "string",
+							"format": "date",
+							"widget": "date-picker",
+							"title": "Fecha de expedición del documento de identidad",
+							"htmlClass": "double-line",
+							"placeholder": "15/2/2012",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"format": "Formato invalido"
+							},
+							"maxDateOpt": {
+								"today": true
+							}
+						},
+						"DateOfExpiration": {
+							"type": "string",
+							"format": "date",
+							"widget": "date-picker",
+							"title": "Fecha de expiración del documento de identidad",
+							"htmlClass": "double-line",
+							"placeholder": "15/2/2020",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"format": "Formato invalido"
+							}
+						},
+						"ExpeditionPlace": {
+							"type": "object",
+							"title": "Lugar de Expedición:",
+							"properties": {
+								"CountryEP": {
+									"type": "string",
+									"title": "País",
+									"default": "1",
+									"placeholder": "Colombia",
+									"floatPlaceholder": "always",
+									"oneOf": [
+										{
+											"title": "Colombia",
+											"const": "1"
+										},
+										{
+											"title": "País extranjero",
+											"const": "2"
+										}
+									]
+								},
+								"DepartmentEP": {
+									"type": "string",
+									"isParent": true,
+									"widget": "select-url",
+									"title": "Departamento",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+								},
+								"CityEP": {
+									"type": "string",
+									"widget": "select-url",
+									"title": "Ciudad",
+									"dependent": "DepartmentEP",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+								},
+								"PopulatedEP": {
+									"type": "string",
+									"widget": "select-url",
+									"title": "Población ",
+									"dependent": "DepartmentEP",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=4&filter=departmentId&id="
+								}
+							},
+							"dependencies": {
+								"CountryEP": {
+									"anyOf": [
+										{
+											"properties": {
+												"CountryEP": {
+													"enum": [
+														"1"
+													]
+												}
+											},
+											"required": [
+												"DepartmentEP",
+												"CityEP",
+												"PopulatedEP"
+											]
+										},
+										{
+											"properties": {
+												"CountryEP": {
+													"enum": [
+														"2"
+													]
+												}
+											},
+											"required": []
+										}
+									]
+								}
+							},
+							"required": [
+								"CountryEP"
+							]
+						},
+						"Email": {
+							"type": "string",
+							"title": "Correo electrónico del solicitante",
+							"htmlClass": "double-line",
+							"placeholder": "correo@micorreo.com",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 50,
+							"pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"validateEqual": "",
+								"pattern": "Direccion de correo incorrecta"
+							}
+						},
+						"BirthDate": {
+							"type": "string",
+							"format": "date",
+							"widget": "date-picker",
+							"title": "Fecha de nacimiento",
+							"placeholder": "11/11/1991",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"format": "Formato invalido",
+								"minimum": "La fecha minima debe ser 2014-01-01"
+							},
+							"maxDateOpt": {
+								"today": true
+							}
+						},
+						"BirthPlace": {
+							"type": "object",
+							"title": "Lugar de nacimiento:",
+							"properties": {
+								"CountryBP": {
+									"type": "string",
+									"title": "País",
+									"placeholder": "Colombia",
+									"floatPlaceholder": "always",
+									"oneOf": [
+										{
+											"title": "Colombia",
+											"const": "1"
+										},
+										{
+											"title": "País extranjero",
+											"const": "2"
+										}
+									]
+								},
+								"DepartmentBP": {
+									"type": "string",
+									"title": "Departamento",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"isParent": true,
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+								},
+								"CityBP": {
+									"type": "string",
+									"title": "Ciudad ",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"widget": "select-url",
+									"dependent": "DepartmentBP",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+								}
+							},
+							"dependencies": {
+								"CountryBP": {
+									"anyOf": [
+										{
+											"properties": {
+												"CountryBP": {
+													"enum": [
+														"1"
+													]
+												}
+											},
+											"required": [
+												"DepartmentBP",
+												"CityBP"
+											]
+										},
+										{
+											"properties": {
+												"CountryBP": {
+													"enum": [
+														"2"
+													]
+												}
+											}
+										}
+									]
+								}
+							},
+							"required": [
+								"CountryBP"
+							]
+						},
+						"Gender": {
+							"type": "string",
+							"title": "Género",
+							"placeholder": "Femenino",
+							"floatPlaceholder": "always",
+							"oneOf": [
+								{
+									"title": "Femenino",
+									"const": "F"
+								},
+								{
+									"title": "Masculino",
+									"const": "M"
+								}
+							]
+						},
+						"MaritalStatus": {
+							"type": "string",
+							"title": "Estado civil",
+							"placeholder": "Casado",
+							"floatPlaceholder": "always",
+							"default": "S",
+							"oneOf": [
+								{
+									"title": "Casado",
+									"const": "C"
+								},
+								{
+									"title": "Soltero",
+									"const": "S"
+								},
+								{
+									"title": "Divorciado / Separado",
+									"const": "E"
+								},
+								{
+									"title": "Unión Libre",
+									"const": "U"
+								},
+								{
+									"title": "Viudo",
+									"const": "V"
+								}
+							]
+						},
+						"TypeOfHousing": {
+							"type": "string",
+							"title": "Tipo de vivienda",
+							"placeholder": "Arrendada",
+							"floatPlaceholder": "always",
+							"default": "A",
+							"oneOf": [
+								{
+									"title": "Arrendada",
+									"const": "A"
+								},
+								{
+									"title": "Familiar",
+									"const": "F"
+								},
+								{
+									"title": "Propia con hipoteca",
+									"const": "H"
+								},
+								{
+									"title": "No establecida",
+									"const": "N"
+								},
+								{
+									"title": "Propia sin hipoteca",
+									"const": "P"
+								}
+							],
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							}
+						},
+						"Stratum": {
+							"type": "string",
+							"title": "Estrato",
+							"placeholder": "3",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 6,
+							"minLength": 1,
+							"maxLength": 1,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"AddressType": {
+							"type": "string",
+							"title": "Tipo de dirección",
+							"placeholder": "Empresa",
+							"floatPlaceholder": "always",
+							"default": "E",
+							"oneOf": [
+								{
+									"title": "Empresa",
+									"const": "E"
+								},
+								{
+									"title": "Oficina",
+									"const": "O"
+								},
+								{
+									"title": "Residencia",
+									"const": "R"
+								},
+								{
+									"title": "No Establecida",
+									"const": "N"
+								}
+							]
+						},
+						"TimeAtHome": {
+							"type": "object",
+							"title": "Tiempo en el domicilio",
+							"properties": {
+								"Years": {
+									"type": "string",
+									"title": "Años",
+									"placeholder": "2",
+									"floatPlaceholder": "always",
+									"minimum": 0,
+									"maximum": 100,
+									"minLength": 1,
+									"maxLength": 2,
+									"pattern": "^[0-9]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"minimum": "el valor mínimo debe ser 0",
+										"maximum": "el valor mínimo debe ser 100",
+										"pattern": "Este campo debe contener solo números"
+									}
+								},
+								"Months": {
+									"type": "string",
+									"title": "Meses",
+									"placeholder": "11",
+									"floatPlaceholder": "always",
+									"minLength": 1,
+									"maxLength": 2,
+									"pattern": "^([0-9]|10|11)$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"minimum": "el valor mínimo debe ser 0",
+										"maximum": "el valor mínimo debe ser 12",
+										"pattern": "Este campo debe contener solo números y debe estar entre 1 y 11"
+									}
+								}
+							}
+						},
+						"Address": {
+							"type": "string",
+							"title": "Dirección de domicilio",
+							"placeholder": "Autopista norte",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+							}
+						},
+						"IsFirst": {
+							"type": "string",
+							"title": "¿Es la dirección principal?",
+							"placeholder": "Sí",
+							"floatPlaceholder": "always",
+							"default": "S",
+							"oneOf": [
+								{
+									"title": "Sí",
+									"const": "S"
+								},
+								{
+									"title": "No",
+									"const": "N"
+								}
+							]
+						},
+						"Location": {
+							"type": "string",
+							"title": "Barrio",
+							"placeholder": "12 de Octubre",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+							}
+						},
+						"HomePlace": {
+							"type": "object",
+							"title": "Datos del domicilio:",
+							"properties": {
+								"CountryHP": {
+									"type": "string",
+									"title": "País",
+									"placeholder": "Colombia",
+									"floatPlaceholder": "always",
+									"default": "1",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"oneOf": [
+										{
+											"title": "Colombia",
+											"const": "1"
+										},
+										{
+											"title": "País extranjero",
+											"const": "2"
+										}
+									]
+								},
+								"DepartmentHP": {
+									"type": "string",
+									"title": "Departamento",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"isParent": true,
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+								},
+								"CityHP": {
+									"type": "string",
+									"title": "Ciudad ",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"widget": "select-url",
+									"dependent": "DepartmentHP",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+								},
+								"PopulatedHP": {
+									"type": "string",
+									"title": "Población ",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"widget": "select-url",
+									"dependent": "DepartmentHP",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=4&filter=departmentId&id="
+								}
+							},
+							"dependencies": {
+								"CountryHP": {
+									"anyOf": [
+										{
+											"properties": {
+												"CountryHP": {
+													"enum": [
+														"1"
+													]
+												}
+											},
+											"required": [
+												"DepartmentHP",
+												"CityHP",
+												"PopulatedHP"
+											]
+										},
+										{
+											"properties": {
+												"CountryHP": {
+													"enum": [
+														"2"
+													]
+												}
+											}
+										}
+									]
+								}
+							},
+							"required": [
+								"CountryHP"
+							]
+						},
+						"PhoneIndicativeCode1": {
+							"type": "string",
+							"title": "Indicativo país",
+							"placeholder": "57",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 999,
+							"minLength": 1,
+							"maxLength": 3,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"CityAreaCode1": {
+							"type": "string",
+							"title": "Código de área",
+							"placeholder": "37",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 99,
+							"minLength": 1,
+							"maxLength": 2,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 99",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"TypePhone1": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"placeholder": "Celular",
+							"floatPlaceholder": "always",
+							"default": "O",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								},
+								{
+									"title": "Fax",
+									"const": "F"
+								},
+								{
+									"title": "No tiene",
+									"const": "T"
+								}
+							]
+						},
+						"Phone1": {
+							"type": "string",
+							"title": "Número",
+							"placeholder": "7777777",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"Extension1": {
+							"type": "string",
+							"title": "Extensión",
+							"placeholder": "1234",
+							"floatPlaceholder": "always",
+							"minLength": 0,
+							"maxLength": 5,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"PhoneIndicativeCode2": {
+							"type": "string",
+							"title": "Indicativo país",
+							"placeholder": "57",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 999,
+							"minLength": 1,
+							"maxLength": 3,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"CityAreaCode2": {
+							"type": "string",
+							"title": "Código de área",
+							"placeholder": "37",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 99,
+							"minLength": 1,
+							"maxLength": 2,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 99",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"TypePhone2": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"placeholder": "Celular",
+							"floatPlaceholder": "always",
+							"default": "C",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								},
+								{
+									"title": "Fax",
+									"const": "F"
+								},
+								{
+									"title": "No tiene",
+									"const": "T"
+								}
+							]
+						},
+						"Phone2": {
+							"type": "string",
+							"title": "Número",
+							"placeholder": "7777777",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"Extension2": {
+							"type": "string",
+							"title": "Extensión",
+							"placeholder": "1234",
+							"floatPlaceholder": "always",
+							"minLength": 0,
+							"maxLength": 5,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"AcademicLevel": {
+							"type": "string",
+							"title": "Nivel académico",
+							"placeholder": "Primaria",
+							"floatPlaceholder": "always",
+							"default": "1",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Primaria",
+									"const": "2"
+								},
+								{
+									"title": "Bachillerato",
+									"const": "5"
+								},
+								{
+									"title": "Pregrado",
+									"const": "13"
+								},
+								{
+									"title": "Postgrado",
+									"const": "14"
+								},
+								{
+									"title": "Ninguna",
+									"const": "1"
+								}
+							]
+						},
+						"Profession": {
+							"type": "string",
+							"title": "Profesión u oficio",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=7"
+						},
+						"Taxes": {
+							"type": "boolean",
+							"widget": "boolean-input-info",
+							"helpMessage": "Actualmente pagas impuestos por ingresos de fuentes provenientes dentro del territorio de Estados Unidos.",
+							"title": "¿Es responsable de impuestos en EE.UU (U.S Person)?",
+							"default": false
+						},
+						"TINNumber": {
+							"type": "string",
+							"title": "Mi número TIN en EE.UU.",
+							"placeholder": "126546516",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 11,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"DoubleNationality": {
+							"type": "boolean",
+							"title": "¿Tiene doble nacionalidad?",
+							"default": false
+						},
+						"WhichNationality": {
+							"type": "string",
+							"title": "País",
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=3"
+						},
+						"ResideAbroad": {
+							"type": "boolean",
+							"title": "¿Reside en el exterior?",
+							"default": false
+						},
+						"DocumentTypeExt": {
+							"type": "string",
+							"title": "Tipo de documento de Extranjería",
+							"placeholder": "CEDULA DE CIUDADANIA",
+							"floatPlaceholder": "always",
+							"htmlClass": "double-line",
+							"oneOf": [
+								{
+									"title": "CEDULA DE CIUDADANIA",
+									"const": "CC"
+								},
+								{
+									"title": "TARJETA DE IDENTIDAD",
+									"const": "TI"
+								},
+								{
+									"title": "NIT PERSONA NATURAL",
+									"const": "NIP"
+								},
+								{
+									"title": "NIT",
+									"const": "NIT"
+								},
+								{
+									"title": "CEDULA DE EXTRANJERIA",
+									"const": "CE"
+								},
+								{
+									"title": "CARNE DIPLOMATICO",
+									"const": "CD"
+								},
+								{
+									"title": "SOCIEDAD EXTRANJERA",
+									"const": "SE"
+								}
+							]
+						},
+						"DocNumberExt": {
+							"type": "string",
+							"title": "Número de documento de Extranjería",
+							"placeholder": "196516849",
+							"floatPlaceholder": "always",
+							"htmlClass": "double-line",
+							"minLength": 6,
+							"maxLength": 11,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"State": {
+							"type": "string",
+							"title": "Estatus migratorio definido:",
+							"oneOf": [
+								{
+									"title": "Sí",
+									"const": "si"
+								},
+								{
+									"title": "No",
+									"const": "no"
+								}
+							]
+						},
+						"PostalCode": {
+							"type": "string",
+							"title": "Código postal",
+							"placeholder": "6516",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 7,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"AddressExt": {
+							"type": "string",
+							"title": "Dirección de domicilio",
+							"placeholder": "Avenida Boyacá",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+							}
+						},
+						"HomeExtPlace": {
+							"type": "object",
+							"title": "Datos del domicilio:",
+							"properties": {
+								"CountryHE": {
+									"type": "string",
+									"title": "País",
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=3"
+								},
+								"DepartmentHE": {
+									"type": "string",
+									"title": "Departamento / Estado",
+									"minLength": 2,
+									"maxLength": 50,
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"isParent": true,
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+								},
+								"CityHE": {
+									"type": "string",
+									"title": "Ciudad",
+									"minLength": 2,
+									"maxLength": 50,
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo letras"
+									},
+									"widget": "select-url",
+									"dependent": "DepartmentHE",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+								}
+							},
+							"required": [
+								"CountryHE",
+								"DepartmentHE",
+								"CityHE"
+							]
+						},
+						"AddressTypeExt": {
+							"type": "string",
+							"title": "Tipo de dirección",
+							"placeholder": "Empresa",
+							"floatPlaceholder": "always",
+							"default": "R",
+							"oneOf": [
+								{
+									"title": "Empresa",
+									"const": "E"
+								},
+								{
+									"title": "Oficina",
+									"const": "O"
+								},
+								{
+									"title": "Residencia",
+									"const": "R"
+								}
+							]
+						},
+						"IsFirstExt": {
+							"type": "string",
+							"title": "¿Es la dirección principal?",
+							"placeholder": "Sí",
+							"floatPlaceholder": "always",
+							"default": "S",
+							"oneOf": [
+								{
+									"title": "Sí",
+									"const": "S"
+								},
+								{
+									"title": "No",
+									"const": "N"
+								}
+							]
+						},
+						"PhoneIndicativeCodeExt": {
+							"type": "string",
+							"title": "Indicativo país",
+							"placeholder": "57",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 999,
+							"minLength": 1,
+							"maxLength": 3,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"CityAreaCodeExt": {
+							"type": "string",
+							"title": "Código de área",
+							"placeholder": "37",
+							"floatPlaceholder": "always",
+							"minimum": 1,
+							"maximum": 99,
+							"minLength": 1,
+							"maxLength": 2,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 99",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"TypePhoneExt": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"placeholder": "Celular",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"default": "C",
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								},
+								{
+									"title": "Fax",
+									"const": "F"
+								},
+								{
+									"title": "No establecido",
+									"const": "N"
+								},
+								{
+									"title": "No tiene",
+									"const": "T"
+								}
+							]
+						},
+						"PhoneExt": {
+							"type": "string",
+							"title": "Número",
+							"placeholder": "46516103",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"ExtensionExt": {
+							"type": "string",
+							"title": "Extensión",
+							"placeholder": "1234",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 5,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"FullName": {
+							"type": "string"
+						}
+					},
+					"dependencies": {
+						"DocumentType": {
+							"anyOf": [
+								{
+									"properties": {
+										"DocumentType": {
+											"enum": [
+												"CD",
+												"CE"
+											]
+										}
+									},
+									"required": [
+										"DateOfExpiration"
+									]
+								},
+								{
+									"properties": {
+										"DocumentType": {
+											"enum": [
+												"CC",
+												"NIP",
+												"NIT",
+												"SE",
+												"TI"
+											]
+										}
+									}
+								}
+							]
+						},
+						"TypePhone1": {
+							"anyOf": [
+								{
+									"properties": {
+										"TypePhone1": {
+											"enum": [
+												"O",
+												"F",
+												"C"
+											]
+										}
+									},
+									"required": [
+										"PhoneIndicativeCode1",
+										"CityAreaCode1",
+										"Phone1"
+									]
+								},
+								{
+									"properties": {
+										"TypePhone1": {
+											"enum": [
+												"T"
+											]
+										}
+									}
+								}
+							]
+						},
+						"TypePhone2": {
+							"anyOf": [
+								{
+									"properties": {
+										"TypePhone2": {
+											"enum": [
+												"O",
+												"F",
+												"C"
+											]
+										}
+									},
+									"required": [
+										"PhoneIndicativeCode2",
+										"CityAreaCode2",
+										"Phone2"
+									]
+								},
+								{
+									"properties": {
+										"TypePhone2": {
+											"enum": [
+												"T"
+											]
+										}
+									}
+								}
+							]
+						},
+						"Taxes": {
+							"anyOf": [
+								{
+									"properties": {
+										"Taxes": {
+											"enum": [
+												true
+											]
+										}
+									},
+									"required": [
+										"TINNumber"
+									]
+								},
+								{
+									"properties": {
+										"Taxes": {
+											"enum": [
+												false
+											]
+										}
+									}
+								}
+							]
+						},
+						"DoubleNationality": {
+							"anyOf": [
+								{
+									"properties": {
+										"DoubleNationality": {
+											"enum": [
+												true
+											]
+										}
+									},
+									"required": [
+										"WhichNationality"
+									]
+								},
+								{
+									"properties": {
+										"DoubleNationality": {
+											"enum": [
+												false
+											]
+										}
+									}
+								}
+							]
+						},
+						"ResideAbroad": {
+							"anyOf": [
+								{
+									"properties": {
+										"ResideAbroad": {
+											"enum": [
+												true
+											]
+										}
+									},
+									"required": [
+										"DocumentTypeExt",
+										"DocNumberExt",
+										"HomePlaceExt",
+										"State",
+										"PostalCode",
+										"AddressExt",
+										"HomePlaceExt",
+										"PhoneIndicativeCodeExt",
+										"CityAreaCodeExt",
+										"TypePhoneExt",
+										"PhoneExt"
+									]
+								},
+								{
+									"properties": {
+										"ResideAbroad": {
+											"enum": [
+												false
+											]
+										}
+									}
+								}
+							]
+						}
+					},
+					"required": [
+						"FirstName",
+						"FirstLastName",
+						"DocumentType",
+						"DocNumber",
+						"DateOfExpedition",
+						"ExpeditionPlace",
+						"Email",
+						"BirthDate",
+						"Gender",
+						"MaritalStatus",
+						"TypeOfHousing",
+						"AddressType",
+						"Address",
+						"Stratum",
+						"IsFirst",
+						"Location",
+						"HomePlace",
+						"TypePhone1",
+						"TypePhone2",
+						"AcademicLevel",
+						"Profession",
+						"Taxes",
+						"DoubleNationality",
+						"ResideAbroad"
+					]
+				}
+			},
+			"required": [
+				"PersonalInformation"
+			]
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-one\">1. Información personal </div> <div class=\"container-div first \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs",
+				"items": [
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.FirstName",
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "PersonalInformation.SecondName",
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "PersonalInformation.FirstLastName",
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "PersonalInformation.SecondLastName",
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.Email",
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.DocumentType",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.DocNumber",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.DateOfExpedition",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.DateOfExpiration",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.DocumentType == 'CE' || model.PersonalInformation.DocumentType == 'CD') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"required": true
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Lugar de expedición<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.ExpeditionPlace.CountryEP",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.ExpeditionPlace.DepartmentEP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.ExpeditionPlace.CountryEP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.ExpeditionPlace.CityEP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.ExpeditionPlace.CountryEP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.ExpeditionPlace.PopulatedEP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.ExpeditionPlace.CountryEP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Fecha y lugar de nacimiento</section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.BirthDate",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.BirthPlace.CountryBP",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.BirthPlace.DepartmentBP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.BirthPlace.CountryBP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.BirthPlace.CityBP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.BirthPlace.CountryBP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.TypeOfHousing",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.Stratum",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.Location",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.AddressType",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Tiempo en residencia<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.TimeAtHome.Years",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.TimeAtHome.Months",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.Address",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.IsFirst",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Lugar de residencia<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.HomePlace.CountryHP",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.HomePlace.DepartmentHP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.HomePlace.CountryHP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.HomePlace.CityHP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.HomePlace.CountryHP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.HomePlace.PopulatedHP",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.HomePlace.CountryHP == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos de los teléfonos<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"widget": "message",
+						"message": "<strong>Teléfono 1</strong>"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.TypePhone1",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.PhoneIndicativeCode1",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone1 == 'T' || model.PersonalInformation.TypePhone1 == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.CityAreaCode1",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone1 == 'T' || model.PersonalInformation.TypePhone1 == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.Phone1",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone1 == 'T' || model.PersonalInformation.TypePhone1 == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.Extension1",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone1 == 'F' || model.PersonalInformation.TypePhone1 == 'O') { return true;} else {return false}} catch(e){ return false}"
+								}
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<strong>Teléfono 2</strong>"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.TypePhone2",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.PhoneIndicativeCode2",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone2 == 'T' || model.PersonalInformation.TypePhone2 == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.CityAreaCode2",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone2 == 'T' || model.PersonalInformation.TypePhone2 == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.Phone2",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone2 == 'T' || model.PersonalInformation.TypePhone2 == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.Extension2",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhone2 == 'F' || model.PersonalInformation.TypePhone2 == 'O') { return true;} else {return false}} catch(e){ return false}"
+								}
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.Gender",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.MaritalStatus",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.AcademicLevel",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.Profession",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"htmlClass": "separated",
+						"items": [
+							{
+								"key": "PersonalInformation.Taxes",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.TINNumber",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try{if(model.PersonalInformation.Taxes == false){return false;}else { return true;}} catch(e) {return false;}"
+								},
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.DoubleNationality",
+								"type": "radios-inline",
+								"titleMap": [
+									{
+										"name": "Sí",
+										"value": true
+									},
+									{
+										"name": "No",
+										"value": false
+									}
+								],
+								"required": true,
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.WhichNationality",
+								"condition": {
+									"functionBody": "try{if(model.PersonalInformation.DoubleNationality == false){return false;} else { return true;} }catch(e){return false;}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.ResideAbroad",
+								"type": "radios-inline",
+								"titleMap": [
+									{
+										"name": "Sí",
+										"value": true
+									},
+									{
+										"name": "No",
+										"value": false
+									}
+								],
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.State",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+								},
+								"type": "radios-inline",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.PostalCode",
+								"condition": {
+									"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"condition": {
+							"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+						},
+						"items": [
+							{
+								"key": "PersonalInformation.DocumentTypeExt",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.DocNumberExt",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"condition": {
+							"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+						},
+						"items": [
+							{
+								"key": "PersonalInformation.AddressTypeExt",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "PersonalInformation.IsFirstExt",
+								"flex": "3 3 20%"
+							},
+							{
+								"key": "PersonalInformation.AddressExt",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos de domicilio<strong> </strong> </section>",
+						"condition": {
+							"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+						},
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"condition": {
+							"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+						},
+						"items": [
+							{
+								"key": "PersonalInformation.HomeExtPlace.CountryHE",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.HomeExtPlace.DepartmentHE",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.HomeExtPlace.CityHE",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Teléfono en el Exterior<strong> </strong> </section>",
+						"condition": {
+							"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+						},
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"condition": {
+							"functionBody": "try { if(model.PersonalInformation.ResideAbroad == true) { return true; } else { return false; } } catch(e) {return false}"
+						},
+						"items": [
+							{
+								"key": "PersonalInformation.TypePhoneExt",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.CityAreaCodeExt",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhoneExt == 'T' || model.PersonalInformation.TypePhoneExt == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.PhoneIndicativeCodeExt",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhoneExt == 'T' || model.PersonalInformation.TypePhoneExt == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "PersonalInformation.PhoneExt",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.TypePhoneExt == 'T' || model.PersonalInformation.TypePhoneExt == 'N') { return false;} else {return true;}} catch(e){ return false}"
+								},
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"condition": {
+							"functionBody": "try {if(model.PersonalInformation.TypePhoneExt == 'F' || model.PersonalInformation.TypePhoneExt == 'O') { return true;} else {return false}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "PersonalInformation.ExtensionExt",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "PersonalInformation.FullName",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.FirstName != '') {model.PersonalInformation.FullName = model.PersonalInformation.FirstName + ' ' + model.PersonalInformation.FirstLastName ; return false;} } catch(e){ return false}"
+								},
+								"flex": "3 3 2%"
+							},
+							{
+								"key": "PersonalInformation.ZipDocNumber",
+								"condition": {
+									"functionBody": "try {if(model.PersonalInformation.FirstName != '') {model.PersonalInformation.ZipDocNumber = model.PersonalInformation.DocNumber + '_' + model.PersonalInformation.ZipSimpleid + '.zip' ; return false;} } catch(e){ return false}"
+								},
+								"flex": "3 3 2%"
+							}
+						]
+					},
+					{
+						"type": "actions",
+						"htmlClass": "buttons",
+						"items": [
+							{
+								"type": "submit",
+								"style": "btn-info",
+								"title": "Guardar",
+								"flex": "3 3 100%",
+								"htmlClass": "btn-submit"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-two\">2. Información laboral</div> <div class=\"container-div second\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-three\">3. Información Financiera (Pesos Colombianos)</div> <div class=\"container-div third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-four\">4. Si es apoderado</div> <div class=\"container-div fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-six\">5. Declaraciones y autorizaciones</div> <div class=\"container-div sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"flex": "3 3 100%",
+						"disabled": true,
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {}
+	}
+}

@@ -1,0 +1,1050 @@
+{
+	"breadCrumb": 3,
+	"title": "Solicitud única de crédito persona natural",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Guarantee": {
+					"type": "object",
+					"properties": {
+						"TypeGuarantee": {
+							"type": "string",
+							"title": "Garantía de respaldo",
+							"default": "1",
+							"oneOf": [
+								{
+									"title": "Pignoración de cesantías",
+									"const": "1"
+								},
+								{
+									"title": "Codeudor",
+									"const": "2"
+								},
+								{
+									"title": "Hipoteca con el FNA",
+									"const": "3"
+								},
+								{
+									"title": "Aval",
+									"const": "4"
+								}
+							]
+						},
+						"FullName": {
+							"type": "string",
+							"title": "Primer nombre",
+							"placeholder": "Juan DaviD",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"FirstNameCD": {
+							"type": "string",
+							"title": "Primer nombre",
+							"placeholder": "Juan",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"SecondNameCD": {
+							"type": "string",
+							"title": "Segundo nombre",
+							"placeholder": "David",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"FirstLastNameCD": {
+							"type": "string",
+							"title": "Primer apellido",
+							"placeholder": "Quintero",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"SecondLastNameCD": {
+							"type": "string",
+							"title": "Segundo apellido",
+							"placeholder": "Hernandez",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DocumentTypeCD": {
+							"type": "string",
+							"title": "Tipo de documento de identidad",
+							"htmlClass": "double-line",
+							"default": "CC",
+							"oneOf": [
+								{
+									"title": "Cédula de Ciudadanía",
+									"const": "CC"
+								},
+								{
+									"title": "Cédula de Extranjería",
+									"const": "CE"
+								},
+								{
+									"title": "Carne diplimático",
+									"const": "CD"
+								},
+								{
+									"title": "NIT persona natural",
+									"const": "NIP"
+								},
+								{
+									"title": "NIT",
+									"const": "NIT"
+								},
+								{
+									"title": "Sociedad extranjera",
+									"const": "SE"
+								},
+								{
+									"title": "Tarjeta de identidad ",
+									"const": "TI"
+								}
+							]
+						},
+						"DocNumberCD": {
+							"type": "string",
+							"title": "Número de documento de identidad",
+							"htmlClass": "double-line",
+							"placeholder": "1111111",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 11,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"DateOfExpeditionCD": {
+							"type": "string",
+							"widget": "date-picker",
+							"placeholder": "9/9/1999",
+							"floatPlaceholder": "always",
+							"htmlClass": "double-line",
+							"title": "Fecha de expedición del documento de identidad",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"format": "Formato invalido",
+								"minimum": "La fecha minima debe ser 2014-01-01"
+							},
+							"maxDateOpt": {
+								"today": true,
+								"yearsBefore": 110
+							}
+						},
+						"EmailCD": {
+							"type": "string",
+							"widget": "input-equals",
+							"title": "Correo electrónico del solicitante",
+							"htmlClass": "double-line",
+							"placeholder": "micorreo@correo.com",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 50,
+							"pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"validateEqual": "",
+								"pattern": "Direccion de correo incorrecta"
+							}
+						},
+						"GenderCD": {
+							"type": "string",
+							"title": "Género",
+							"placeholder": "Femenino",
+							"floatPlaceholder": "always",
+							"default": "F",
+							"oneOf": [
+								{
+									"title": "Femenino",
+									"const": "F"
+								},
+								{
+									"title": "Masculino",
+									"const": "M"
+								}
+							]
+						},
+						"RelationshipCD": {
+							"title": "Parentesco con el beneficiario:",
+							"htmlClass": "double-line",
+							"type": "string",
+							"default": "0",
+							"oneOf": [
+								{
+									"title": "Afiliado",
+									"const": "0"
+								},
+								{
+									"title": "Compañero(a) permanente",
+									"const": "1"
+								},
+								{
+									"title": "Conyugue",
+									"const": "2"
+								},
+								{
+									"title": "Hijo(a)",
+									"const": "3"
+								},
+								{
+									"title": "Hermano(a)",
+									"const": "4"
+								},
+								{
+									"title": "Sobrino(a)",
+									"const": "5"
+								},
+								{
+									"title": "Nieto(a)",
+									"const": "6"
+								}
+							]
+						},
+						"EconomicActivityCIIUCD": {
+							"type": "string",
+							"title": "Actividad económica",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=5"
+						},
+						"ProfessionCD": {
+							"type": "string",
+							"title": "Profesión u oficio",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=7"
+						},
+						"TotalIncomeCD": {
+							"type": "string",
+							"title": "Total ingresos",
+							"widget": "number-format",
+							"placeholder": "2.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 10,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 99999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"TotalExpensesCD": {
+							"type": "string",
+							"title": "Total egresos",
+							"placeholder": "1.500.000",
+							"floatPlaceholder": "always",
+							"widget": "number-format",
+							"minLength": 1,
+							"maxLength": 10,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 99999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"CellPhoneCD": {
+							"type": "string",
+							"title": "Número de celular",
+							"placeholder": "3000000000",
+							"floatPlaceholder": "always",
+							"minLength": 10,
+							"maxLength": 10,
+							"pattern": "^3[\\d]{9}$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} números.",
+								"maxLength": "Debe tener máximo {{maximumLength}} números.",
+								"pattern": "Tu número de celular debe comenzar por 3 y contener solo números"
+							}
+						},
+						"PhoneCD": {
+							"type": "string",
+							"title": "Número de teléfono oficina",
+							"placeholder": "1724000",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"BusinessNameCD": {
+							"type": "string",
+							"title": "Nombre o razón social empleador",
+							"htmlClass": "double-line",
+							"placeholder": "Banlinea",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 60,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"JobAddressCD": {
+							"type": "string",
+							"title": "Dirección",
+							"placeholder": "Av Boyacvá #45",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 50,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+							}
+						},
+						"LocateJobCD": {
+							"type": "object",
+							"title": "Lugar de trabajo: ",
+							"properties": {
+								"JobCountry": {
+									"type": "string",
+									"title": "País",
+									"default": "1",
+									"oneOf": [
+										{
+											"title": "Colombia",
+											"const": "1"
+										},
+										{
+											"title": "País extranjero",
+											"const": "2"
+										}
+									]
+								},
+								"JobDepartment": {
+									"type": "string",
+									"title": "Departamento",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"isParent": true,
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+								},
+								"JobCity": {
+									"type": "string",
+									"title": "Ciudad ",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"widget": "select-url",
+									"dependent": "JobDepartment",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+								}
+							},
+							"dependencies": {
+								"JobCountry": {
+									"anyOf": [
+										{
+											"properties": {
+												"JobCountry": {
+													"enum": [
+														"1"
+													]
+												}
+											},
+											"required": [
+												"JobDepartment",
+												"JobCity"
+											]
+										},
+										{
+											"properties": {
+												"JobCountry": {
+													"enum": [
+														"2"
+													]
+												}
+											}
+										}
+									]
+								}
+							},
+							"required": [
+								"JobCountry"
+							]
+						},
+						"JobPhonesCD": {
+							"type": "object",
+							"title": "Teléfono de oficina",
+							"properties": {
+								"PhoneIndicativeCode": {
+									"type": "string",
+									"title": "Indicativo país",
+									"placeholder": "57",
+									"floatPlaceholder": "always",
+									"minimum": 1,
+									"maximum": 999,
+									"minLength": 1,
+									"maxLength": 3,
+									"pattern": "^[0-9]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"minimum": "el valor mínimo debe ser 1",
+										"maximum": "el valor mínimo debe ser 999",
+										"pattern": "Este campo debe contener solo números"
+									}
+								},
+								"CityAreaCode": {
+									"type": "string",
+									"title": "Código de área Ciudad",
+									"placeholder": "37",
+									"floatPlaceholder": "always",
+									"minimum": 1,
+									"maximum": 99,
+									"minLength": 1,
+									"maxLength": 2,
+									"pattern": "^[0-9]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"minimum": "el valor mínimo debe ser 1",
+										"maximum": "el valor mínimo debe ser 99",
+										"pattern": "Este campo debe contener solo números"
+									}
+								},
+								"Phone": {
+									"type": "string",
+									"title": "Teléfono domicilio",
+									"placeholder": "78945612",
+									"floatPlaceholder": "always",
+									"minLength": 7,
+									"maxLength": 10,
+									"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo números"
+									}
+								},
+								"CellPhone": {
+									"type": "string",
+									"title": "Número de celular",
+									"placeholder": "3333333",
+									"floatPlaceholder": "always",
+									"minLength": 10,
+									"maxLength": 10,
+									"pattern": "^3[\\d]{9}$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} números.",
+										"maxLength": "Debe tener máximo {{maximumLength}} números.",
+										"pattern": "Tu número de celular debe comenzar por 3 y contener solo números"
+									}
+								}
+							},
+							"required": [
+								"PhoneIndicativeCode",
+								"CityAreaCode",
+								"Phone",
+								"CellPhone"
+							]
+						},
+						"EnrollmentH": {
+							"type": "string",
+							"title": "Número de matricula",
+							"placeholder": "111222",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 11,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"ValueCommerceH": {
+							"type": "string",
+							"title": "Valor Comercial",
+							"widget": "number-format",
+							"placeholder": "45.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 10,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"MortgageH": {
+							"type": "boolean",
+							"title": "¿Tiene hipoteca?",
+							"default": false
+						}
+					},
+					"dependencies": {
+						"TypeGuarantee": {
+							"anyOf": [
+								{
+									"properties": {
+										"TypeGuarantee": {
+											"enum": [
+												"2"
+											]
+										}
+									},
+									"required": [
+										"DocumentTypeCD",
+										"DateOfExpeditionCD",
+										"DocNumberCD",
+										"GenderCD",
+										"RelationshipCD",
+										"FirstNameCD",
+										"FirstLastNameCD",
+										"CellPhoneCD",
+										"EmailCD",
+										"ProfessionCD",
+										"EconomicActivityCIIUCD",
+										"TotalIncomeCD",
+										"TotalExpensesCD",
+										"BusinessNameCD",
+										"JobAddressCD",
+										"LocateJobCD",
+										"JobPhonesCD"
+									]
+								},
+								{
+									"properties": {
+										"TypeGuarantee": {
+											"enum": [
+												"3"
+											]
+										}
+									},
+									"required": [
+										"EnrollmentH",
+										"ValueCommerceH",
+										"MortgageH"
+									]
+								},
+								{
+									"properties": {
+										"TypeGuarantee": {
+											"enum": [
+												"1",
+												"4"
+											]
+										}
+									}
+								}
+							]
+						}
+					},
+					"required": [
+						"TypeGuarantee"
+					]
+				}
+			}
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "1. Información personal <div class=\"container-div-second first\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs",
+				"items": [
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "Guarantee.TypeGuarantee",
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if( model.Guarantee.TypeGuarantee == '3' ) { return true;} else {return false;} } catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.EnrollmentH",
+								"required": true,
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "Guarantee.ValueCommerceH",
+								"required": true,
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "Guarantee.MortgageH",
+								"type": "radios-inline",
+								"titleMap": [
+									{
+										"name": "Sí",
+										"value": true
+									},
+									{
+										"name": "No",
+										"value": false
+									}
+								],
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.RelationshipCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.FirstNameCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.SecondNameCD",
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "Guarantee.FirstLastNameCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.SecondLastNameCD",
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.DocumentTypeCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.DocNumberCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.DateOfExpeditionCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.GenderCD",
+								"flex": "1 1 25%",
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.CellPhoneCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.EmailCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos financieros<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						}
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.TotalIncomeCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.TotalExpensesCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos laborales<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						}
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.ProfessionCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.EconomicActivityCIIUCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.BusinessNameCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.JobAddressCD",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos del domicilio laboral<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						}
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.LocateJobCD.JobCountry",
+								"required": true,
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "Guarantee.LocateJobCD.JobDepartment",
+								"condition": {
+									"functionBody": "try {if(model.Guarantee.LocateJobCD.JobCountry == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.LocateJobCD.JobCity",
+								"condition": {
+									"functionBody": "try {if(model.Guarantee.LocateJobCD.JobCountry == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos del teléfono laboral<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						}
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "Guarantee.JobPhonesCD.PhoneIndicativeCode",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.JobPhonesCD.CityAreaCode",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.JobPhonesCD.Phone",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "Guarantee.JobPhonesCD.CellPhone",
+								"flex": "1 1 25%",
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "Guarantee.FullName",
+								"condition": {
+									"functionBody": "try {if(model.Guarantee.TypeGuarantee == '2') {model.Guarantee.FullName = model.Guarantee.FirstNameCD + model.Guarantee.SecondNameCD + model.Guarantee.FirstLastNameCD + ' ' + model.Guarantee.SecondLastNameCD; return false;} else {return false}} catch(e){ return false}"
+								},
+								"flex": "3 3 2%"
+							}
+						]
+					},
+					{
+						"type": "actions",
+						"htmlClass": "buttons",
+						"items": [
+							{
+								"type": "submit",
+								"style": "btn-info",
+								"title": "Guardar",
+								"flex": "1 1 100%",
+								"htmlClass": "btn-submit"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "div",
+				"title": "3. Referencias <div class=\"container-div-second third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "4. Información financiera <div class=\"container-div-second fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "5. Datos de la solicitud <div class=\"container-div-second fifth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "7. Autorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"flex": "1 1 100%",
+						"disabled": "true",
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {}
+	}
+}

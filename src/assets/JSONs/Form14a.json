@@ -1,0 +1,45 @@
+{
+    "breadCrumb": 2,
+    "title": "Validación vía correo electrónico",
+    "subtitle": " Para continuar, el tomador debe ingresa al correo electrónico y seguir los pasos que se le indiquen.",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Debes tener tu teléfono celular a la mano para poder ingresar el código.",
+            "El código de validación es único  y secreto, no lo compartas.",
+            "Si el código no llega, haz clic en reenviar código.",
+            "Prepárate para recibir un correo de validación después de esta sección."
+        ]
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "RequestCode": {
+                    "type": "object",
+                    "message": "Ingresa a tu correo electrónico y sigue los pasos que se te indican para poder continuar tu solicitud.",
+                    "widget": "info-validation"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "RequestCode"
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "condition": "false",
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "SALIR",
+                        "flex": "3 3 100%",
+                        "htmlClass": "btn-submit"
+                    }
+                ]
+            }
+        ]
+    }
+}

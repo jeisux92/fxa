@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 class="description" [textContent]=options.information>
+    <br>
+    <strong [textContent]=options.description></strong>
+  </h2>
+
+  <div class="documents">
+    <div class="box" *ngFor="let item of options.oneOf">
+      <div>
+
+        <div class="box-document">
+          <img src="assets/Group 4.png" alt="">
+        </div>
+
+      </div>
+      <p [textContent]=options.description></p>
+      <button mat-raised-button type="button" (click)="methodUrlPdf(item.urlPdf)">Ver documento</button>
+
+    </div>
+  </div>
+
+</div>
+<br>
+<div class="button-centered">
+  <button mat-raised-button color=primary style="clear:both;">Firmar</button>
+</div>
+
+
+<div [ngClass]="{'modal-hidden' : !active, 'modal-container' : active }">
+  <div class="modal">
+    <label class="x" (click)="closeModalDelete()">
+      <i class="fas fa-times-circle"></i>
+    </label>
+
+    <iframe [src]="urlPdf" frameborder="0" width="800"></iframe>
+  </div>
+</div>

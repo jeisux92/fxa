@@ -1,0 +1,30 @@
+@import '~assets/colors-palettes';
+.container{
+    width: 90%;
+    
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    color: $error-color;
+    img {
+        padding-left: 9px;
+        height: 85px;
+        width: 85px;
+    }
+}
+
+.btn-exit{
+    margin: 15px auto;
+    display: block;
+}
+
+p{
+    color: $text-color;
+}

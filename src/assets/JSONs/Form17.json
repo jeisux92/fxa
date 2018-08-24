@@ -1,0 +1,58 @@
+{
+    "breadCrumb": 2,
+    "title": "Retomar solicitud de crédito",
+    "subtitle": "Ingresa tus datos para retomar la solicitud. <strong></strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Retomarás la solicitud desde el punto en el que la dejaste la última vez.",
+            "Tu información es privada y está totalmente a salvo con nosotros",
+            "tu código de solicitud fue enviado a tu correo la última vez que ceraste sesión.",
+            "Tienes 60 días para culminar tu solicitud."
+        ]
+    },
+    "info": {
+		"nameUser": "Global.ApplicantDetails.FullName",
+		"single": "Simpleid"
+	},
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "Los datos ingresados no coinciden.",
+                    "subtitle": "No te preocupes, puedes volver a intentarlo siguiendo los consejos que te indocamos a continuación:",
+                    "widget": "result-message"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": true,
+                "items": [
+                    {
+                        "type": "Tienes dos oportunidades más para realizar correctamente la validación. "
+                    },
+                    {
+                        "type": "En caso de no lograrlo en tres intentos, deberás esperar 24 horas. "
+                    },
+                    {
+                        "type": "Revisa bien la información que ingresas antes de hacer clic en continuar. "
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Intenta de nuevo"
+                    }
+                ]
+            }
+        ]
+    }
+}

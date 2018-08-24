@@ -1,0 +1,54 @@
+{
+    "breadCrumb": 2,
+    "title": "Validación de código SMS",
+    "subtitle": "Para continuar con el proceso debes intentar de nuevo el procedimiento. <strong></strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estas son preguntas secretas de las cuales solo tú sabes la respuesta.",
+            "Las 4 respuestas deben ser correctas para poder continuar la solicitud.",
+            "No puedes escoger más de una respuesta por pregunta.",
+            "El botón de Validar solo se activará cuando las cuatro preguntas sean respondidas."
+        ]
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "El código ingresado no es el correcto.",
+                    "subtitle": "Verifique la información que ha sido enviada a tu celular",
+                    "widget": "result-message"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": true,
+                "items": [
+                    {
+                        "type": "Tienes dos oportunidades más para realizar correctamente la validación. "
+                    },
+                    {
+                        "type": "En caso de no lograrlo en tres intentos, deberás esperar 24 horas. "
+                    },
+                    {
+                        "type": "Revisa bien la información que ingresas antes de hacer clic en continuar. "
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Intenta de nuevo"
+                    }
+                ]
+            }
+        ]
+    }
+}

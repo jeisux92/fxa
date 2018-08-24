@@ -1,0 +1,11 @@
+<div fxFlexLayout="row" class="div-button-retake">
+  <div fxFlex=70 fxFlexOffset=10>
+    <h2 [textContent]=title></h2>
+    <p [innerHTML]=subtitle></p>
+  </div>
+  <div fxFlex=11>
+    <button mat-raised-button color=primary *ngIf=retake routerLink="/retomar">
+      Retomar solicitud
+    </button>
+  </div>
+</div>

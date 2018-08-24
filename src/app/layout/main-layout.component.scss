@@ -1,0 +1,33 @@
+.bread-crumb-container {
+    margin-left: 10%;
+}
+
+.loading-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    display: none;
+    height: 100%;
+    opacity: 1;
+    transform: scale(1.0);
+    background-color: rgba(0, 0, 0, 0.5);
+    #spinner {
+        left: 50%;
+        top: 50%;
+        width: 100px;
+        left: calc(50% - 100px/2);
+        height: 100px;
+        top: calc(50% - 100px/2);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.politics-validation{
+    margin:0 auto;
+}
+
+.validation-center{
+    justify-content: center !important;
+}

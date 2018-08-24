@@ -1,0 +1,1195 @@
+{
+    "breadCrumb": 3,
+    "title": "Formulario único de solicitud de afiliación",
+    "subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Despliega cada uno de los formularios para ingresar la información correspondiente.",
+            "Verifica todos los datos ingresados antes de continuar.",
+            "Tu información es privada y está totalmente a salvo con nosotros.",
+            "En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "IsApproved": {
+                    "type": "object",
+                    "title": "",
+                    "properties": {
+                        "FirstName": {
+                            "type": "string",
+                            "title": "Primer nombre",
+                            "placeholder": "Diego",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondName": {
+                            "type": "string",
+                            "title": "Segundo nombre",
+                            "placeholder": "Saens",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "FirstLastName": {
+                            "type": "string",
+                            "title": "Primer apellido",
+                            "placeholder": "Castiblanco",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondLastName": {
+                            "type": "string",
+                            "title": "Segundo apellido",
+                            "placeholder": "Perez",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "DocumentType": {
+                            "type": "string",
+                            "title": "Tipo de documento",
+                            "description": "de identidad",
+                            "default": "CC",
+                            "oneOf": [
+                                {
+                                    "title": "CEDULA DE CIUDADANIA",
+                                    "const": "CC"
+                                },
+                                {
+                                    "title": "TARJETA DE IDENTIDAD",
+                                    "const": "TI"
+                                },
+                                {
+                                    "title": "NIT PERSONA NATURAL",
+                                    "const": "NIP"
+                                },
+                                {
+                                    "title": "NIT",
+                                    "const": "NIT"
+                                },
+                                {
+                                    "title": "CEDULA DE EXTRANJERIA",
+                                    "const": "CE"
+                                },
+                                {
+                                    "title": "CARNE DIPLOMATICO",
+                                    "const": "CD"
+                                },
+                                {
+                                    "title": "SOCIEDAD EXTRANJERA",
+                                    "const": "SE"
+                                }
+                            ]
+                        },
+                        "DocNumber": {
+                            "type": "string",
+                            "title": "Número de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "1111111111",
+                            "floatPlaceholder": "always",
+                            "minLength": 6,
+                            "maxLength": 11,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "ExpeditionDate": {
+                            "type": "string",
+                            "format": "date",
+                            "widget": "date-picker",
+                            "title": "Fecha de Expedición",
+                            "placeholder": "9/9/1999",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true,
+                                "yearsBefore": 110
+                            }
+                        },
+                        "ExpeditionPlace": {
+                            "type": "object",
+                            "title": "Lugar de Expedición:",
+                            "properties": {
+                                "Country": {
+                                    "type": "string",
+                                    "title": "País",
+                                    "default": "1",
+                                    "oneOf": [
+                                        {
+                                            "title": "Colombia",
+                                            "const": "1"
+                                        },
+                                        {
+                                            "title": "País extranjero",
+                                            "const": "2"
+                                        }
+                                    ]
+                                },
+                                "Department": {
+                                    "type": "string",
+                                    "title": "Departamento",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "isParent": true,
+                                    "widget": "select-url",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                },
+                                "City": {
+                                    "type": "string",
+                                    "title": "Ciudad ",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "dependent": "Department",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                }
+                            },
+                            "dependencies": {
+                                "Country": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "Country": {
+                                                    "enum": [
+                                                        "1"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "Department",
+                                                "City"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "Country": {
+                                                    "enum": [
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "Country"
+                            ]
+                        },
+                        "BirthDate": {
+                            "type": "string",
+                            "format": "date",
+                            "widget": "date-picker",
+                            "placeholder": "9/9/1999",
+                            "floatPlaceholder": "always",
+                            "title": "Fecha de nacimiento",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true
+                            }
+                        },
+                        "Relationship": {
+                            "title": "Parentesco con el beneficiario:",
+                            "type": "string",
+                            "default": "0",
+                            "oneOf": [
+                                {
+                                    "title": "Afiliado",
+                                    "const": "0"
+                                },
+                                {
+                                    "title": "Compañero(a) permanente",
+                                    "const": "1"
+                                },
+                                {
+                                    "title": "Conyugue",
+                                    "const": "2"
+                                },
+                                {
+                                    "title": "Hijo(a)",
+                                    "const": "3"
+                                },
+                                {
+                                    "title": "Hermano(a)",
+                                    "const": "4"
+                                },
+                                {
+                                    "title": "Sobrino(a)",
+                                    "const": "5"
+                                },
+                                {
+                                    "title": "Nieto(a)",
+                                    "const": "6"
+                                }
+                            ]
+                        },
+                        "AddressType": {
+                            "type": "string",
+                            "title": "Tipo de dirección",
+                            "default": "R",
+                            "oneOf": [
+                                {
+                                    "title": "Empresa",
+                                    "const": "E"
+                                },
+                                {
+                                    "title": "Oficina",
+                                    "const": "O"
+                                },
+                                {
+                                    "title": "Residencia",
+                                    "const": "R"
+                                },
+                                {
+                                    "title": "No Establecida",
+                                    "const": "N"
+                                }
+                            ]
+                        },
+                        "Stratum": {
+                            "type": "string",
+                            "title": "Estrato",
+                            "placeholder": "3",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "Address": {
+                            "type": "string",
+                            "title": "Dirección de domicilio",
+                            "placeholder": "Calle falsa 123",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 60,
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "IsFirst": {
+                            "type": "string",
+                            "title": "¿Es la dirección principal?",
+                            "default": "S",
+                            "oneOf": [
+                                {
+                                    "title": "Sí",
+                                    "const": "S"
+                                },
+                                {
+                                    "title": "No",
+                                    "const": "N"
+                                }
+                            ]
+                        },
+                        "TimeAtHome": {
+                            "type": "object",
+                            "title": "Tiempo en el domicilio",
+                            "properties": {
+                                "Years": {
+                                    "type": "string",
+                                    "title": "Años",
+                                    "placeholder": "3",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 0",
+                                        "maximum": "el valor mínimo debe ser 100",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Months": {
+                                    "type": "string",
+                                    "title": "Meses",
+                                    "placeholder": "11",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^([0-9]|10|11)$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 0",
+                                        "maximum": "el valor mínimo debe ser 11",
+                                        "pattern": "Este campo debe contener solo números y debe estar entre 0 y 11"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "Years",
+                                "Months"
+                            ]
+                        },
+                        "Location": {
+                            "type": "string",
+                            "title": "Barrio",
+                            "placeholder": "12 de octubre",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+                            }
+                        },
+                        "HomePlace": {
+                            "type": "object",
+                            "title": "Lugar de Expedición:",
+                            "properties": {
+                                "Country": {
+                                    "type": "string",
+                                    "title": "País",
+                                    "default": "1",
+                                    "oneOf": [
+                                        {
+                                            "title": "Colombia",
+                                            "const": "1"
+                                        },
+                                        {
+                                            "title": "País extranjero",
+                                            "const": "2"
+                                        }
+                                    ]
+                                },
+                                "HomeDepartmentS": {
+                                    "type": "string",
+                                    "title": "Departamento",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "isParent": true,
+                                    "widget": "select-url",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                },
+                                "HomeCityS": {
+                                    "type": "string",
+                                    "title": "Ciudad",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "dependent": "HomeDepartmentS",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                },
+                                "PopulatedS": {
+                                    "type": "string",
+                                    "title": "Población ",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "dependent": "HomeDepartmentS",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=4&filter=departmentId&id="
+                                }
+                            },
+                            "dependencies": {
+                                "Country": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "Country": {
+                                                    "enum": [
+                                                        "1"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "HomeDepartmentS",
+                                                "HomeCityS",
+                                                "PopulatedS"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "Country": {
+                                                    "enum": [
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "Country"
+                            ]
+                        },
+                        "PostalCode": {
+                            "type": "string",
+                            "title": "Código postal",
+                            "placeholder": "33333",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 7,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "PhoneData1": {
+                            "type": "object",
+                            "title": "Teléfono N° 1",
+                            "properties": {
+                                "TypePhone": {
+                                    "type": "string",
+                                    "title": "Tipo de teléfono",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "default": "O",
+                                    "oneOf": [
+                                        {
+                                            "title": "Celular",
+                                            "const": "C"
+                                        },
+                                        {
+                                            "title": "Fijo",
+                                            "const": "O"
+                                        },
+                                        {
+                                            "title": "Fax",
+                                            "const": "F"
+                                        },
+                                        {
+                                            "title": "No establecido",
+                                            "const": "N"
+                                        },
+                                        {
+                                            "title": "No tiene",
+                                            "const": "T"
+                                        }
+                                    ]
+                                },
+                                "IndicativeCode": {
+                                    "type": "string",
+                                    "title": "Indicativo país",
+                                    "placeholder": "57",
+                                    "floatPlaceholder": "always",
+                                    "minimum": 1,
+                                    "maximum": 999,
+                                    "minLength": 1,
+                                    "maxLength": 3,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 1",
+                                        "maximum": "el valor mínimo debe ser 999",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "AreaCode": {
+                                    "type": "string",
+                                    "title": "Código de área",
+                                    "placeholder": "37",
+                                    "floatPlaceholder": "always",
+                                    "minimum": 1,
+                                    "maximum": 99,
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 1",
+                                        "maximum": "el valor mínimo debe ser 99",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "PhoneNumber": {
+                                    "type": "string",
+                                    "title": "Número",
+                                    "placeholder": "999999999",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 7,
+                                    "maxLength": 10,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Extension": {
+                                    "type": "string",
+                                    "title": "Extensión",
+                                    "placeholder": "12345",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 5,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                }
+                            },
+                            "dependencies": {
+                                "TypePhone": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "TypePhone": {
+                                                    "enum": [
+                                                        "O",
+                                                        "F"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "Extension"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "TypePhone": {
+                                                    "enum": [
+                                                        "C",
+                                                        "N",
+                                                        "T"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "TypePhone",
+                                "IndicativeCode",
+                                "AreaCode",
+                                "PhoneNumber"
+                            ]
+                        },
+                        "PhoneData2": {
+                            "type": "object",
+                            "title": "Teléfono N° 2",
+                            "properties": {
+                                "TypePhone": {
+                                    "type": "string",
+                                    "title": "Tipo de teléfono",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "default": "C",
+                                    "oneOf": [
+                                        {
+                                            "title": "Celular",
+                                            "const": "C"
+                                        },
+                                        {
+                                            "title": "Fijo",
+                                            "const": "O"
+                                        },
+                                        {
+                                            "title": "Fax",
+                                            "const": "F"
+                                        },
+                                        {
+                                            "title": "No establecido",
+                                            "const": "N"
+                                        },
+                                        {
+                                            "title": "No tiene",
+                                            "const": "T"
+                                        }
+                                    ]
+                                },
+                                "IndicativeCode": {
+                                    "type": "string",
+                                    "title": "Indicativo país",
+                                    "placeholder": "57",
+                                    "floatPlaceholder": "always",
+                                    "minimum": 1,
+                                    "maximum": 999,
+                                    "minLength": 1,
+                                    "maxLength": 3,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 1",
+                                        "maximum": "el valor mínimo debe ser 999",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "AreaCode": {
+                                    "type": "string",
+                                    "title": "Código de área",
+                                    "placeholder": "37",
+                                    "floatPlaceholder": "always",
+                                    "minimum": 1,
+                                    "maximum": 99,
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 1",
+                                        "maximum": "el valor mínimo debe ser 99",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "PhoneNumber": {
+                                    "type": "string",
+                                    "title": "Número",
+                                    "placeholder": "9999999",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 7,
+                                    "maxLength": 10,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Extension": {
+                                    "type": "string",
+                                    "title": "Extensión",
+                                    "placeholder": "12345",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 5,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                }
+                            },
+                            "dependencies": {
+                                "TypePhone": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "TypePhone": {
+                                                    "enum": [
+                                                        "O",
+                                                        "F"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "Extension"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "TypePhone": {
+                                                    "enum": [
+                                                        "C",
+                                                        "N",
+                                                        "T"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "TypePhone",
+                                "IndicativeCode",
+                                "AreaCode",
+                                "PhoneNumber"
+                            ]
+                        },
+                        "Email": {
+                            "type": "string",
+                            "title": "Correo electrónico",
+                            "placeholder": "diego.lopez@laboral.com",
+                            "floatPlaceholder": "always",
+                            "minLength": 6,
+                            "maxLength": 50,
+                            "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "validateEqual": "",
+                                "pattern": "Direccion de correo incorrecta"
+                            }
+                        }
+                    },
+                    "required": [
+                        "FirstName",
+                        "FirstLastName",
+                        "DocumentType",
+                        "DocNumber",
+                        "ExpeditionDate",
+                        "ExpeditionPlace",
+                        "Relationship",
+                        "Address",
+                        "HomePlace",
+                        "Email"
+                    ]
+                }
+            },
+            "required": [
+                "IsApproved"
+            ]
+        },
+        "layout": [
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-one\">1. Información personal </div> <div class=\"container-div first \"><div class=\"bar\"></div><div class=\"icon opened\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-two\">2. Información laboral</div> <div class=\"container-div second\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-three\">3. Información Financiera (Pesos Colombianos)</div> <div class=\"container-div third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-four\">4. Si es apoderado</div> <div class=\"container-div fourth\"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs",
+                "items": [
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.FirstName",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.SecondName",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.FirstLastName",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.SecondLastName",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.Relationship",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "IsApproved.Email",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.DocumentType",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.DocNumber",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.ExpeditionDate",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Lugar de expedición<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.BirthDate",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.ExpeditionPlace.Country",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.ExpeditionPlace.Department",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.ExpeditionPlace.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.ExpeditionPlace.City",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.ExpeditionPlace.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Datos del lugar de residencia<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.AddressType",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.Stratum",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.Location",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Tiempo en residencia<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.TimeAtHome.Years",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.TimeAtHome.Months",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.Address",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.IsFirst",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.HomePlace.Country",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "IsApproved.HomePlace.HomeDepartmentS",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.HomePlace.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.HomePlace.HomeCityS",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.HomePlace.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.HomePlace.PopulatedS",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.HomePlace.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Datos de los teléfonos</section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<strong>Teléfono 1</strong>"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.PhoneData1.TypePhone",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.PhoneData1.IndicativeCode",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData1.TypePhone == 'T' || model.IsApproved.PhoneData1.TypePhone == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.PhoneData1.AreaCode",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData1.TypePhone == 'T' || model.IsApproved.PhoneData1.TypePhone == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.PhoneData1.PhoneNumber",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData1.TypePhone == 'T' || model.IsApproved.PhoneData1.TypePhone == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.PhoneData1.Extension",
+                                "flex": "1 1 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData1.TypePhone == 'F' || model.IsApproved.PhoneData1.TypePhone == 'O') { return true;} else {return false}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<strong>Teléfono 2</strong>"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.PhoneData2.TypePhone",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.PhoneData2.IndicativeCode",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData2.TypePhone == 'T' || model.IsApproved.PhoneData2.TypePhone == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.PhoneData2.AreaCode",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData2.TypePhone == 'T' || model.IsApproved.PhoneData2.TypePhone == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "IsApproved.PhoneData2.PhoneNumber",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData2.TypePhone == 'T' || model.IsApproved.PhoneData2.TypePhone == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "IsApproved.PhoneData2.Extension",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.IsApproved.PhoneData2.TypePhone == 'F' || model.IsApproved.PhoneData2.TypePhone == 'O') { return true;} else {return false}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "actions",
+                        "htmlClass": "buttons",
+                        "items": [
+                            {
+                                "type": "submit",
+                                "style": "btn-info",
+                                "title": "Guardar",
+                                "flex": "3 3 100%",
+                                "htmlClass": "btn-submit"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-six\">5. Declaraciones y autorizaciones</div> <div class=\"container-div sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Continuar",
+                        "flex": "3 3 100%",
+                        "disabled": "true",
+                        "htmlClass": "btn-submit"
+                    }
+                ]
+            }
+        ],
+        "data": {}
+    }
+}

@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+
+mat-radio-button {
+    display: block;
+    margin-top: 5px;
+}
+
+label {
+    color: $primary-color !important;
+    font-size: 1.2em;
+    font-weight: bolder;
+}

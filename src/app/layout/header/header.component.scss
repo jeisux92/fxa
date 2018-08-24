@@ -1,0 +1,100 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+$primary-color: mat-color($custom-theme-primary);
+.center-block {
+    display: block;
+    margin: 0 auto;
+}
+
+.blue-bar {
+    background-color: $primary-color;
+}
+
+.title-page {
+    font-size: 34px;
+    display: block;
+    position: relative;
+    line-height: 80px;
+    color: $title-color;
+}
+
+figure {
+    display: block;
+    margin-left: 0;
+}
+
+img {
+    padding-right: 8px;
+}
+
+.banners {
+    float: right;
+}
+
+.info {
+    max-width: fit-content;
+    flex-direction: column;
+    color: $title-color;
+    h3 {
+        display: block;
+        margin-bottom: 0%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    p {
+        margin-top: 0%;
+    }
+}
+
+.margin {
+    margin-left: 10%;
+}
+
+.button {
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    button {
+        border: 1px solid $title-color;
+        border-radius: 5px;
+        color: $title-color;
+        font-weight: 100;
+        margin: 0 auto;
+    }
+}
+
+.banners img {
+    margin: 2em auto;
+}
+
+.container {
+    height: 128px;
+}
+
+div[fxFlex='30'] {
+    display: flex;
+    div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.button-left {
+    width: 100%;
+}
+
+@media (max-width:960px) {
+    div[fxFlex='50'] {
+        margin-left: 10%;
+        .button-left {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width:536px) {
+    .title-page {
+        line-height: 40px;
+    }
+}

@@ -1,0 +1,426 @@
+{
+    "breadCrumb": 3,
+    "title": "Solicitud única de crédito persona natural",
+    "subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Despliega cada uno de los formularios para ingresar la información correspondiente.",
+            "Verifica todos los datos ingresados antes de continuar.",
+            "Tu información es privada y está totalmente a salvo con nosotros.",
+            "En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "CentralRisk": {
+                    "type": "object",
+                    "properties": {
+                        "Relation": {
+                            "title": " ",
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Sí",
+                                    "const": "si"
+                                },
+                                {
+                                    "title": "No",
+                                    "const": "no"
+                                }
+                            ],
+                            "default": "Sí"
+                        },
+                        "NameAndPosition": {
+                            "type": "string",
+                            "title": "En caso afirmativo, especifique nombre y cargo",
+                            "minLength": 0,
+                            "maxLength": 120,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SendMessageCellPhone": {
+                            "type": "boolean",
+                            "title": "Celular:",
+                            "default": true
+                        },
+                        "AnnualReports": {
+                            "title": " ",
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Físico",
+                                    "const": "Físico"
+                                },
+                                {
+                                    "title": "Electrónico",
+                                    "const": "Electrónico"
+                                }
+                            ],
+                            "default": "Electrónico"
+                        },
+                        "PhysicalReceipts": {
+                            "title": " ",
+                            "type": "string",
+                            "enum": [
+                                "Domicilio",
+                                "Sitio de trabajo"
+                            ],
+                            "default": "Domicilio"
+                        },
+                        "ShareData": {
+                            "title": " ",
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Sí",
+                                    "const": "si"
+                                },
+                                {
+                                    "title": "No",
+                                    "const": "no"
+                                }
+                            ],
+                            "default": "si"
+                        },
+                        "SharpName": {
+                            "type": "string",
+                            "title": "Afiliado",
+                            "minLength": 2,
+                            "maxLength": 80,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "DebtorName": {
+                            "type": "string",
+                            "title": "Deudor Solidario 1",
+                            "minLength": 2,
+                            "maxLength": 80,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SendMessageEmail": {
+                            "title": "Correo Electrónico",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "Confident": {
+                            "title": " ",
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Sí",
+                                    "const": "si"
+                                },
+                                {
+                                    "title": "No",
+                                    "const": "no"
+                                }
+                            ],
+                            "default": "si"
+                        }
+                    },
+                    "dependencies": {
+                        "Relation": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "Relation": {
+                                            "enum": [
+                                                "si"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "NameAndPosition"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "Relation": {
+                                            "enum": [
+                                                "no"
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "Relation",
+                        "SendMessageEmail",
+                        "SendMessageCellPhone",
+                        "AnnualReports",
+                        "ShareData",
+                        "SharpName",
+                        "DebtorName",
+                        "Confident"
+                    ]
+                }
+            },
+            "required": [
+                "CentralRisk"
+            ]
+        },
+        "layout": [
+            {
+                "type": "div",
+                "title": "1. Información personal <div class=\"container-div-second first\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "3. Referencias <div class=\"container-div-second third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "4. Información financiera <div class=\"container-div-second fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "5. Datos de la solicitud <div class=\"container-div-second fifth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs active"
+            },
+            {
+                "type": "div",
+                "title": "7. Autorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+                "display": "flex",
+                "htmlClass": "panel align-inputs ",
+                "items": [
+                    {
+                        "type": "flex",
+                        "flex-flow": "row wrap",
+                        "items": [
+                            {
+                                "type": "help",
+                                "helpvalue": "<label>TIENE(N) USTED(ES) PARENTESCO, DENTRO DEL CUARTO GRADO DE CONSANGUINIDAD, SEGUNDO DE AFINIDAD Y PRIMERO CIVIL, O RELACIÓN DE HECHO O DE DERECHO CON ALGUNO DE LOS MIEMBROS DE LA JUNTA DIRECTIVA Y/O FUNCIONARIOS DE NIVEL DIRECTIVO DEL FONDO NACIONAL DEL AHORRO O CON SUS CÓNYUGES? (En caso de no señalar alguna opción, se entenderá que la respuesta es negativa)</label>",
+                                "flex": "3 3 100%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row wrap",
+                        "items": [
+                            {
+                                "key": "CentralRisk.Relation",
+                                "flex": "3 3 25%",
+                                "type": "radios-inline"
+                            },
+                            {
+                                "key": "CentralRisk.NameAndPosition",
+                                "flex": "3 3 70%",
+                                "condition": {
+                                    "functionBody": "try {if(model.CentralRisk.Relation == 'si') { return true;}  else {return false;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "htmlClass": "title-content",
+                        "items": [
+                            {
+                                "type": "help",
+                                "helpvalue": "<section class='content'><strong>Autorizo(amos) al FNA a enviar mensajes con contenido institucional, informativo y comercial, a través de: </strong></section>",
+                                "flex": "3 3 50%"
+                            },
+                            {
+                                "type": "help",
+                                "helpvalue": "<section class='content'><strong>Usted(es) desea(n) que su(s) reporte(s) anual de costos totales sea enviado en medio:</strong></section>",
+                                "flex": "3 3 50%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "htmlClass": "title-content radio-button-reverse",
+                        "items": [
+                            {
+                                "type": "flex",
+                                "flex-flow": "row",
+                                "flex": "3 3 50%",
+                                "items": [
+                                    {
+                                        "key": "CentralRisk.SendMessageEmail",
+                                        "type": "radios-inline",
+                                        "titleMap": [
+                                            {
+                                                "name": "Sí",
+                                                "value": true
+                                            },
+                                            {
+                                                "name": "No",
+                                                "value": false
+                                            }
+                                        ],
+                                        "flex": "3 3 25%"
+                                    },
+                                    {
+                                        "key": "CentralRisk.SendMessageCellPhone",
+                                        "type": "radios-inline",
+                                        "titleMap": [
+                                            {
+                                                "name": "Sí",
+                                                "value": true
+                                            },
+                                            {
+                                                "name": "No",
+                                                "value": false
+                                            }
+                                        ],
+                                        "flex": "3 3 25%"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "flex",
+                                "flex-flow": "row",
+                                "flex": "3 3 50%",
+                                "items": [
+                                    {
+                                        "key": "CentralRisk.AnnualReports",
+                                        "type": "radios-inline",
+                                        "flex": "3 3 50%"
+                                    },
+                                    {
+                                        "key": "CentralRisk.PhysicalReceipts",
+                                        "type": "radios-inline",
+                                        "condition": {
+                                            "functionBody": "try {if(model.CentralRisk.AnnualReports == 'Físico') {return true;} else {return false}} catch(e){ return false}"
+                                        },
+                                        "flex": "3 3 25%"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row wrap",
+                        "items": [
+                            {
+                                "type": "help",
+                                "helpvalue": "<section class='content'><strong>Autorizo(amos) compartir mis(nuestros) datos personales con todos aquellos intervinientes que apoyen mi(nuestro) proceso de crédito hipotecario y/o educativo con los cuales el FNA tenga convenio de confidencialidad.</strong></section>"
+                            },
+                            {
+                                "key": "CentralRisk.Confident",
+                                "type": "radios-inline",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row wrap",
+                        "items": [
+                            {
+                                "type": "help",
+                                "helpvalue": "<label>Bajo la gravedad de juramento manifiesto(estamos) que la información que he(mos) suministrado en este formulario, es cierta y autorizo(amos) su verificación ante cualquier persona natural y jurídica, privada o pública, sin limitación alguna, desde ahora y mientras subsista alguna relación con el FNA o con quien represente sus derechos.</label>"
+                            },
+                            {
+                                "type": "help",
+                                "helpvalue": "<label>Declaro(amos) que al momento de presentar esta solicitud, conozco(cemos) y acepto(amos) los reglamentos y normas vigentes del Fondo Nacional del Ahorro, en materia de crédito. En constancia de haber leído, entendido y aceptado lo anterior, firmo(amos):</label><br/>"
+                            },
+                            {
+                                "type": "flex",
+                                "helpvalue": "<br>",
+                                "flex-direction": "row wrap",
+                                "items": [
+                                    {
+                                        "key": "CentralRisk.SharpName",
+                                        "flex": "3 3 25%"
+                                    },
+                                    {
+                                        "key": "CentralRisk.DebtorName",
+                                        "flex": "3 3 25%"
+                                    },
+                                    {
+                                        "flex": "3 3 50%"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "flex",
+                "flex-flow": "row",
+                "htmlClass": "center-content",
+                "items": [
+                    {
+                        "items": [
+                            {
+                                "type": "submit",
+                                "style": "btn-info",
+                                "title": "Guardar",
+                                "htmlClass": "btn-submit"
+                            }
+                        ]
+                    },
+                    {
+                        "items": [
+                            {
+                                "type": "submit",
+                                "style": "btn-info",
+                                "title": "Continuar",
+                                "htmlClass": "btn-submit"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "data": {}
+    }
+}

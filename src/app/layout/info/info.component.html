@@ -1,0 +1,7 @@
+<ul class="group-list" *ngIf="card">
+  <li class="list-item">
+    <strong [textContent]=card.title>
+    </strong>
+  </li>
+  <li *ngFor="let item of card.items" [textContent]=item class="list-item" ></li>
+</ul>

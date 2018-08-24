@@ -1,0 +1,50 @@
+{
+    "breadCrumb": 4,
+    "title": "¡Validación de referencia exitosa!",
+    "subtitle": "Ya fuiste validado como referencia de José Augusto Pérez Lozano.",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Debes contactar a tus referencias para que estén al tanto de la confirmación que les será enviada.",
+            "Si las 48 horas se terminan, deberás repetir el proceso de solicitud.",
+            "Te será enviado un correo con el enlace para que revises el estado de la confirmación de tus referencias.",
+            "Para poder continuar el proceso, ambas personas deben haber confirmado vía SMS."
+        ]
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "¡Gracias,",
+                    "subtitle": "Daniela Alejandra García Suárez!",
+                    "widget": "result-message",
+                    "exit": true,
+                    "url": "https://www.fna.gov.co/",
+                    "buttonExit": "Finalizar"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": false,
+                "items": [
+                    {
+                        "type": "Ya fuiste validadado(a) como referencia para el proceso de crédito solicitado con el Fondo Nacional del Ahorro."
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "condition": false
+                    }
+                ]
+            }
+        ]
+    }
+}

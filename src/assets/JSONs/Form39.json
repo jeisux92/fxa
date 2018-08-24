@@ -1,0 +1,61 @@
+{
+    "breadCrumb": 2,
+    "title": "Preguntas de seguridad",
+    "subtitle": "Para continuar con el proceso debes hacer clic en  <strong>Afiliarme al FNA</strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estas son preguntas secretas de las cuales solo tú sabes la respuesta.",
+            "Las 4 respuestas deben ser correctas para poder continuar la solicitud.",
+            "No puedes escoger más de una respuesta por pregunta.",
+            "El botón de Validar solo se activará cuando las cuatro preguntas sean respondidas."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+		"single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "¡El proceso de validación fue exitoso!",
+                    "subtitle": "puedes continuar con tu solicitud",
+                    "widget": "result-message"
+                },
+                "RequestType":{
+                    "type": "boolean"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": false,
+                "items": [
+                    {
+                        "type": "Ya falta menos para terminar tu proceso de solicitud."
+                    },
+                    {
+                        "type": "Como no estás afiliado al FNA, a continuación tendrás que completar el formulario afiliación. "
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Afiliarme al FNA"
+                    }
+                ]
+            }
+        ],
+        "data":{
+            "RequestType": true
+        }
+    }
+}

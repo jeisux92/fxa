@@ -1,0 +1,49 @@
+{
+    "breadCrumb": 2,
+    "title": "Preguntas de seguridad",
+    "subtitle": "Parece que la información no coincide, sigue las instrucciones para continuar con el proceso.  <strong></strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estos campos aparecerán prediligenciados si el solicitante ya los ingresó previamente"
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+		"single": "Simpleid"
+	},
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "Las respuestas no coinciden.",
+                    "subtitle": "has agotado tus tes intentos. Vuelve a intentarlo dentro de 24 horas para poder continuar.",
+                    "widget": "result-message",
+                    "exit": true,
+                    "url": "https://www.fna.gov.co/",
+                    "buttonExit": "Salir"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": true,
+                "items": [
+                    
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "condition": false
+                    }
+                ]
+            }
+        ]
+    }
+}

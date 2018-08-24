@@ -1,0 +1,14 @@
+@import '~assets/colors-palettes';
+ul {
+    background-color: $info-background-color;
+    list-style: none;
+    padding: 0;
+    color: $text-color;
+    pointer-events: none;
+    margin-top: 0;
+}
+
+ul>li {
+    padding: 20px;
+    border-bottom: 1px solid $divider-color;
+}

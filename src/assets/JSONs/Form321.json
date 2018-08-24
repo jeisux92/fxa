@@ -1,0 +1,3171 @@
+{
+    "breadCrumb": 3,
+    "title": "Solicitud única de crédito persona natural",
+    "subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Despliega cada uno de los formularios para ingresar la información correspondiente.",
+            "Verifica todos los datos ingresados antes de continuar.",
+            "Tu información es privada y está totalmente a salvo con nosotros.",
+            "En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "PersonalInformationPN": {
+                    "type": "object",
+                    "title": "",
+                    "properties": {
+                        "FirstName": {
+                            "type": "string",
+                            "title": "Primer nombre",
+                            "placeholder": "Andrés",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondName": {
+                            "type": "string",
+                            "title": "Segundo nombre",
+                            "placeholder": "Jesús",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "FirstLastName": {
+                            "type": "string",
+                            "title": "Primer apellido",
+                            "placeholder": "Romero",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondLastName": {
+                            "type": "string",
+                            "title": "Segundo apellido",
+                            "placeholder": "Suárez",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "Email": {
+                            "type": "string",
+                            "widget": "input-equals",
+                            "title": "Correo electrónico del solicitante",
+                            "htmlClass": "double-line",
+                            "placeholder": "correo@micorreo.com",
+                            "floatPlaceholder": "always",
+                            "minLength": 6,
+                            "maxLength": 50,
+                            "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "validateEqual": "",
+                                "pattern": "Direccion de correo incorrecta"
+                            }
+                        },
+                        "DocumentType": {
+                            "type": "string",
+                            "title": "Tipo de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "Cédula de Ciudadanía",
+                            "floatPlaceholder": "always",
+                            "oneOf": [
+                                {
+                                    "title": "Cédula de Ciudadanía",
+                                    "const": "CC"
+                                },
+                                {
+                                    "title": "Cédula de Extranjería",
+                                    "const": "CE"
+                                },
+                                {
+                                    "title": "Carne diplimático",
+                                    "const": "CD"
+                                },
+                                {
+                                    "title": "NIT persona natural",
+                                    "const": "NIP"
+                                },
+                                {
+                                    "title": "NIT",
+                                    "const": "NIT"
+                                },
+                                {
+                                    "title": "Sociedad extranjera",
+                                    "const": "SE"
+                                },
+                                {
+                                    "title": "Tarjeta de identidad ",
+                                    "const": "TI"
+                                }
+                            ]
+                        },
+                        "DocNumber": {
+                            "type": "string",
+                            "title": "Número de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "1111111111",
+                            "floatPlaceholder": "always",
+                            "minLength": 6,
+                            "maxLength": 11,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "ZipSimpleid": {
+                            "type": "string"
+                        },
+                        "ZipDocNumber": {
+                            "type": "string"
+                        },
+                        "DateOfExpedition": {
+                            "type": "string",
+                            "format": "date",
+                            "widget": "date-picker",
+                            "title": "Fecha de expedición del documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "15/2/2012",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true,
+                                "yearsBefore": 110
+                            }
+                        },
+                        "ExpeditionPlace": {
+                            "type": "object",
+                            "title": "Expedido en: ",
+                            "properties": {
+                                "CountryExp": {
+                                    "type": "string",
+                                    "title": "País",
+                                    "placeholder": "Colombia",
+                                    "floatPlaceholder": "always",
+                                    "oneOf": [
+                                        {
+                                            "title": "Colombia",
+                                            "const": "1"
+                                        },
+                                        {
+                                            "title": "País extranjero",
+                                            "const": "2"
+                                        }
+                                    ]
+                                },
+                                "DepartmentExp": {
+                                    "type": "string",
+                                    "title": "Departamento",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "isParent": true,
+                                    "widget": "select-url",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                },
+                                "CityExp": {
+                                    "type": "string",
+                                    "title": "Ciudad ",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "dependent": "DepartmentExp",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                }
+                            },
+                            "dependencies": {
+                                "CountryExp": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "CountryExp": {
+                                                    "enum": [
+                                                        "1"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "DepartmentExp",
+                                                "CityExp"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "CountryExp": {
+                                                    "enum": [
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "CountryExp"
+                            ]
+                        },
+                        "BirthDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Fecha de nacimiento",
+                            "widget": "date-picker",
+                            "placeholder": "9/9/1992",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true
+                            }
+                        },
+                        "BirthPlace": {
+                            "type": "object",
+                            "title": "Lugar de nacimiento:",
+                            "properties": {
+                                "CountryBirth": {
+                                    "type": "string",
+                                    "title": "País",
+                                    "placeholder": "Colombia",
+                                    "floatPlaceholder": "always",
+                                    "oneOf": [
+                                        {
+                                            "title": "Colombia",
+                                            "const": "1"
+                                        },
+                                        {
+                                            "title": "País extranjero",
+                                            "const": "2"
+                                        }
+                                    ]
+                                },
+                                "DepartmentBirth": {
+                                    "type": "string",
+                                    "title": "Departamento",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "isParent": true,
+                                    "widget": "select-url",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                },
+                                "CityBirth": {
+                                    "type": "string",
+                                    "title": "Ciudad ",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "dependent": "DepartmentBirth",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                }
+                            },
+                            "dependencies": {
+                                "CountryBirth": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "CountryBirth": {
+                                                    "enum": [
+                                                        "1"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "DepartmentBirth",
+                                                "CityBirth"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "CountryBirth": {
+                                                    "enum": [
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "CountryBirth"
+                            ]
+                        },
+                        "Gender": {
+                            "type": "string",
+                            "title": "Género",
+                            "oneOf": [
+                                {
+                                    "title": "Femenino",
+                                    "const": "F"
+                                },
+                                {
+                                    "title": "Masculino",
+                                    "const": "M"
+                                }
+                            ]
+                        },
+                        "PlaceDomicile": {
+                            "type": "object",
+                            "title": "del domicilio: ",
+                            "properties": {
+                                "CountryDomicile": {
+                                    "type": "string",
+                                    "title": "País",
+                                    "placeholder": "Colombia",
+                                    "floatPlaceholder": "always",
+                                    "oneOf": [
+                                        {
+                                            "title": "Colombia",
+                                            "const": "1"
+                                        },
+                                        {
+                                            "title": "País extranjero",
+                                            "const": "2"
+                                        }
+                                    ]
+                                },
+                                "DepartmentDomicile": {
+                                    "type": "string",
+                                    "title": "Departamento",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "isParent": true,
+                                    "widget": "select-url",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                },
+                                "CityDomicile": {
+                                    "type": "string",
+                                    "title": "Ciudad ",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "dependent": "DepartmentDomicile",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                }
+                            },
+                            "dependencies": {
+                                "CountryDomicile": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "CountryDomicile": {
+                                                    "enum": [
+                                                        "1"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "DepartmentDomicile",
+                                                "CityDomicile"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "CountryDomicile": {
+                                                    "enum": [
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "CountryDomicile"
+                            ]
+                        },
+                        "HeadFamily": {
+                            "type": "boolean",
+                            "title": "Madre o padre cabeza de familia",
+                            "default": false
+                        },
+                        "CommunityMother": {
+                            "type": "boolean",
+                            "title": "Madre comunitaria",
+                            "default": false
+                        },
+                        "EthnicGroup": {
+                            "type": "boolean",
+                            "title": "¿Pertenece a algún grupo étnico?",
+                            "default": false
+                        },
+                        "Disability": {
+                            "type": "boolean",
+                            "title": "¿Presenta alguna discacidad?",
+                            "default": false
+                        },
+                        "AcademicLevel": {
+                            "type": "string",
+                            "title": "Nivel académico",
+                            "placeholder": "Primaria",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "oneOf": [
+                                {
+                                    "title": "Primaria",
+                                    "const": "2"
+                                },
+                                {
+                                    "title": "Bachillerato",
+                                    "const": "5"
+                                },
+                                {
+                                    "title": "Pregrado",
+                                    "const": "13"
+                                },
+                                {
+                                    "title": "Postgrado",
+                                    "const": "14"
+                                },
+                                {
+                                    "title": "Ninguna",
+                                    "const": "1"
+                                }
+                            ]
+                        },
+                        "Profession": {
+                            "type": "string",
+                            "title": "Profesión u oficio",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "widget": "select-url",
+                            "url": "https://releaseasesor.banlinea.com:9092/api/data?list=7"
+                        },
+                        "NumberPeopleHome": {
+                            "type": "string",
+                            "title": "Número de personas en el hogar",
+                            "htmlClass": "double-line",
+                            "placeholder": "2",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 2,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 250000",
+                                "maximum": "el valor mínimo debe ser 999000000",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "NumberJobHome": {
+                            "type": "string",
+                            "title": "Número de personas que trabajan en el hogar",
+                            "htmlClass": "double-line",
+                            "placeholder": "1",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 2,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 250000",
+                                "maximum": "el valor mínimo debe ser 999000000",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "PeopleInCharge": {
+                            "type": "string",
+                            "title": "Número de personas a cargo",
+                            "placeholder": "1",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 2,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 250000",
+                                "maximum": "el valor mínimo debe ser 999000000",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "YoungerChildren": {
+                            "type": "string",
+                            "title": "Hijos Menores de 6 años",
+                            "placeholder": "0",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 2,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 250000",
+                                "maximum": "el valor mínimo debe ser 999000000",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "ResideAbroad": {
+                            "type": "boolean",
+                            "title": "¿Colombiano Residente en el exterior?",
+                            "defaulf": false
+                        },
+                        "MigratoryStatus": {
+                            "type": "string",
+                            "title": "Estatus migratorio definido:",
+                            "oneOf": [
+                                {
+                                    "title": "Sí",
+                                    "const": "si"
+                                },
+                                {
+                                    "title": "No",
+                                    "const": "no"
+                                }
+                            ]
+                        },
+                        "Address": {
+                            "type": "string",
+                            "title": "Dirección de domicilio",
+                            "placeholder": "Carrera 7 #77",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+                            }
+                        },
+                        "TimeAtHome": {
+                            "type": "object",
+                            "title": "Tiempo en el domicilio",
+                            "properties": {
+                                "Years": {
+                                    "type": "string",
+                                    "title": "Años",
+                                    "placeholder": "3",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Months": {
+                                    "type": "string",
+                                    "title": "Meses",
+                                    "placeholder": "11",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^([0-9]|10|11)$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números rango[0 - 11]"
+                                    }
+                                }
+                            }
+                        },
+                        "Stratum": {
+                            "type": "string",
+                            "title": "Estrato",
+                            "placeholder": "3",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[0-6]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "TypeOfHousing": {
+                            "type": "string",
+                            "title": "Tipo de vivienda",
+                            "placeholder": "Arrendada",
+                            "floatPlaceholder": "always",
+                            "oneOf": [
+                                {
+                                    "title": "Arrendada",
+                                    "const": "A"
+                                },
+                                {
+                                    "title": "Familiar",
+                                    "const": "F"
+                                },
+                                {
+                                    "title": "Propia con hipoteca",
+                                    "const": "H"
+                                },
+                                {
+                                    "title": "No establecida",
+                                    "const": "N"
+                                },
+                                {
+                                    "title": "Propia sin hipoteca",
+                                    "const": "P"
+                                }
+                            ],
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "Phone": {
+                            "type": "object",
+                            "title": "",
+                            "properties": {
+                                "PhoneType": {
+                                    "type": "string",
+                                    "title": "Tipo de teléfono",
+                                    "placeholder": "Celular",
+                                    "floatPlaceholder": "always",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "oneOf": [
+                                        {
+                                            "title": "Celular",
+                                            "const": "C"
+                                        },
+                                        {
+                                            "title": "Fijo",
+                                            "const": "O"
+                                        },
+                                        {
+                                            "title": "Fax",
+                                            "const": "F"
+                                        },
+                                        {
+                                            "title": "No establecido",
+                                            "const": "N"
+                                        },
+                                        {
+                                            "title": "No tiene",
+                                            "const": "T"
+                                        }
+                                    ]
+                                },
+                                "Indicative": {
+                                    "type": "string",
+                                    "title": "Indicativo país",
+                                    "placeholder": "57",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 3,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "AreaCode": {
+                                    "type": "string",
+                                    "title": "Código de área",
+                                    "placeholder": "37",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 2,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Number": {
+                                    "type": "string",
+                                    "title": "Número",
+                                    "placeholder": "9999999",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 7,
+                                    "maxLength": 10,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Extension": {
+                                    "type": "string",
+                                    "title": "Extensión",
+                                    "placeholder": "12345",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 5,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                }
+                            },
+                            "dependencies": {
+                                "PhoneType": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "PhoneType": {
+                                                    "enum": [
+                                                        "O",
+                                                        "F"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "Extension"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "PhoneType": {
+                                                    "enum": [
+                                                        "C",
+                                                        "N",
+                                                        "T"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "PhoneType",
+                                "Indicative",
+                                "AreaCode",
+                                "Number"
+                            ]
+                        },
+                        "ValueLease": {
+                            "type": "string",
+                            "title": "Valor del canon de arrendamiento",
+                            "widget": "number-format",
+                            "minimum": 1,
+                            "floatPlaceholder": "always",
+                            "placeholder": "1.000.000.00",
+                            "htmlClass": "double-line",
+                            "maximum": 999999999,
+                            "minLength": 1,
+                            "maxLength": 9,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 1",
+                                "maximum": "el valor mínimo debe ser 99999999",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "NameLandlord": {
+                            "type": "string",
+                            "title": "Nombre del arrendador",
+                            "placeholder": "Juan Lopez",
+                            "minLength": 2,
+                            "maxLength": 60,
+                            "floatPlaceholder": "always",
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "TypePhoneLandlord": {
+                            "type": "string",
+                            "title": "Tipo de teléfono",
+                            "placeholder": "Celular",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "oneOf": [
+                                {
+                                    "title": "Celular",
+                                    "const": "C"
+                                },
+                                {
+                                    "title": "Fijo",
+                                    "const": "O"
+                                }
+                            ]
+                        },
+                        "PhoneLandlord": {
+                            "type": "string",
+                            "title": "Número de Teléfono",
+                            "floatPlaceholder": "always",
+                            "placeholder": "3159896587",
+                            "minLength": 7,
+                            "maxLength": 10,
+                            "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "PublicServer": {
+                            "type": "boolean",
+                            "title": "¿Es servidor público?",
+                            "default": false
+                        },
+                        "PublicResources": {
+                            "type": "boolean",
+                            "title": "¿Maneja Recursos público?",
+                            "default": false
+                        },
+                        "PublicPerson": {
+                            "type": "boolean",
+                            "title": "¿Es una públicamente reconocida?",
+                            "default": false
+                        },
+                        "PublicPersonType": {
+                            "type": "string",
+                            "title": "Seleccione la actividad",
+                            "placeholder": "Política",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "default": " ",
+                            "oneOf": [
+                                {
+                                    "title": "Ninguno",
+                                    "const": " "
+                                },
+                                {
+                                    "title": "Política",
+                                    "const": "1"
+                                },
+                                {
+                                    "title": "Deportista",
+                                    "const": "3"
+                                },
+                                {
+                                    "title": "Farándula",
+                                    "const": "4"
+                                },
+                                {
+                                    "title": "Prensa",
+                                    "const": "5"
+                                },
+                                {
+                                    "title": "Otro",
+                                    "const": "0"
+                                }
+                            ]
+                        },
+                        "WhichPublicPerson": {
+                            "type": "string",
+                            "title": "¿Cuál?",
+                            "minLength": 0,
+                            "maxLength": 60,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "LinkPublicPerson": {
+                            "type": "boolean",
+                            "title": "¿Tiene vínculos con personas públicamente reconocidas?",
+                            "default": false
+                        },
+                        "Spouse": {
+                            "type": "object",
+                            "title": "Datos del Cónyuge",
+                            "properties": {
+                                "MaritalStatus": {
+                                    "type": "string",
+                                    "placeholder": "Casado (a)",
+                                    "floatPlaceholder": "always",
+                                    "title": "Estado civil",
+                                    "oneOf": [
+                                        {
+                                            "title": "Casado (a)",
+                                            "const": "C"
+                                        },
+                                        {
+                                            "title": "Soltero (a)",
+                                            "const": "S"
+                                        },
+                                        {
+                                            "title": "Divorciado (a) / Separado (a)",
+                                            "const": "E"
+                                        },
+                                        {
+                                            "title": "Unión Libre",
+                                            "const": "U"
+                                        },
+                                        {
+                                            "title": "Viudo (a)",
+                                            "const": "V"
+                                        }
+                                    ]
+                                },
+                                "Names": {
+                                    "type": "string",
+                                    "title": "Nombre(s)",
+                                    "placeholder": "Andrea Sofia",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 2,
+                                    "maxLength": 50,
+                                    "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo letras"
+                                    }
+                                },
+                                "FirstLastName": {
+                                    "type": "string",
+                                    "title": "Primer apellido",
+                                    "placeholder": "Villamizar",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 2,
+                                    "maxLength": 50,
+                                    "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo letras"
+                                    }
+                                },
+                                "SecondLastName": {
+                                    "type": "string",
+                                    "title": "Segundo apellido",
+                                    "placeholder": "Rodríguez",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 2,
+                                    "maxLength": 50,
+                                    "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                                    "validationMessages": {
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo letras"
+                                    }
+                                },
+                                "DocumentType": {
+                                    "type": "string",
+                                    "title": "Tipo de documento de identidad",
+                                    "htmlClass": "double-line",
+                                    "placeholder": "Cédula de Ciudadanía",
+                                    "floatPlaceholder": "always",
+                                    "default": "CC",
+                                    "oneOf": [
+                                        {
+                                            "title": "Cédula de Ciudadanía",
+                                            "const": "CC"
+                                        },
+                                        {
+                                            "title": "Cédula de Extranjería",
+                                            "const": "CE"
+                                        },
+                                        {
+                                            "title": "Carne diplimático",
+                                            "const": "CD"
+                                        },
+                                        {
+                                            "title": "NIT persona natural",
+                                            "const": "NIP"
+                                        },
+                                        {
+                                            "title": "NIT",
+                                            "const": "NIT"
+                                        },
+                                        {
+                                            "title": "Sociedad extranjera",
+                                            "const": "SE"
+                                        },
+                                        {
+                                            "title": "Tarjeta de identidad ",
+                                            "const": "TI"
+                                        }
+                                    ]
+                                },
+                                "DocNumber": {
+                                    "type": "string",
+                                    "title": "Número de documento de identidad",
+                                    "htmlClass": "double-line",
+                                    "placeholder": "1111111",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 6,
+                                    "maxLength": 11,
+                                    "pattern": "^[0-9]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "Email": {
+                                    "type": "string",
+                                    "widget": "input-equals",
+                                    "title": "Correo electrónico",
+                                    "placeholder": "espos(a)@correo.com",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 6,
+                                    "maxLength": 50,
+                                    "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "validateEqual": "",
+                                        "pattern": "Direccion de correo incorrecta"
+                                    }
+                                },
+                                "Gender": {
+                                    "type": "string",
+                                    "title": "Género",
+                                    "oneOf": [
+                                        {
+                                            "title": "Femenino",
+                                            "const": "F"
+                                        },
+                                        {
+                                            "title": "Masculino",
+                                            "const": "M"
+                                        }
+                                    ]
+                                },
+                                "PhoneType": {
+                                    "type": "string",
+                                    "title": "Tipo de teléfono",
+                                    "placeholder": "Celular",
+                                    "floatPlaceholder": "always",
+                                    "default": "C",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "oneOf": [
+                                        {
+                                            "title": "Celular",
+                                            "const": "C"
+                                        },
+                                        {
+                                            "title": "Fijo",
+                                            "const": "O"
+                                        },
+                                        {
+                                            "title": "Fax",
+                                            "const": "F"
+                                        },
+                                        {
+                                            "title": "No establecido",
+                                            "const": "N"
+                                        },
+                                        {
+                                            "title": "No tiene",
+                                            "const": "T"
+                                        }
+                                    ]
+                                },
+                                "PhoneNumber": {
+                                    "type": "string",
+                                    "title": "Número",
+                                    "placeholder": "333333333",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 7,
+                                    "maxLength": 10,
+                                    "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "BusinessName": {
+                                    "type": "string",
+                                    "title": "Nombre o razón social empleador",
+                                    "htmlClass": "double-line",
+                                    "placeholder": "Mi negocio",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 1,
+                                    "maxLength": 60,
+                                    "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo letras"
+                                    }
+                                },
+                                "JobAddress": {
+                                    "type": "string",
+                                    "title": "Dirección de empresa",
+                                    "placeholder": "Calle falsa 123",
+                                    "floatPlaceholder": "always",
+                                    "minLength": 2,
+                                    "maxLength": 50,
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "pattern": "Este campo debe contener solo letras"
+                                    }
+                                },
+                                "JobPlace": {
+                                    "type": "object",
+                                    "title": "Localización de la empresa: ",
+                                    "properties": {
+                                        "CountryJob": {
+                                            "type": "string",
+                                            "title": "País",
+                                            "placeholder": "Colombia",
+                                            "floatPlaceholder": "always",
+                                            "default": "1",
+                                            "oneOf": [
+                                                {
+                                                    "title": "Colombia",
+                                                    "const": "1"
+                                                },
+                                                {
+                                                    "title": "País extranjero",
+                                                    "const": "2"
+                                                }
+                                            ]
+                                        },
+                                        "DepartmentJob": {
+                                            "type": "string",
+                                            "title": "Departamento",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido."
+                                            },
+                                            "isParent": true,
+                                            "widget": "select-url",
+                                            "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                        },
+                                        "CityJob": {
+                                            "type": "string",
+                                            "title": "Ciudad ",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido."
+                                            },
+                                            "widget": "select-url",
+                                            "dependent": "DepartmentJob",
+                                            "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                        }
+                                    },
+                                    "dependencies": {
+                                        "CountryJob": {
+                                            "anyOf": [
+                                                {
+                                                    "properties": {
+                                                        "CountryJob": {
+                                                            "enum": [
+                                                                "1"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "DepartmentJob",
+                                                        "CityJob"
+                                                    ]
+                                                },
+                                                {
+                                                    "properties": {
+                                                        "CountryJob": {
+                                                            "enum": [
+                                                                "2"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "CountryJob"
+                                    ]
+                                },
+                                "JobPhone": {
+                                    "type": "object",
+                                    "title": "",
+                                    "properties": {
+                                        "PhoneType": {
+                                            "type": "string",
+                                            "title": "Tipo de teléfono",
+                                            "placeholder": "Celular",
+                                            "floatPlaceholder": "always",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido."
+                                            },
+                                            "oneOf": [
+                                                {
+                                                    "title": "Celular",
+                                                    "const": "C"
+                                                },
+                                                {
+                                                    "title": "Fijo",
+                                                    "const": "O"
+                                                },
+                                                {
+                                                    "title": "Fax",
+                                                    "const": "F"
+                                                },
+                                                {
+                                                    "title": "No establecido",
+                                                    "const": "N"
+                                                },
+                                                {
+                                                    "title": "No tiene",
+                                                    "const": "T"
+                                                }
+                                            ]
+                                        },
+                                        "Indicative": {
+                                            "type": "string",
+                                            "title": "Indicativo país",
+                                            "minimum": 1,
+                                            "maximum": 999,
+                                            "minLength": 1,
+                                            "maxLength": 3,
+                                            "pattern": "^[0-9]*$",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido.",
+                                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                                "minimum": "el valor mínimo debe ser 1",
+                                                "maximum": "el valor mínimo debe ser 999",
+                                                "pattern": "Este campo debe contener solo números"
+                                            }
+                                        },
+                                        "AreaCode": {
+                                            "type": "string",
+                                            "title": "Código de área",
+                                            "minimum": 1,
+                                            "maximum": 99,
+                                            "minLength": 1,
+                                            "maxLength": 2,
+                                            "pattern": "^[0-9]*$",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido.",
+                                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                                "minimum": "el valor mínimo debe ser 1",
+                                                "maximum": "el valor mínimo debe ser 99",
+                                                "pattern": "Este campo debe contener solo números"
+                                            }
+                                        },
+                                        "Number": {
+                                            "type": "string",
+                                            "title": "Número",
+                                            "minLength": 7,
+                                            "maxLength": 10,
+                                            "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido.",
+                                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                                "pattern": "Este campo debe contener solo números"
+                                            }
+                                        },
+                                        "Extension": {
+                                            "type": "string",
+                                            "title": "Extensión",
+                                            "minLength": 1,
+                                            "maxLength": 5,
+                                            "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                                            "validationMessages": {
+                                                "required": "Este campo es requerido.",
+                                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                                "pattern": "Este campo debe contener solo números"
+                                            }
+                                        }
+                                    },
+                                    "dependencies": {
+                                        "PhoneType": {
+                                            "anyOf": [
+                                                {
+                                                    "properties": {
+                                                        "PhoneType": {
+                                                            "enum": [
+                                                                "O"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "Extension",
+                                                        "Indicative",
+                                                        "AreaCode",
+                                                        "Number"
+                                                    ]
+                                                },
+                                                {
+                                                    "properties": {
+                                                        "PhoneType": {
+                                                            "enum": [
+                                                                "F"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "Extension",
+                                                        "Indicative",
+                                                        "AreaCode",
+                                                        "Number"
+                                                    ]
+                                                },
+                                                {
+                                                    "properties": {
+                                                        "PhoneType": {
+                                                            "enum": [
+                                                                "C"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "Indicative",
+                                                        "AreaCode",
+                                                        "Number"
+                                                    ]
+                                                },
+                                                {
+                                                    "properties": {
+                                                        "PhoneType": {
+                                                            "enum": [
+                                                                "N",
+                                                                "T"
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "PhoneType"
+                                    ]
+                                },
+                                "MonthlyIncome": {
+                                    "type": "string",
+                                    "title": "Ingresos mensuales",
+                                    "widget": "number-format",
+                                    "minLength": 6,
+                                    "maxLength": 9,
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 250000",
+                                        "maximum": "el valor mínimo debe ser 999000000",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "OtherIncome": {
+                                    "type": "string",
+                                    "title": "Otros ingresos",
+                                    "widget": "number-format",
+                                    "minLength": 0,
+                                    "maxLength": 9,
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido.",
+                                        "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                        "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                        "minimum": "el valor mínimo debe ser 250000",
+                                        "maximum": "el valor mínimo debe ser 999000000",
+                                        "pattern": "Este campo debe contener solo números"
+                                    }
+                                },
+                                "WorkActivity": {
+                                    "type": "string",
+                                    "title": "Cargo actual",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "widget": "select-url",
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=6"
+                                }
+                            },
+                            "dependencies": {
+                                "MaritalStatus": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "MaritalStatus": {
+                                                    "enum": [
+                                                        "C",
+                                                        "U"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "Names",
+                                                "FirstLastName",
+                                                "SecondLastName",
+                                                "DocumentType",
+                                                "DocNumber",
+                                                "Email",
+                                                "Gender",
+                                                "PhoneType",
+                                                "PhoneNumber",
+                                                "BusinessName",
+                                                "JobAddress",
+                                                "JobPlace",
+                                                "JobPhone",
+                                                "MonthlyIncome",
+                                                "WorkActivity"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "MaritalStatus": {
+                                                    "enum": [
+                                                        "S",
+                                                        "U",
+                                                        "V",
+                                                        "5",
+                                                        "E"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "MaritalStatus"
+                            ]
+                        },
+                        "FullName": {
+                            "type": "string"
+                        }
+                    },
+                    "dependencies": {
+                        "PublicPerson": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "PublicPerson": {
+                                            "enum": [
+                                                true
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "PublicPersonType"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "PublicPerson": {
+                                            "enum": [
+                                                false
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "PublicPersonType": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "PublicPersonType": {
+                                            "enum": [
+                                                "0"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "WhichPublicPerson"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "PublicPersonType": {
+                                            "enum": [
+                                                "1",
+                                                "3",
+                                                "4",
+                                                "5",
+                                                " "
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "TypeOfHousing": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "TypeOfHousing": {
+                                            "enum": [
+                                                "A"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "ValueLease",
+                                        "NameLandlord",
+                                        "TypePhoneLandlord",
+                                        "PhoneLandlord"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "TypeOfHousing": {
+                                            "enum": [
+                                                "F",
+                                                "H",
+                                                "N",
+                                                "P"
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "FirstName",
+                        "Spouse",
+                        "FirstLastName",
+                        "DocumentType",
+                        "DocNumber",
+                        "DateOfExpedition",
+                        "Email",
+                        "BirthDate",
+                        "Gender",
+                        "HeadFamily",
+                        "CommunityMother",
+                        "EthnicGroup",
+                        "Disability",
+                        "AcademicLevel",
+                        "NumberPeopleHome",
+                        "NumberJobHome",
+                        "PeopleInCharge",
+                        "YoungerChildren",
+                        "Profession",
+                        "ResideAbroad",
+                        "Address",
+                        "TimeAtHome",
+                        "Stratum",
+                        "TypeOfHousing",
+                        "Phone",
+                        "PublicServer",
+                        "PublicPerson",
+                        "LinkPublicPerson"
+                    ]
+                },
+                "WorkingInformationPN": {
+                    "type": "object",
+                    "title": "1.1 INFORMACIÓN LABORAL ",
+                    "properties": {
+                        "EconomicActivityCIIU": {
+                            "type": "string",
+                            "widget": "select-url",
+                            "title": "Actividad económica",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "url": "https://releaseasesor.banlinea.com:9092/api/data?list=5"
+                        },
+                        "TimePerformingEA": {
+                            "type": "string",
+                            "title": "Tiempo desempeñando la actividad en meses",
+                            "htmlClass": "double-line",
+                            "placeholder": "34",
+                            "floatPlaceholder": "always",
+                            "minimum": 1,
+                            "maximum": 9999,
+                            "minLength": 1,
+                            "maxLength": 4,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "BusinessName": {
+                            "type": "string",
+                            "title": "Nombre o razón social empleador",
+                            "htmlClass": "double-line",
+                            "placeholder": "Compañia S.A",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 60,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "EntityType": {
+                            "type": "string",
+                            "title": "Identificación entidad o empresa",
+                            "description": "de identidad",
+                            "default": "NIT",
+                            "oneOf": [
+                                {
+                                    "title": "CC",
+                                    "const": "CC"
+                                },
+                                {
+                                    "title": "CE",
+                                    "const": "CE"
+                                },
+                                {
+                                    "title": "NIT",
+                                    "const": "NIT"
+                                }
+                            ]
+                        },
+                        "BusinessNumber": {
+                            "type": "string",
+                            "title": "Núm.",
+                            "minLength": 1,
+                            "maxLength": 10,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "LinkingDate": {
+                            "type": "string",
+                            "format": "date",
+                            "title": "Fecha de vinculación",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "value": "2018-28-38",
+                                "today": true,
+                                "adds": {
+                                    "amount": -18,
+                                    "kind": "years"
+                                }
+                            }
+                        },
+                        "Email": {
+                            "type": "string",
+                            "widget": "input-equals",
+                            "title": "Correo electrónico",
+                            "description": "de la empresa",
+                            "minLength": 6,
+                            "maxLength": 60,
+                            "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "validateEqual": "",
+                                "pattern": "Dirección de correo incorrecta"
+                            }
+                        },
+                        "Sector": {
+                            "type": "string",
+                            "title": "Sector",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "placeholder": "Público",
+                            "floatPlaceholder": "always",
+                            "oneOf": [
+                                {
+                                    "title": "Público",
+                                    "const": "PUB"
+                                },
+                                {
+                                    "title": "Privado",
+                                    "const": "PRI"
+                                },
+                                {
+                                    "title": "Mixto",
+                                    "const": "MIX"
+                                }
+                            ]
+                        },
+                        "Salary": {
+                            "type": "string",
+                            "title": "Salario",
+                            "placeholder": "1.111.111",
+                            "floatPlaceholder": "always",
+                            "widget": "number-format",
+                            "minimum": 1,
+                            "maximum": 999999999,
+                            "minLength": 6,
+                            "maxLength": 9,
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 1",
+                                "maximum": "el valor mínimo debe ser 999999999",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "JobTitle": {
+                            "type": "string",
+                            "title": "Cargo actual",
+                            "widget": "select-url",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "url": "https://releaseasesor.banlinea.com:9092/api/data?list=6"
+                        },
+                        "JobPlace": {
+                            "type": "object",
+                            "title": "Localización de la empresa: ",
+                            "properties": {
+                                "CountryJob2": {
+                                    "type": "string",
+                                    "title": "País",
+                                    "placeholder": "Colombia",
+                                    "floatPlaceholder": "always",
+                                    "oneOf": [
+                                        {
+                                            "title": "Colombia",
+                                            "const": "1"
+                                        },
+                                        {
+                                            "title": "País extranjero",
+                                            "const": "2"
+                                        }
+                                    ]
+                                },
+                                "DepartmentJob2": {
+                                    "type": "string",
+                                    "isParent": true,
+                                    "widget": "select-url",
+                                    "title": "Departamento",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+                                },
+                                "CityJob2": {
+                                    "type": "string",
+                                    "widget": "select-url",
+                                    "title": "Ciudad",
+                                    "dependent": "DepartmentJob2",
+                                    "validationMessages": {
+                                        "required": "Este campo es requerido."
+                                    },
+                                    "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+                                }
+                            },
+                            "dependencies": {
+                                "CountryJob2": {
+                                    "anyOf": [
+                                        {
+                                            "properties": {
+                                                "CountryJob2": {
+                                                    "enum": [
+                                                        "1"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "DepartmentJob2",
+                                                "CityJob2"
+                                            ]
+                                        },
+                                        {
+                                            "properties": {
+                                                "CountryJob2": {
+                                                    "enum": [
+                                                        "2"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "CountryJob2"
+                            ]
+                        },
+                        "JobAddress": {
+                            "type": "string",
+                            "title": "Dirección de empresa",
+                            "placeholder": "Calle 165 #43-2",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "Indicative": {
+                            "type": "string",
+                            "title": "Indicativo país",
+                            "placeholder": "57",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 3,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 1",
+                                "maximum": "el valor mínimo debe ser 999",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "AreaCode": {
+                            "type": "string",
+                            "title": "Código de área",
+                            "placeholder": "37",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 2,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "minimum": "el valor mínimo debe ser 1",
+                                "maximum": "el valor mínimo debe ser 99",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "PhoneType": {
+                            "type": "string",
+                            "title": "Tipo de teléfono",
+                            "placeholder": "Celular",
+                            "floatPlaceholder": "always",
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "oneOf": [
+                                {
+                                    "title": "Celular",
+                                    "const": "C"
+                                },
+                                {
+                                    "title": "Fijo",
+                                    "const": "O"
+                                },
+                                {
+                                    "title": "Fax",
+                                    "const": "F"
+                                },
+                                {
+                                    "title": "No establecido",
+                                    "const": "N"
+                                },
+                                {
+                                    "title": "No tiene",
+                                    "const": "T"
+                                }
+                            ]
+                        },
+                        "JobPhone": {
+                            "type": "string",
+                            "title": "Número",
+                            "placeholder": "333333333",
+                            "floatPlaceholder": "always",
+                            "minLength": 7,
+                            "maxLength": 10,
+                            "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "Extension": {
+                            "type": "string",
+                            "title": "Extensión",
+                            "placeholder": "12345",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 5,
+                            "pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        }
+                    },
+                    "dependencies": {
+                        "PhoneType": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "PhoneType": {
+                                            "enum": [
+                                                "O",
+                                                "F"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "Extension"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "PhoneType": {
+                                            "enum": [
+                                                "C",
+                                                "N",
+                                                "T"
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "EconomicActivityCIIU",
+                        "TimePerformingEA",
+                        "BusinessName",
+                        "Sector",
+                        "Salary",
+                        "JobTitle",
+                        "JobPlace",
+                        "JobAddress",
+                        "PhoneType",
+                        "Indicative",
+                        "AreaCode",
+                        "JobPhone"
+                    ]
+                }
+            },
+            "required": [
+                "PersonalInformationPN",
+                "WorkingInformationPN"
+            ]
+        },
+        "layout": [
+            {
+                "type": "div",
+                "title": "1. Información personal <div class=\"container-div-second first \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs",
+                "items": [
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.FirstName",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.SecondName",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.FirstLastName",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.SecondLastName",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Email",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.DocumentType",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.DocNumber",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.DateOfExpedition",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Lugar de expedición<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.ExpeditionPlace.CountryExp",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.ExpeditionPlace.DepartmentExp",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.ExpeditionPlace.CountryExp == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.ExpeditionPlace.CityExp",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.ExpeditionPlace.CountryExp == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Lugar de nacimiento<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.BirthDate",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.BirthPlace.CountryBirth",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.BirthPlace.DepartmentBirth",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.BirthPlace.CountryBirth == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.BirthPlace.CityBirth",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.BirthPlace.CountryBirth == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Teléfono<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Phone.PhoneType",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Phone.Indicative",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Phone.PhoneType == 'T' || model.PersonalInformationPN.Phone.PhoneType == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Phone.AreaCode",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Phone.PhoneType == 'T' || model.PersonalInformationPN.Phone.PhoneType == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Phone.Number",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Phone.PhoneType == 'T' || model.PersonalInformationPN.Phone.PhoneType == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Phone.Extension",
+                                "flex": "1 1 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Phone.PhoneType == 'F' || model.PersonalInformationPN.Phone.PhoneType == 'O') { return true;} else {return false}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Tiempo en el domicilio<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.TimeAtHome.Years",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.TimeAtHome.Months",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Stratum",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Lugar de residencia<strong> </strong> </section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.PlaceDomicile.CountryDomicile",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.PlaceDomicile.DepartmentDomicile",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.PlaceDomicile.CountryDomicile == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.PlaceDomicile.CityDomicile",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.PlaceDomicile.CountryDomicile == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Address",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.TypeOfHousing",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.NameLandlord",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.TypeOfHousing == 'A') {return true;} else {model.PersonalInformationPN.NameLandlord ='';}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.TypePhoneLandlord",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.TypeOfHousing == 'A') {return true;} else {model.PersonalInformationPN.TypePhoneLandlord ='';}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.PhoneLandlord",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.TypeOfHousing == 'A') {return true;} else {model.PersonalInformationPN.PhoneLandlord ='';}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.ValueLease",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.TypeOfHousing == 'A') {return true;} else {model.PersonalInformationPN.ValueLease ='';}} catch(e){ return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.NumberPeopleHome",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.NumberJobHome",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.PeopleInCharge",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.YoungerChildren",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Otros datos</section>",
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Gender",
+                                "flex": "3 3 25%",
+                                "type": "radios-inline",
+                                "default": "F"
+                            },
+                            {
+                                "key": "PersonalInformationPN.AcademicLevel",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.Profession",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.HeadFamily",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.CommunityMother",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.EthnicGroup",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.Disability",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.ResideAbroad",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.MigratoryStatus",
+                                "flex": "1 1 25%",
+                                "type": "radios-inline",
+                                "condition": {
+                                    "functionBody": "try {if( model.PersonalInformationPN.ResideAbroad = true) {return true;} else {return false}} catch(e){ required = true;return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.PublicServer",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "type": "radios-inline",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.PublicResources",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "3 3 25%",
+                                "type": "radios-inline",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.PublicServer == true) {return true;} else { model.PersonalInformationPN.PublicResources = false; return false;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.LinkPublicPerson",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ],
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.PublicPerson",
+                                "flex": "3 3 25%",
+                                "type": "radios-inline",
+                                "titleMap": [
+                                    {
+                                        "name": "Sí",
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "No",
+                                        "value": false
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "PersonalInformationPN.PublicPersonType",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try { if(model.PersonalInformationPN.PublicPerson == true) {return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.WhichPublicPerson",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try { if( model.PersonalInformationPN.PublicPerson == true ) { if( model.PersonalInformationPN.PublicPersonType == '0' )  { return true; } else { return false; } } else { return false; } } catch(e) { return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.MaritalStatus",
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Otros datos<strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.Gender",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.Names",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.FirstLastName",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.SecondLastName",
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.DocumentType",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.DocNumber",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.Email",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.PhoneType",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.PhoneNumber",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Datos Laborales<strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.BusinessName",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.WorkActivity",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobAddress",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Domicilio laboral <strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPlace.CountryJob",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPlace.DepartmentJob",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Spouse.JobPlace.CountryJob == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "required": true,
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPlace.CityJob",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Spouse.JobPlace.CountryJob == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "required": true,
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Teléfono laboral <strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPhone.PhoneType",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPhone.Indicative",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'T' || model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'N') { return false;} else {return true}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPhone.AreaCode",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'T' || model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'N') { return false;} else {return true}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPhone.Number",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'T' || model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'N') { return false;} else {return true}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row wrap",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.JobPhone.Extension",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'F' || model.PersonalInformationPN.Spouse.JobPhone.PhoneType == 'O' ) { return true;} else {return false}} catch(e){ return false}"
+                                },
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Datos financieros <strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.Spouse.MonthlyIncome",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "PersonalInformationPN.Spouse.OtherIncome",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "type": "help",
+                                "message": "<section>1.1 INFORMACIÓN LABORAL DEL SOLICITANTE</section>",
+                                "labelHtmlClass": "subtitle-form"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "WorkingInformationPN.EconomicActivityCIIU",
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.TimePerformingEA",
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "WorkingInformationPN.BusinessName",
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "WorkingInformationPN.Sector",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.JobTitle",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.Salary",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Datos del domicilio <strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "WorkingInformationPN.JobAddress",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.JobPlace.CountryJob2",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.JobPlace.DepartmentJob2",
+                                "condition": {
+                                    "functionBody": "try {if(model.WorkingInformationPN.JobPlace.CountryJob2 == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.JobPlace.CityJob2",
+                                "condition": {
+                                    "functionBody": "try {if(model.WorkingInformationPN.JobPlace.CountryJob2 == '1') { return true;} else {return false;}} catch(e){ return false}"
+                                },
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "widget": "message",
+                        "message": "<section>Datos del teléfono <strong></strong> </section>",
+                        "condition": {
+                            "functionBody": "try {if(model.PersonalInformationPN.Spouse.MaritalStatus == 'C' || model.PersonalInformationPN.Spouse.MaritalStatus == 'U') {return true;} else {return false;}} catch(e){ return false}"
+                        },
+                        "labelHtmlClass": "subtitle-form"
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "WorkingInformationPN.PhoneType",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.Indicative",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.WorkingInformationPN.PhoneType == 'T' || model.WorkingInformationPN.PhoneType == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.AreaCode",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.WorkingInformationPN.PhoneType == 'T' || model.WorkingInformationPN.PhoneType == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "key": "WorkingInformationPN.JobPhone",
+                                "flex": "3 3 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.WorkingInformationPN.PhoneType == 'T' || model.WorkingInformationPN.PhoneType == 'N') { return false;} else {return true;}} catch(e){ return false}"
+                                },
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "WorkingInformationPN.Extension",
+                                "flex": "1 1 25%",
+                                "condition": {
+                                    "functionBody": "try {if(model.WorkingInformationPN.PhoneType == 'F' || model.WorkingInformationPN.PhoneType == 'O') { return true;} else {return false}} catch(e){ return false}"
+                                },
+                                "required": true
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "PersonalInformationPN.FullName",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.FirstName != '') {model.PersonalInformationPN.FullName = model.PersonalInformationPN.FirstName +' '+ model.PersonalInformationPN.FirstLastName; return false;} } catch(e){ return false}"
+                                },
+                                "flex": "3 3 2%"
+                            },
+                            {
+                                "key": "PersonalInformationPN.ZipDocNumber",
+                                "condition": {
+                                    "functionBody": "try {if(model.PersonalInformationPN.FirstName != '') {model.PersonalInformationPN.ZipDocNumber = model.PersonalInformationPN.DocNumber + '_' + model.PersonalInformationPN.ZipSimpleid + '.zip' ; return false;} } catch(e){ return false}"
+                                },
+                                "flex": "3 3 2%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "actions",
+                        "htmlClass": "buttons",
+                        "items": [
+                            {
+                                "type": "submit",
+                                "style": "btn-info",
+                                "title": "Guardar",
+                                "flex": "3 3 100%"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "div",
+                "title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-direction": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "3. Referencias <div class=\"container-div-second third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-direction": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "4. Información financiera <div class=\"container-div-second fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-direction": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "5. Datos de la solicitud <div class=\"container-div-second fifth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-direction": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-direction": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "7. Autkorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-direction": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Continuar",
+                        "flex": "3 3 100%",
+                        "disabled": true,
+                        "htmlClass": "btn-submit"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "PersonalInformationPN": {
+                "ZipSimpleid": "Global.Simpleid"
+            }
+        }
+    }
+}

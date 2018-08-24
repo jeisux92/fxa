@@ -1,0 +1,16 @@
+<div [ngClass]="{'modal-hidden' : !active, 'modal-container' : active }">
+  <div class="modal">
+    <div class="container-modal">
+      <h1 class="first-title">Términos y condiciones</h1>
+      <div class="container-text">
+        <p *ngFor="let text of content" [textContent]=text></p>
+      </div>
+    </div>
+    <div class="container-button">
+      <div class="center-block">
+      <mat-checkbox [(ngModel)]='checked' >Acepto términos y condiciones</mat-checkbox>
+      <button mat-raised-button color=primary [disabled]="!checked">Continuar</button>
+    </div>
+    </div>
+  </div>
+</div>

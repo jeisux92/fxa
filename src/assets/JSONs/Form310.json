@@ -1,0 +1,141 @@
+{
+    "breadCrumb": 3,
+    "title": "Formulario único de solicitud de afiliación",
+    "subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Despliega cada uno de los formularios para ingresar la información correspondiente.",
+            "Verifica todos los datos ingresados antes de continuar.",
+            "Tu información es privada y está totalmente a salvo con nosotros.",
+            "En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Data": {
+                    "type": "object",
+                    "content": [
+                        "Declaro que los recursos que se entregarán al FNA por concepto de cesantías provienen de actividades lícitas. No admitiré que terceros efectúen depósitos a mi cuenta con dineros provenientes de actividades ilícitas, ni efectuaré transacciones destinadas a tales actividades o a favor de personas relacionadas con las mismas. Declaro que la información que he suministrado en este formulario es exacta, completa y verídica, por lo tanto entiendo que la falsedad, omisión o error en ella tendrá las consecuencias estipuladas en la ley y en la reglamentación interna de la entidad. Declaro que he recibido información comercial sobre los derechos y deberes que adquiero como Afiliado(a) al FNA y acepto la normatividad de la Entidad.",
+                        "Los trabajadores pertenecientes al sector privado afiliados al FNA, así como los servidores públicos que se afilien voluntariamente, sólo podrán trasladar sus Cesantías a la Sociedad Administradora de Cesantías transcurridos tres (3) años a partir de la afiliación, siempre que no tengan crédito vigente con el FNA (art. 5 y 8 de la Ley 432 de 1998).",
+                        "5.2 AHORRO VOLUNTARIO CONTRACTUAL (Si seleccionó afiliación por AVC o AVC CRE)",
+                        "1. Declaro que los activos y recursos que poseo y he informado en el presente contrato; así como aquellos que entregaré en virtud del Ahorro Voluntario Contractual no provienen de ninguna actividad ilícita de las contempladas en la legislación vigente.",
+                        "2. Los recursos que entregaré en Ahorro Voluntario Contractual provienen de las siguientes fuentes (Detalle de la ocupación, o¬cio, profesión, negocio, entre otros)",
+                        "3. No admitiré que terceros efectúen depósitos en cuentas a mi nombre con fondos provenientes de actividades ilícitas, ni efectuaré transacciones destinadas a tales actividades o a favor de personas relacionadas con las mismas.",
+                        "4. Autorizo a FNA a que dé por terminado el Contrato de Ahorro Voluntario, en caso de infracción de cualquiera de los numerales contenidos en este documento, eximiendo a la Entidad de toda responsabilidad que se derive de información inconsistente, inexacta o insuficiente que yo hubiere proporcionado en este documento o de la violación del mismo.",
+                        "1. CONDICIONES PARA LA SUSCRIPCIÓN DEL CONTRATO:",
+                        "1.1. Podrán suscribir contrato de ahorro voluntario con el Fondo Nacional del AHORRO, en adelante “FNA”, las personas naturales, en adelante el “SUSCRIPTOR”, afiliadas a través de cesantías, así como las personas señaladas en el parágrafo segundo del artículo primero de la ley 1114 de 2006 y decreto 2555 de 2010.",
+                        "1.2. Todo SUSCRIPTOR de contrato de ahorro voluntario con el FNA estará sometido a suministrar al FNA todos los documentos y demás información que éste requiera para cumplir con un adecuado proceso de identificación y conocimiento del cliente.",
+                        "1.3. El SUSCRIPTOR se obliga a notificar al FNA oportunamente y en la forma o por los medios establecidos por éste, cualquier cambio de la información que permita su ubicación, evaluación financiera o cambio en el tipo de actividad que desarrolle.",
+                        "1.4. El FNA aplicará políticas y controles sobre prevención del lavado de activos y financiación del terrorismo, de conformidad con lo establecido en las normas correspondientes.  Así mismo, se reservará el derecho de afiliación por vía de ahorro voluntario contractual, absteniéndose de aprobar o desembolsar créditos, cuando ello pueda implicar exposición del FNA a los riesgos asociados al lavado de activos y financiación del terrorismo.",
+                        "1.5. El SUSCRIPTOR se compromete a realizar depósito (s) de dinero a favor del FNA, en la (s) cuantía (s) acordada (s) e intervalo (s) regulares libremente establecidos en el presente contrato, hasta cumplir la meta del ahorro en el plazo convenido. El cumplimiento de este contrato se fundamenta en tres (3) parámetros básicos: i) periodicidad (entendida como constancia y hábito del ahorro), ii) monto periódico (suma pactada como ahorro) y, iii) monto total. PARÁGRAFO: En el evento de que el SUSCRIPTOR de este contrato sea dependiente; pensionado; independiente bancarizado que declare renta o que haya suscrito contrato de prestación de servicios profesionales o de apoyo a la gestión; asociado a cooperativas de trabajo o cuando existan convenios con entidades públicas o privadas suscritas con el FNA gozarán de condiciones especiales del AVC, en virtud de las cuales se entenderán cumplidos los términos del contrato de AVC en el momento de acumular los correspondientes al ahorro pactado y /o un vez la suma de los depósitos realizados sea igual o superior a un ingreso promedio mensual del SUSCIPTOR. Cuando exista convenio suscrito con fuente de pago a favor del FNA por un plazo de 12 meses se entenderá cumplido el contrato AVC cuando se consigne el equivalente a una cuota del monto del contrato. En todo caso, el monto deberá ser inmovilizado hasta el vencimiento del plazo pactado en este contrato.",
+                        "1.6. El primer pago y los subsiguientes se realizarán con la periodicidad definida en el presente contrato, adquiriendo el SUSCRIPTOR la calidad de afiliado al FNA una vez se haya hecho efectivo el primer pago pactado en el contrato.",
+                        "1.7. Para efectos del cálculo del puntaje, la fecha inicial será aquella en la cual el ahorrador complete en cien por ciento (100%) del valor de la primera cuota del contrato, aunque ésta se haya efectuado en varias consignaciones y en fechas diferentes.",
+                        "1.8. El FNA podrá habilitar medios electrónicos para que EL SUSCRIPTOR efectúe los depósitos acordados, realice el retiro total de los mismos, para lo cual el FNA asegurará la adecuada contabilización de depósitos y de los retiros a nombre del suscriptor, en todo caso, se requerirá autorización expresa del SUSCRIPTOR para el uso de estos medios.",
+                        "2. CONDICIONES DE MANEJO",
+                        "2.1. El monto total del ahorro voluntario contractual, no podrá ser inferior al uno punto  dos (1.2) SMLMV del salario mínimo mensual legal vigente en Colombia a la fecha de suscripción del contrato.",
+                        "2.2.  El plazo mínimo del Ahorro Voluntario Contractual para personas cuyos  ingresos provengan de un contrato de trabajado o de una relación laboral de derecho público o privado y pensionados será de nueve (9) meses y de doce (12) meses para quienes no cumplan con estas condiciones. La(s) cuantía(s) de la(s) cuota(s) será la pactada en este contrato y su periodicidad podrá ser: mensual, bimestral, trimestral, semestral, cada nueve meses o anual, según se indique en este documento. Este contrato, una vez terminado, se prorroga automáticamente en períodos sucesivos de seis meses en seis meses, salvo que el SUSCRIPTOR manifieste su decisión de no prorrogarlo durante el mes siguiente al vencimiento del período pactado. Durante las prórrogas el afiliado podrá  solicitar el retiro de las sumas depositadas en cualquier tiempo, la entrega de los recursos se hará en los términos previstos en el numeral 7.5 de este mismo reglamento.",
+                        "2.3. Los afiliados no podrán tener más de un  contrato de ahorro voluntario vigente con el FNA.",
+                        "2.4. El FNA suministrará al SUSCRIPTOR o a quien éste autorice, información sobre la apertura, movimientos y saldos del ahorro voluntario contractual y a los funcionarios públicos facultados para consultarla. En tal sentido, el FNA enviará Anualmente al SUSCRIPTOR, en documento físico o correo electrónico o medio electrónico idóneo, la información relacionada con el movimiento del contrato de ahorro voluntario a los afiliados.",
+                        "2.5. El FNA podrá entregar a los titulares del contrato de  ahorro voluntario un código de barras que les permitirá dar cumplimiento con el plan de ahorro voluntario acordado.",
+                        "2.6. El FNA no cobrará suma alguna al titular del ahorro voluntario contractual por el manejo, la administración, transacciones y servicios asociados al producto.",
+                        "2.7. El monto del ahorro voluntario contractual  podrá incrementarse mensualmente de acuerdo al valor de las cuotas mensuales del crédito. El afiliado que resulte beneficiario de un crédito del FNA podrá destinar el monto del ahorro voluntario contractual y sus rendimientos al pago del crédito, previa autorización del afiliado, de manera expresa en documento independiente y/o en el pagaré contentivo de la obligación.",
+                        "3. LIQUIDACIÓN Y ABONO DE INTERESES",
+                        "3.1. El FNA reconocerá y abonará al “SUSCRIPTOR” sobre los depósitos de ahorro voluntario contractual, una tasa de interés al límite inferior del rango meta de inflación establecido por el Banco de la República para el año en curso (Financiera debe revisar este aspecto). Dicha tasa de interés no podrá ser modificada durante el período de liquidación del respectivo depósito.",
+                        "3.2. La tasa de interés remuneratorio se liquidará en forma trimestral, sobre el saldo promedio del trimestre o fracción correspondiente a partir de la primera consignación, y el abono de los rendimientos se efectuará en el último día de cada período de liquidación, esto es, trimestre vencido, en los meses de marzo, junio, septiembre y diciembre.",
+                        "3.3. El FNA cesará la obligación de reconocer intereses remuneratorios por las sumas depositadas, en el caso de terminación unilateral por parte del FNA descritas en el numeral 6.1 del presente contrato.",
+                        "4. DEPÓSITOS",
+                        "4.1. El SUSCRIPTOR realizará los depósitos pactados en el presente contrato en las entidades financieras que para tal efecto señale el FNA, quien adoptará los canales de comunicación adecuados para mantener informado al SUSCRIPTOR sobre los establecimientos bancarios en los cuales podrá realizar tales depósitos.",
+                        "4.2. El SUSCRIPTOR podrá depositar sumas de dinero superiores a las acordadas en el presente contrato. Estos depósitos adicionales no modificarán las condiciones iniciales del contrato, y no podrán exceder, individual o conjuntamente, el valor inicial del contrato.",
+                        "4.3. El SUSCRIPTOR podrá realizar depósitos extraordinarios cuyo monto individual o conjuntamente considerado supere el monto total del ahorro inicialmente acordado en el contrato de AVC, con lo cual se entenderá modificado en el monto final. Las cuotas periódicas continuarán cancelándose en las fechas y montos inicialmente acordados. Los depósitos extraordinarios se podrán aplicar a elección del afiliado, como anticipo a cuotas futuras del ahorro voluntario. (no puede aplicar para todos).",
+                        "4.4. Los depósitos adicionales que realice el SUSCRIPTOR se tendrán en cuenta para la evaluación y asignación del puntaje para acceder a los créditos que otorgue el FNA.",
+                        "4.5. Los depósitos se podrán hacer en efectivo, medios electrónicos o cheques de gerencia.",
+                        "5. CUMPLIMIENTO DEL CONTRATO",
+                        "5.1. El SUSCRIPTOR podrá solicitar crédito para vivienda y/o educación, Leasing Habitacional o Arriendo Social al FNA cuando haya cumplido con las condiciones pactadas en el contrato, de acuerdo con la metodología definida por la Junta Directiva.",
+                        "5.2. En todo caso conforme a lo dispuesto en el artículo 10.5.10.1.5 del Decreto 2555 de 2010 la celebración del contrato de ahorro voluntario, así como el cumplimiento del mismo por parte del SUSCRIPTOR, no supone obligación alguna del FNA de otorgar crédito únicamente por ese hecho.",
+                        "5.3. El SUSCRIPTOR que resulte beneficiario de un crédito del FNA podrá destinar el monto del ahorro voluntario contractual  y   sus rendimientos al pago del crédito, para lo cual autorizó al FNA a realizar el debito de la cuenta de AVC.",
+                        "5.4. El SUSCRIPTOR que fue objeto de aprobación de crédito y/o legalización del mismo antes del vencimiento  del plazo pactado en el contrato de AVC, los recursos depositados en la cuenta AVC quedarán inmovilizados hasta el vencimiento del plazo pactado.",
+                        "6. TERMINACIÓN DEL CONTRATO",
+                        "6.1. El FNA dará por terminado el contrato en los siguientes casos: a)  Cuando se detecte inconsistencia o inexactitud en la información suministrada por el afiliado. b) Cuando se advierta que el origen de los recursos utilizados por el afiliado puedan estar relacionados con las conductas mencionadas en el artículo 102 del EOSF, modificado por el artículo 1 del la ley 1121 de 2006. c) Cuando se detecte cualquier conducta fraudulenta por parte del afiliado. Una vez se presente alguna de estas causales el FNA informará por escrito o vía correo electrónico al suscriptor, en un término no mayor a 30 días, para efectúe la solicitud de retiro de estos recursos.",
+                        "7. RETIROS",
+                        "7.1. El FNA entregará al SUSCRIPTOR, a quien éste autorice o a sus herederos,  las sumas depositadas, junto con los rendimientos liquidados, en los siguientes casos: a) A solicitud del afiliado, siempre y cuando haya cumplido con las condiciones pactadas en el contrato y previa suscripción del formato establecido para tal efecto y el documento de identificación. b) Por orden de autoridad competente. c) Por muerte del afiliado. En este evento se devolverá el capital más los intereses causados hasta la fecha del retiro.",
+                        "7.2. El FNA entregará al afiliado, a quien éste autorice o a sus herederos,  las sumas depositadas, sin rendimientos, en los siguientes casos: a) Cuando el contrato se termine por decisión unilateral por parte del FNA, en lo casos señalados en el numeral 6.1 del presente contrato. b). Cuando el afiliado haya incumplido las condiciones pactadas del contrato durante el plazo inicialmente pactado. c) Cuando el afiliado solicite el retiro del ahorro antes del plazo inicialmente pactado.",
+                        "7.3. El SUSCRIPTOR no podrá realizar retiros parciales de las sumas depositadas.",
+                        "7.4. El SUSCRIPTOR podrá dar por terminado unilateralmente, y en cualquier momento, el presente contrato. Cuando la terminación unilateral del contrato sea antes de su cumplimiento el FNA no reconocerá intereses remuneratorios sobre las sumas depositadas.",
+                        "7.5. El FNA realizará el pago de las sumas depositadas al titular o persona autorizada en un plazo de diez (10) días hábiles siguientes a la fecha de la solicitud.",
+                        "7.6. En caso de fallecimiento o presunción de muerte del SUSCRIPTOR el FNA entregará las sumas depositadas con sus intereses a los herederos, a solicitud de éstos y de conformidad con las disposiciones legales vigentes.",
+                        "8. PERDIDA DE LA CALIDAD DE AFILIADO POR AHORRO VOLUNTARIO",
+                        "8.1. El SUSCRIPTOR perderá la condición de afiliado a través de ahorro voluntario contractual en: a) en los casos enunciados en el numeral 6.1. b) A solicitud del afiliado, siempre y cuando haya cumplido con las condiciones pactadas en el contrato. En este caso se perderá la condición de afiliado, cuando este manifieste su intención de no prorrogar el contrato o cuando incumpla las condiciones pactadas durante la prórroga. c) Por muerte del afiliado. En este evento se devolverá el capital más los intereses causados hasta la fecha del retiro. d) Cuando el contrato se termine por decisión unilateral. e). Cuando el afiliado solicite el retiro de las sumas depositadas antes de la terminación del contrato.",
+                        "9. BENEFICIOS AFC",
+                        "9.1. En relación con los beneficios tributarios que aquí se trata, el titular del ahorro voluntario contractual que se vincule a este producto en los términos del presente reglamento y de la normatividad vigente aplicable a la materia, reconoce y acepta: a) Que los beneficios tributarios aquí previstos son de creación legal, y por tanto, su duración y alcance se encuentran sujetos a las disposiciones legales vigentes. b) Que la información que le ha suministrado al FNA en relación con los beneficios tributarios no constituye una asesoría tributaria. c) Es obligación del SUSCRIPTOR informar previa y oportunamente a su empleador o pagador, según sea el caso, el valor de las sumas que deberá consignar con destino al ahorro voluntario contractual. d) Que a través de la cuenta de ahorro voluntario contractual sólo podrán efectuarse pagos de las cuotas periódicas de amortización del crédito que le hubiere otorgado el FNA, para realizar prepagos de éste o para la cancelación del precio de compraventa del respectivo inmueble. Salvo que el afiliado expresare una intención diferente.",
+                        "10. OTRAS DISPOSICIONES",
+                        "10.1. El SUSCRIPTOR declara y acepta que toda la información contenida en este documento (anverso y reverso) constituye el contrato de ahorro voluntario Contractual suscrito con el FNA.",
+                        "10.2. El SUSCRIPTOR deberá actualizar sus datos con una periodicidad mínima de un año. En caso de incumplimiento de este numeral,  será calificado como afiliado activo no aportante y deberá actualizar los datos y realizar un depósito conforme a los montos pactos en el presente contrato  para que sea calificado como afiliado activo aportante."
+                    ],
+                    "widget": "modal"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Data"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-one\">1. Información personal </div> <div class=\"container-div first \"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-two\">2. Información laboral</div> <div class=\"container-div second\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-three\">3. Información Financiera (Pesos Colombianos)</div> <div class=\"container-div third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-four\">4. Si es apoderado</div> <div class=\"container-div fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "div",
+                "title": "<div class=\"title-form-six\">5. Declaraciones y autorizaciones</div> <div class=\"container-div sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+                "display": "flex",
+                "flex-flow": "row wrap",
+                "htmlClass": "panel align-inputs"
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Continuar",
+                        "flex": "3 3 100%",
+                        "disabled": "true",
+                        "htmlClass": "btn-submit"
+                    }
+                ]
+            }
+        ],
+        "data": {}
+    }
+}

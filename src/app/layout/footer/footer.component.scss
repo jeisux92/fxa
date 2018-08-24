@@ -1,0 +1,66 @@
+@import '~assets/colors-palettes';
+.footer {
+    color: $text-color;
+    margin-top: 80px;
+    height: 210px;
+    .container-flex {
+        width: 80%;
+        margin: 0 auto;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            .contact {
+                width: 20%;
+                min-width: 300px;
+                padding-bottom: 4%;
+            }
+            .banner {
+                width: 10%;
+                min-width: 300px;
+                padding-bottom: 4%;
+            }
+            div:last-child {
+                width: 10%;
+                min-width: 150px;
+                padding-bottom: 4%;
+            }
+        }
+    }
+    h3 {
+        font-size: 17px;
+    }
+    p {
+        font-size: 0.8em;
+        margin-top: 0;
+    }
+    img {
+        display: block;
+    }
+    .logo-vigilado {
+        width: 293px;
+    }
+    ul {
+        margin-top: 0;
+    }
+    li {
+        list-style: none;
+        display: inline;
+        font-size: 0.7em;
+        padding-right: 20px;
+        a {
+            font-weight: bolder;
+            text-decoration: none !important;
+            &:visited {
+                color: $text-color;
+            }
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+    div[fxLayout=row]:nth-of-type(1) {
+        margin: 8px 0;
+    }
+}

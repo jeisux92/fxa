@@ -1,0 +1,847 @@
+{
+	"breadCrumb": 3,
+	"title": "Solicitud única de crédito persona natural",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"References": {
+					"type": "object",
+					"title": "",
+					"properties": {
+						"NamesRF": {
+							"type": "string",
+							"title": "Nombres",
+							"placeholder": "Juan David",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastNameRF": {
+							"type": "string",
+							"title": "Apellidos",
+							"placeholder": "Rodriguez Pedraza",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"NombreCompletoRF": {
+							"type": "string",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DepartmentRF": {
+							"type": "string",
+							"title": "Departamento",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"isParent": true,
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+						},
+						"CityRF": {
+							"type": "string",
+							"title": "Ciudad ",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"dependent": "DepartmentRF",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+						},
+						"EmailRF": {
+							"type": "string",
+							"title": "Correo electrónico",
+							"placeholder": "correo1@email.com",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 50,
+							"pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"validateEqual": "",
+								"pattern": "Direccion de correo incorrecta"
+							}
+						},
+						"TypePhoneRF": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"default": "C",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								}
+							]
+						},
+						"CellPhoneRF": {
+							"type": "string",
+							"title": "Teléfono",
+							"placeholder": "7777777",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"NamesRP": {
+							"type": "string",
+							"title": "Nombres",
+							"placeholder": "Ana Maria",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastNameRP": {
+							"type": "string",
+							"title": "Apellidos",
+							"placeholder": "Calderón",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"NombreCompletoRP": {
+							"type": "string",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DepartmentRP": {
+							"type": "string",
+							"title": "Departamento",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"isParent": true,
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+						},
+						"CityRP": {
+							"type": "string",
+							"title": "Ciudad ",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"dependent": "DepartmentRP",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+						},
+						"EmailRP": {
+							"type": "string",
+							"title": "Correo electrónico",
+							"placeholder": "correo2@email.com",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 50,
+							"pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"validateEqual": "",
+								"pattern": "Direccion de correo incorrecta"
+							}
+						},
+						"TypePhoneRP": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"placeholder": "Celular",
+							"default": "C",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								}
+							]
+						},
+						"CellPhoneRP": {
+							"type": "string",
+							"title": "Teléfono",
+							"placeholder": "3213213214",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"NamesRC": {
+							"type": "string",
+							"title": "Nombres",
+							"placeholder": "Diana Marcela",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastNameRC": {
+							"type": "string",
+							"title": "Apellidos",
+							"placeholder": "Martinez Peña",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"NombreCompletoRC": {
+							"type": "string",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DepartmentRC": {
+							"type": "string",
+							"title": "Departamento",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"isParent": true,
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+						},
+						"CityRC": {
+							"type": "string",
+							"title": "Ciudad ",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"dependent": "DepartmentRC",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+						},
+						"EmailRC": {
+							"type": "string",
+							"title": "Correo electrónico",
+							"placeholder": "correo3@email.com",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 50,
+							"pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"validateEqual": "",
+								"pattern": "Direccion de correo incorrecta"
+							}
+						},
+						"TypePhoneRC": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"placeholder": "Celular",
+							"default": "C",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								}
+							]
+						},
+						"CellPhoneRC": {
+							"type": "string",
+							"title": "Teléfono",
+							"placeholder": "3213213214",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"NamesDF": {
+							"type": "string",
+							"title": "Nombres",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastNameDF": {
+							"type": "string",
+							"title": "Apellidos",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DepartmentDF": {
+							"type": "string",
+							"title": "Departamento",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"isParent": true,
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+						},
+						"CityDF": {
+							"type": "string",
+							"title": "Ciudad ",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"dependent": "DepartmentDF",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+						},
+						"TypePhoneDF": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								}
+							]
+						},
+						"CellPhoneDF": {
+							"type": "string",
+							"title": "Teléfono",
+							"placeholder": "3213213214",
+							"floatPlaceholder": "always",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"NamesDP": {
+							"type": "string",
+							"title": "Nombres",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastNameDP": {
+							"type": "string",
+							"title": "Apellidos",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DepartmentDP": {
+							"type": "string",
+							"title": "Departamento",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"isParent": true,
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+						},
+						"CityDP": {
+							"type": "string",
+							"title": "Ciudad ",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"dependent": "DepartmentDP",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+						},
+						"TypePhoneDP": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								}
+							]
+						},
+						"CellPhoneDP": {
+							"type": "string",
+							"title": "Teléfono",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"NamesDC": {
+							"type": "string",
+							"title": "Nombres",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastNameDC": {
+							"type": "string",
+							"title": "Apellidos",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"DepartmentDC": {
+							"type": "string",
+							"title": "Departamento",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"isParent": true,
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+						},
+						"CityDC": {
+							"type": "string",
+							"title": "Ciudad ",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"dependent": "DepartmentDC",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+						},
+						"TypePhoneDC": {
+							"type": "string",
+							"title": "Tipo de teléfono",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Celular",
+									"const": "C"
+								},
+								{
+									"title": "Fijo",
+									"const": "O"
+								}
+							]
+						},
+						"CellPhoneDC": {
+							"type": "string",
+							"title": "Teléfono",
+							"minLength": 7,
+							"maxLength": 10,
+							"pattern": "^[0-9\\-\\+\\s\\(\\)]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						}
+					},
+					"required": [
+						"NamesRF",
+						"LastNameRF",
+						"CityRF",
+						"DepartmentRF",
+						"TypePhoneRF",
+						"EmailRF",
+						"CellPhoneRF",
+						"NamesRP",
+						"LastNameRP",
+						"CityRP",
+						"DepartmentRP",
+						"TypePhoneRP",
+						"CellPhoneRP",
+						"EmailRP",
+						"NamesRC",
+						"LastNameRC",
+						"CityRC",
+						"DepartmentRC",
+						"TypePhoneRC",
+						"CellPhoneRC",
+						"EmailRC"
+					]
+				}
+			},
+			"required": [
+				"References"
+			]
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "1. Información personal <div class=\"container-div-second first\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "3. Referencias <div class=\"container-div-second third \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<label class='subtitle'> Familiar </label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "References.NamesRF",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.LastNameRF",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.DepartmentRF",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.CityRF",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "References.TypePhoneRF",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.CellPhoneRF",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.EmailRF",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "help",
+						"helpvalue": "<label class='subtitle'> Personal </label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "References.NamesRP",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.LastNameRP",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.DepartmentRP",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.CityRP",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "References.TypePhoneRP",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.CellPhoneRP",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.EmailRP",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "help",
+						"helpvalue": "<label class='subtitle'> Comercial </label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "References.NamesRC",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.LastNameRC",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.DepartmentRC",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.CityRC",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "References.TypePhoneRC",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.CellPhoneRC",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "References.EmailRC",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "actions",
+						"htmlClass": "buttons",
+						"items": [
+							{
+								"type": "submit",
+								"style": "btn-info",
+								"title": "Guardar",
+								"flex": "3 3 100%",
+								"htmlClass": "btn-submit"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "div",
+				"title": "4. Información financiera <div class=\"container-div-second fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "5. Datos de la solicitud <div class=\"container-div-second fifth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "7. Autorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"flex": "3 3 100%",
+						"disabled": "true",
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {}
+	}
+}

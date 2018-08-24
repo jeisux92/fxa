@@ -1,0 +1,43 @@
+{
+    "breadCrumb": 2,
+    "title": "Validación de referencias vía correo electrónico",
+    "subtitle": " Para continuar, las referencias deben ingresa al correo electrónico y seguir los pasos que se le indiquen.",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+           
+            "Las referencias deben Prepárase para recibir un correo de validación después de esta sección."
+        ]
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "RequestCode": {
+                    "type": "object",
+                    "message": "El proceso queda pendiente hasta que se validen las referencias",
+                    "widget": "info-validation"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "RequestCode"
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "condition": "false",
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "SALIR",
+                        "flex": "3 3 100%",
+                        "htmlClass": "btn-submit"
+                    }
+                ]
+            }
+        ]
+    }
+}

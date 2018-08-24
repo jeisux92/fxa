@@ -1,0 +1,52 @@
+{
+    "breadCrumb": 3,
+    "title": "Afiliación exitosa",
+    "subtitle": "Para continuar con el proceso debes hacer clic en <strong>Continuar</strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estas son preguntas secretas de las cuales solo tú sabes la respuesta.",
+            "Las 4 respuestas deben ser correctas para poder continuar la solicitud.",
+            "No puedes escoger más de una respuesta por pregunta.",
+            "El botón de Validar solo se activará cuando las cuatro preguntas sean respondidas."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "¡Buenas noticias,",
+                    "subtitle": "eres viable para el crédito!",
+                    "widget": "result-message"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": false,
+                "items": [
+                    {
+                        "type": "Para continuar debes diligenciar el formulario de crédito que se te presentará a continuación."
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Continuar"
+                    }
+                ]
+            }
+        ]
+    }
+}

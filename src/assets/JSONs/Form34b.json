@@ -1,0 +1,43 @@
+{
+    "breadCrumb": 3,
+    "title": "",
+    "subtitle": "",
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "El proceso de afilicación ha fallado.",
+                    "widget": "rejection-validation"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": true,
+                "items": [
+                    {
+                        "type": "Por favor dirigase a uno de los puntos de atención del FNA más cercano y presente la solicitud."
+                    }
+                   
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+						"style": "btn-info",
+						"condition": false                        
+                    }
+                ]
+            }
+        ]
+    }
+}

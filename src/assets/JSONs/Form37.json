@@ -1,0 +1,89 @@
+{
+    "breadCrumb": 5,
+    "title": "Resumen de solicitud",
+    "subtitle": "En esta sección puedes ver el resumen de tu solicitud",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Debes tener tu teléfono celular a la mano para poder ingresar el código.",
+            "El código de validación es único y secreto, no lo compartas.",
+            "Si el código no llega, haz clic en reenviar código.",
+            "Prepárate para recibir un correo de validación después de esta sección."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Card": {
+                    "url": "https://www.fna.gov.co/",
+                    "widget": "summary",
+                    "steps": [
+                        "Validación de referencias",
+                        "Validación de identidiad del codeudor",
+                        "Firma del pagaré por pare del codeudor"
+                    ],
+                    "properties": {
+                        "summary": {
+                            "type": "object",
+                            "properties": {
+                                "Name": {
+                                    "type": "string"
+                                },
+                                "TypeDocument": {
+                                    "type": "string"
+                                },
+                                "Document": {
+                                    "type": "string"
+                                },
+                                "CellPhone": {
+                                    "type": "string"
+                                },
+                                "Mount": {
+                                    "type": "string"
+                                },
+                                "Procedure": {
+                                    "type": "string"
+                                },
+                                "DateOfExpedition": {
+                                    "type": "string",
+                                    "format": "date"
+                                },
+                                "PlaceOfExpedition": {
+                                    "type": "string"
+                                },
+                                "Email": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Card"
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "condition": false,
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "condition": false
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "Procedure": "Crédito de estudio"
+        }
+    }
+}

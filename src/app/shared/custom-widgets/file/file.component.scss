@@ -1,0 +1,95 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+input[type="file"] {
+    display: none
+}
+
+span {
+    display: block;
+    pointer-events: none
+}
+
+.container {
+    margin: 0 auto;
+    width: 50%;
+    background-color: $info-background-color;
+    padding: 0;
+    color: $text-color;
+    margin-top: 0;
+    >span {
+        color: $primary-color;
+    }
+    .container-title {
+        text-align: center;
+        color: $primary-color;
+        padding: 22px 0;
+        .error {
+            color: $error-color;
+            span:first-child {
+                font-weight: bolder
+            }
+            button {
+                background-color: $error-color;
+                max-width: 95%;
+                label {
+                    color: $title-color !important;
+                }
+                label:last-child {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    display: block;
+                }
+            }
+        }
+        .success {
+            color: $bar-pass-color;
+            span:first-child {
+                font-weight: bolder
+            }
+            button {
+                background-color: $bar-pass-color;
+                max-width: 95%;
+                label {
+                    color: $title-color !important;
+                }
+                label:last-child {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    display: block;
+                }
+            }
+        }
+        button {
+            font-size: 14px;
+            height: 32px;
+        }
+        .file-button {
+            margin-top: 22px;
+            label.x {
+                right: 6px;
+                font-size: 15px;
+                top: 1px;
+                position: absolute;
+                width: 10px;
+                line-height: 10px;
+            }
+        }
+    }
+    .container-inputs {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 22px;
+        >button:first-child {
+            background-color: $secondary-color;
+        }
+    }
+}

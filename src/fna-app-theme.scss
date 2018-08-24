@@ -1,0 +1,15 @@
+$mat-fondo-nacional: ( 
+    100: #7994ff, 
+    500: #3c67de, 
+    700: #003dab, 
+    contrast: ( 
+        100: #FFF, 
+        500: #FFF, 
+        700: #FFF));
+@import '~@angular/material/theming';
+@include mat-core();
+$custom-theme-primary: mat-palette($mat-fondo-nacional);
+$custom-theme-accent: mat-palette($mat-fondo-nacional);
+$custom-theme-warn: mat-palette($mat-red);
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+@include angular-material-theme($custom-theme);

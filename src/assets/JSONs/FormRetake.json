@@ -1,0 +1,29 @@
+{
+	"breadCrumb": 1,
+	"title": "Retomar solicitud de crédito",
+	"subtitle": "Ingresa tus datos para retomar la solicitud",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Retomarás la solicitud desde el punto en el que la dejaste la última vez.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"Tu código de solicitud fue enviado a tu correo la última vez que cerraste sesión.",
+			"Tienes 60 días para culminar tu solicitud."
+		]
+	},
+	"DocumentTypes": [
+		{
+			"id": 1,
+			"title": "Cédula de ciudadanía"
+		},
+		{
+			"id": 2,
+			"title": "Cédula de extranjería"
+		},
+		{
+			"id": 3,
+			"title": "Pasaporte"
+		}
+	],
+	"tooltip": "Este es el código que recibiste por correo electrónico al iniciar tu solicitud. Es necesario para retomar tu proceso de crédito"
+}

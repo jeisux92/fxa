@@ -1,0 +1,10 @@
+<mat-card>
+  <json-schema-form  *ngIf=form [widgets]="widgets" 
+                    [form]="form" 
+                    #forms 
+                    [loadExternalAssets]="true"
+                    (onSubmit)="submit($event)" 
+                    [(model)]="data">
+
+  </json-schema-form>
+</mat-card> 

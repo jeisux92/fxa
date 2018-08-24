@@ -1,0 +1,36 @@
+<div fxLayout="row" fxlayout.sm="column" fxlayout.xs="column" class="container">
+  <div fxFlex="30" fxFlexOffset="10">
+    <div>
+      <a routerLink="" target="_self">
+        <img src="assets/fna.png" alt="Fondo Nacional">
+      </a>
+    </div>
+  </div>
+  <div fxFlexOffset="30" fxFlexOffset.xs="0">
+    <div class="banners">
+      <a href="">
+        <img src="assets/gov.png" alt="Gobierno">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div fxLayout.md="row" fxLayout.sm="column" fxLayout.xs="column" class="blue-bar" fxflex>
+  <div fxFlex=60 class="margin">
+    <div class="title-page">
+      Solicitud de crédito educativo
+    </div>
+  </div>
+  <div fxFlex="21"  *ngIf="info" fxLayout.sm="column" fxLayout.xs="column" class="blue-bar" >
+    <div class="info" fxFlex=50>
+      <h3 [textContent]="'Bienvenido, ' + info.nameUser"></h3>
+      <p [textContent]="'N° de Solicitud: ' + info.single"></p>
+    </div>
+    <div class="button" fxFlex=50>
+      <div fxLayoutAlign="end none" fxLayout="row" class="button-left">
+
+        <button mat-raised-button color=accent (click)="closeSession()">Cerrar sesión</button>
+      </div>
+    </div>
+  </div>
+</div>

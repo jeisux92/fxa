@@ -1,0 +1,49 @@
+{
+    "breadCrumb": 2,
+    "title": "Validación vía correo electrónico",
+    "subtitle": "Ingresa a tu correo electrónico y sigue los pasos que se te indican para realizar la validación. <strong></strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Debes tener tu teléfono celular a la mano para poder ingresar el código.",
+            "El código de validación es único y secreto, no lo compartas.",
+            "Si el código no llega, haz clic en reenviar código.",
+            "Prepárate para recibir un correo de validación depués de esta sección."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "Ingresa a tu correo electrónico y sigue los pasos que se te indican para poder continuar con tu solicitud.",
+                    "subtitle": "",
+                    "widget": "result-message",
+                    "exit": true,
+                    "url": "https://www.fna.gov.co/",
+                    "buttonExit": "Salir"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": true
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "condition": false
+                    }
+                ]
+            }
+        ]
+    }
+}

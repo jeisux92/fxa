@@ -1,0 +1,156 @@
+{
+    "breadCrumb": 5,
+    "title": "Validación de código SMS - Firma de pagaré",
+    "subtitle": "Para firmar el pagaré de crédito, ingresa el código único que hemos enviado a tu celular",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Recuerda tener tu celular a la mano para validar el código.",
+            "Esta firma solo debe ser realizada por ti, por seguridad.",
+            "Recuerda que la firma digital equivale a una firma física.",
+            "Prepárate para recibir un código de validación después de esta sección."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformationPN.FullName",
+        "single": "Simpleid"
+	},
+    "form": {
+        "schema": {
+            "type": "object",
+            "htmlClass": "transform-number",
+            "properties": {
+                "RequestCode": {
+                    "type": "object",
+                    "title": "Código de seguridad",
+                    "properties": {
+                        "Code1": {
+                            "type": "string",
+                            "minimum": 1,
+                            "maximum": 1,
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minimum": "Este campo debe tener mas de 0",
+                                "maximum": "Este campo debe tener menos de 9",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "Code2": {
+                            "type": "string",
+                            "minimum": 1,
+                            "maximum": 1,
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minimum": "Este campo debe tener mas de 0",
+                                "maximum": "Este campo debe tener menos de 9",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "Code3": {
+                            "type": "string",
+                            "minimum": 1,
+                            "maximum": 1,
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minimum": "Este campo debe tener mas de 0",
+                                "maximum": "Este campo debe tener menos de 9",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "Code4": {
+                            "type": "string",
+                            "minimum": 1,
+                            "maximum": 1,
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minimum": "Este campo debe tener mas de 0",
+                                "maximum": "Este campo debe tener menos de 9",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        }
+                    },
+                    "required": [
+                        "Code1",
+                        "Code2",
+                        "Code3",
+                        "Code4"
+                    ]
+                }
+            },
+            "required": [
+                "RequestCode"
+            ]
+        },
+        "layout": [
+            {
+                "widget": "message",
+                "message": "<section>Código de seguridad</section>",
+                "labelHtmlClass": "title-form"
+            },
+            {
+                "type": "flex",
+                "flex-flow": "row",
+                "htmlClass": "transform-number center-content",
+                "items": [
+                    {
+                        "htmlClass": "error",
+                        "key": "RequestCode.Code1",
+                        "flex": "3 3 25%"
+                    },
+                    {
+                        "htmlClass": "error",
+                        "key": "RequestCode.Code2",
+                        "flex": "3 3 25%"
+                    },
+                    {
+                        "htmlClass": "error",
+                        "key": "RequestCode.Code3",
+                        "flex": "3 3 25%"
+                    },
+                    {
+                        "htmlClass": "error",
+                        "key": "RequestCode.Code4",
+                        "flex": "3 3 25%"
+                    }
+                ]
+            },
+            {
+                "type": "flex",
+                "flex-flow": "row",
+                "htmlClass": "center-content",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Reenviar código"
+                    },
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Validar código"
+                    }
+                ]
+            }
+        ]
+    }
+}

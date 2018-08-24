@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Formulario 17</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+</head>
+
+<body yahoo style="font-family: 'Open Sans', sans-serif;margin: 0;padding: 0;min-width: 100%!important;">
+    <!--[if (gte mso 9)|(IE)]>
+        <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <![endif]-->
+    <table class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse;width: 100%;max-width: 600px;">
+        <tr class="header">
+            <td>
+                <div class="header-div" style="height: 243px;width: 100%;background: url(http://via.placeholder.com/600x242);background-repeat: no-repeat;">
+                    <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="header-table" style="table-layout: fixed;border-collapse: collapse;height: 244px;width: 100%;border-top-left-radius: 21px;border-top-right-radius: 21px;">
+                        <tr>
+                            <td height="100%" style="padding-top: 84px;">
+                                <table width="90%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#f9f9f9" style="padding: 6px 0 0 0;height: 159px;border-collapse: collapse;border-top-left-radius: 21px;border-top-right-radius: 21px;">
+                                    <tr>
+                                        <td height="100%" style="padding: 0 0 0 0;height: 124px;" align="center" class="img-container">
+                                            <img src="http://cdn.banlinea.com/banlinea-products/Newsletters/FnaConnect/CreditoEducativo/fna.png" alt="">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="body">
+                <table width="90%" align="center" border="0" cellpadding="0" cellspacing="0" bgcolor="#f9f9f9" style="border-collapse: collapse;border-bottom-left-radius: 21px;border-bottom-right-radius: 21px;box-shadow: 0px 6px 11px #bba5a5;">
+                    <tr>
+                        <td style="padding: 15px 0 15px 0;">
+                            <table width="80%" align="center" border="0" cellpadding="0" cellspacing="0" class="information" style="border-collapse: collapse;">
+                                <tr>
+                                    <td style="vertical-align: baseline;">
+                                        <div class="title" style="color: #273A85;">
+                                            Bienvenido:
+                                            <strong> {{nombre}}</strong>
+                                        </div>
+                                        <div class="color-text" style="color: #9B9B9B;">
+                                            <strong> {{tipoDoc}}:</strong> {{numDoc}}
+                                        </div>
+                                        <div class="color-text" style="color: #9B9B9B;">
+                                            <strong> Trámite: </strong>{{tramite}}
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align: baseline;">
+                                        <div class="title" style="color: #273A85;">
+                                            Valor prestamo:
+                                        </div>
+                                        <span class="color-text" style="color: #9B9B9B;"> ${{valor}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 15px;vertical-align: baseline;">
+                                        <div class="title" style="color: #273A85;">
+                                            Fecha de expedición del documento:
+                                        </div>
+                                        <div class="colortext"> {{fechaExpedicion}}</div>
+                                    </td>
+                                    <td style="vertical-align: baseline;">
+                                        <div class="title" style="color: #273A85;"> Número celular:</div>
+                                        <div class="color-text" style="color: #9B9B9B;">
+                                            {{numCelular}}
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-top: 15px;vertical-align: baseline;">
+                                        <div class="title" style="color: #273A85;">
+                                            Lugar de expedición del documento:
+                                        </div>
+                                        <div class="colortext"> {{lugarExpedicion}}</div>
+                                    </td>
+                                    <td style="vertical-align: baseline;">
+                                        <div class="title" style="color: #273A85;">Correo electrónico:</div>
+                                        <div class="color-text" style="color: #9B9B9B;">
+                                            {{email}}
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="vertical-align: baseline;">
+                                        <hr>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 0 20px 0;">
+                            <table width="80%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                                <tr>
+                                    <td style="padding: 0 0 0 0;padding-top: 5px;" class="name-container">
+                                        <h3 style="color: #273A85;">¡Gracias por confiar en el FNA!</h3>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="color: #9B9B9B;">Ya te falta poco para terminar. Cumpliste con tu parte en el proceso de solicitud,
+                                            solo faltan los siguientes pasos:</p>
+                                        <ul style="padding-left: 1em;">
+
+                                            <li style="color: #9B9B9B;">{{pasosFaltantes}}</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p class="subtitle" style="color: #273A85;">Cuando se cumpla cada uno de estos pasos, te llegará un correo electrónico con los
+                                            detalles de cada uno.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+            <td class="footer">
+                <table width="80%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                    <tr>
+                        <td height="100%" style="padding: 5px 20px 20px 0;">
+                            <table width="90%" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                                <tr>
+                                    <td style="padding-top: 15px;">
+                                        <p style="color: #9B9B9B;font-size: 0.6em;">
+                                            FNA 2018 &copy; Marca registrada por FNA.
+                                            <br> Todos los derechos reservados
+                                            <br> Bogotá, Colombia
+                                        </p>
+
+                                    </td>
+                                    <td align="right" style="padding-top: 15px">
+                                        <img src="http://cdn.banlinea.com/banlinea-products/Newsletters/FnaConnect/CreditoEducativo/fna-footer.png" style="width: 50px;height: 44px;">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!--[if (gte mso 9)|(IE)]>
+                </td>
+            </tr>
+        </table>
+        <![endif]-->
+</body>
+
+</html>

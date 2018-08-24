@@ -1,0 +1,9 @@
+<mat-form-field floatLabel="always" class="multiline">
+    <mat-label style="font-size: 18px;">Código de solicitud dfgdfgd dfgdf g
+    </mat-label>
+    <input matInput placeholder="XDFG" />
+    <mat-icon matSuffix fontSet="fa" fontIcon="fa-question-circle" color=red (click)="showMe($event)"></mat-icon>
+    <div class="message" unselectable="on" [ngStyle]="{'display':showMesssage?'block':'none'}" (mouseleave)="showMesssage && showMe($event)"
+      (click)="showMesssage &&  showMe($event)">Here there is a text kjanskjdnajdsn kjnaskjdnads kjnajdakjdsn kjnsakjdn akjsndkajnds kjnaskjdnakjds kjnaskjdnakjds kjnakjsndkjands
+      kjnaksjndkjad kjnaskjnaknd kjnasd kjnaskjdnakjsdns s s sakjsndkjand</div>
+  </mat-form-field>

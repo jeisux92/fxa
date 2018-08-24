@@ -1,0 +1,33 @@
+<form [formGroup]=modelForm (ngSubmit)="submit()">
+  <div class="container-inputs">
+    <mat-form-field *ngIf=documentType floatLabel="always">
+      <mat-label [textContent]="'Tipo de documento'"></mat-label>
+      <mat-select formControlName=documentType placeholder="Tipo de documento" required placeholder="Cédula de ciudadanía">
+        <mat-option *ngFor="let type of documentType" [value]="type.id">{{type.title}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="always" class="double-line">
+      <mat-label style="height: 30px;">Número de documento de identidad
+      </mat-label>
+      <input matInput placeholder="123456789" formControlName=documentNumber placeholder="1111111111" required type=string pattern="[0-9]*"
+      />
+    </mat-form-field>
+
+
+    <mat-form-field floatLabel="always">
+      <mat-label style="height: 30px;">Código de solicitud
+      </mat-label>
+      <input matInput placeholder="123456789" formControlName=requestCode required maxlength="6" />
+      <mat-icon matSuffix fontSet="fa" fontIcon="fa-question-circle" color=red (click)="showMe($event)"></mat-icon>
+
+      <div class="message" unselectable="on" [ngStyle]="{'display':showMesssage?'block':'none'}" (mouseleave)="showMesssage && showMe($event)"
+        (click)="showMesssage &&  showMe($event)" [innerText]="tooltip"></div>
+    </mat-form-field>
+
+  </div>
+  <div class="container-buttons">
+    <button mat-raised-button color=primary (click)="back()" type="button">Volver</button>
+    <button mat-raised-button color=primary type="submit" [disabled]=!modelForm.valid>Retomar solicitud</button>
+  </div>
+</form>

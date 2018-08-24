@@ -1,0 +1,13 @@
+@import '~assets/colors-palettes';
+mat-form-field {
+    width: 100%;
+    font-family: SourceSansPro-Bold, 'Open Sans', sans-serif;
+    line-height: 1.325;
+    span {
+        color: $error-color;
+    }
+}
+
+span[matPrefix] {
+    color: black !important;
+}

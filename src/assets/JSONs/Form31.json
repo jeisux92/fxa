@@ -1,0 +1,56 @@
+{
+    "breadCrumb": 3,
+    "title": "Documento de identidad",
+    "subtitle": "Para continuar con el proceso debes adjuntar tu documento de identidad al 150%",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "El documento de identidad debe estar escaneado por ambos lados.",
+            "Los datos del documento de identidad deben ser completamente legibles.",
+            "La plataforma solo acepta tres tipos de formato: .png, .jpg y .pdf",
+            "El archivo que adjuntes no puede pesar más de 2 MB."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.PersonalInformation.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "File1": {
+                    "title": "Seleccionar archivo",
+                    "widget": "file",
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "content": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "File1"
+            ]
+        },
+        "layout": [
+            {
+                "key": "File1",
+                "htmlClass": "btn-upload"
+            },
+            {
+                "type": "actions",
+                "items": [
+                    {
+                        "type": "submit",
+                        "condition": true
+                    }
+                ]
+            }
+        ]
+    }
+}

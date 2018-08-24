@@ -1,0 +1,134 @@
+{
+	"breadCrumb": 2,
+	"title": "Preguntas de seguridad",
+	"subtitle": "Para continuar con el proceso debes responder las siguientes preguntas de seguridad.",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Estas son preguntas secretas de las cuales solo tú sabes la respuesta.",
+			"Las 4 respuestas deben ser correctas para poder continuar la solicitud.",
+			"No puedes escoger más de una respuesta por pregunta.",
+			"El botón de Validar solo se activará cuando las cuatro preguntas sean respondidas."
+		]
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"answers": {
+					"type": "object",
+					"title": "",
+					"properties": {
+						"Question01": {
+							"type": "object",
+							"widget": "confront",
+							"properties": {
+								"optionId": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"questionId": {
+									"type": "string"
+								}
+							}
+						},
+						"Question02": {
+							"type": "object",
+							"widget": "confront",
+							"properties": {
+								"optionId": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"questionId": {
+									"type": "string"
+								}
+							}
+						},
+						"Question03": {
+							"type": "object",
+							"widget": "confront",
+							"properties": {
+								"optionId": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"questionId": {
+									"type": "string"
+								}
+							}
+						},
+						"Question04": {
+							"type": "object",
+							"widget": "confront",
+							"properties": {
+								"optionId": {
+									"type": "string"
+								},
+								"title": {
+									"type": "string"
+								},
+								"questionId": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"layout": [
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"items": [
+					{
+						"key": "answers.Question01",
+						"flex": "3 3 40%"
+					},
+					{
+						"flex": "3 3 10%"
+					},
+					{
+						"key": "answers.Question02",
+						"flex": "3 3 40%"
+					}
+				]
+			},
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"items": [
+					{
+						"key": "answers.Question03",
+						"flex": "3 3 40%"
+					},
+					{
+						"flex": "3 3 10%"
+					},
+					{
+						"key": "answers.Question04",
+						"flex": "3 3 40%"
+					}
+				]
+			},
+			{
+				"type": "actions",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Validar"
+					}
+				]
+			}
+		],
+		"data": {}
+	}
+}

@@ -1,0 +1,302 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+.panel {
+    >label {
+        height: 45px;
+        display: block;
+        color: $primary-color !important;
+        .title-form-one {
+            width: 23%;
+            display: inline-block;
+        }
+        .title-form-two {
+            width: 23%;
+            display: inline-block;
+        }
+        .title-form-three {
+            width: 44%;
+            display: inline-block;
+        }
+        .title-form-four {
+            width: 18%;
+            display: inline-block;
+        }
+        .title-form-five {
+            width: 47%;
+            display: inline-block;
+        }
+        .title-form-six {
+            width: 31%;
+            display: inline-block;
+        }
+    }
+    .content {
+        color: $text-color;
+        font-weight: normal;
+        strong {
+            max-width: 364px !important;
+            color: $text-color !important;
+        }
+    }
+    .title-content {
+        flex-layout-root-widget {
+            justify-content: space-between !important;
+            .form-flex-item {
+                max-width: 340px !important;
+            }
+        }
+    }
+    .vertical-buttons mat-radio-group {
+        flex-direction: column !important;
+        mat-radio-button {
+            padding-top: 7px;
+            margin-left: 0 !important;
+        }
+    }
+    .mat-radio-label-content {
+        padding-left: 0;
+    }
+    mat-radio-group {
+        flex-wrap: wrap;
+        padding-right: 50px;
+        justify-content: space-between;
+    }
+    &.active>label {
+        color: $bar-pass-color !important;
+    }
+    .subtitle {
+        color: $primary-color !important;
+        label {
+            font-weight: normal;
+            color: $primary-color !important;
+        }
+        strong {
+            color: $primary-color !important;
+        }
+    }
+    .last-triple-size flex-layout-root-widget .form-flex-item:last-child {
+        max-width: 615px !important;
+    }
+}
+
+.split-two {
+    .form-flex-item {
+        max-width: 50%;
+    }
+    flex-layout-root-widget {
+        align-items: center;
+    }
+}
+
+.align-inputs>flex-layout-root-widget {
+    display: block !important;
+}
+
+.align-inputs div.form-flex-item {
+    display: inline !important;
+}
+
+.container-div {
+    height: 14px;
+    float: right;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    .icon {
+        border-radius: 50%;
+        border: 2px solid $primary-color;
+        width: 15px;
+        margin-left: 12px;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 15px;
+        color: $primary-color;
+        &.opened {
+            font-size: inherit;
+        }
+    }
+    .bar {
+        width: 96%;
+        height: 3px;
+        background-color: $primary-color;
+        display: flex;
+        .bar {
+            color: $primary-color;
+        }
+    }
+    &.first {
+        width: 77%;
+    }
+    &.second {
+        width: 77%;
+    }
+    &.third {
+        width: 56%;
+    }
+    &.fourth {
+        width: 82%;
+    }
+    &.fifth {
+        width: 53%;
+    }
+    &.sixth {
+        width: 69%;
+    }
+}
+
+.container-div-second {
+    height: 14px;
+    float: right;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    .icon {
+        border-radius: 50%;
+        border: 2px solid $primary-color;
+        width: 15px;
+        margin-left: 12px;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 15px;
+        color: $primary-color;
+        &.opened {
+            font-size: inherit;
+        }
+    }
+    .bar {
+        width: 96%;
+        height: 3px;
+        background-color: $primary-color;
+        display: flex;
+        .bar {
+            color: $primary-color;
+        }
+    }
+    &.first {
+        width: 81%;
+    }
+    &.second {
+        width: 89%;
+    }
+    &.third {
+        width: 87%;
+    }
+    &.fourth {
+        width: 78%;
+    }
+    &.fifth {
+        width: 81%;
+    }
+    &.sixth {
+        width: 59%;
+    }
+    &.seventh {
+        width: 55%;
+    }
+}
+
+.active {
+    .icon {
+        border: 2px solid $bar-pass-color;
+        color: $bar-pass-color;
+    }
+    .bar {
+        background-color: $bar-pass-color;
+    }
+}
+
+.subtitle-form {
+    color: $primary-color;
+    font-weight: bolder;
+}
+
+mat-card {
+    max-width: 40em;
+    margin: 2em auto;
+}
+
+mat-hint {
+    color: $text-color !important;
+}
+
+.mat-radio-checked .mat-radio-inner-circle {
+    transform: scale(1) !important;
+}
+
+.mat-radio-outer-circle,
+.mat-radio-inner-circle {
+    height: 14px !important;
+    width: 14px !important;
+}
+
+.radio-button-reverse {
+    &.separated {
+        mat-radio-button {
+            margin-left: 18px !important;
+        }
+    }
+    mat-radio-button:first-child {
+        margin-left: 2px !important;
+    }
+}
+
+material-button-widget {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+}
+
+.mat-radio-ripple {
+    height: 46px !important;
+    width: 46px !important;
+}
+
+.mat-form-field-label {
+    top: 1.2em !important;
+    height: 3em !important;
+    white-space: pre-line !important;
+    mat-label {
+        font-size: large;
+        font-weight: bolder !important;
+    }
+}
+
+.mat-form-field-hide-placeholder {
+    mat-label {
+        font-size: inherit;
+        font-weight: normal;
+    }
+}
+
+material-textarea-widget .mat-form-field-label {
+    font-weight: bolder !important;
+    font-size: large;
+}
+
+material-radios-widget div:first-child div:first-child label {
+    font-weight: bolder;
+    color: $title-input-color;
+}
+
+.double-line {
+    .mat-form-field-label-wrapper {
+        top: -2.1em;
+        label {
+            height: 3.3em !important;
+        }
+    }
+}
+
+.datepicker-widget {
+    .double-line {
+        .mat-form-field-label-wrapper {
+            top: -2em !important;
+            label {
+                height: 3.3em !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<div [formGroup]=modelForm>
+    <br>
+    <div class="transform-number">
+        <input type="text" min="0" max="9" placeholder="&#8226;" required="required" (keypress)="keyup($event)" id="0" fnFocus pattern="[0-9]*" inputmode="numeric"
+            minlength="1" maxlength="1" formControlName=requestCode1 [ngModel]="requestCode0" autocomplete="off">
+        <input type="text" min="0" max="9" placeholder="&#8226;" required="required" (keypress)="keyup($event)" id="1" fnFocus pattern="[0-9]*" inputmode="numeric"
+            minlength="1" maxlength="1" formControlName=requestCode2 [ngModel]="requestCode1" autocomplete="off">
+        <input type="text" min="0" max="9" placeholder="&#8226;" required="required" (keypress)="keyup($event)" id="2" fnFocus pattern="[0-9]*" inputmode="numeric"
+            minlength="1" maxlength="1" formControlName=requestCode3 [ngModel]="requestCode2" autocomplete="off">
+        <input type="text" min="0" max="9" placeholder="&#8226;" required="required" (keypress)="keyup($event)" id="3" fnFocus pattern="[0-9]*" inputmode="numeric"
+            minlength="1" maxlength="1" formControlName=requestCode4 [ngModel]="requestCode3" autocomplete="off">
+    </div>
+
+    <div class="button-validator">
+        <button mat-raised-button color=primary type="button"> Reenviar código </button>
+        <button mat-raised-button color=primary type="submit" [disabled]=!modelForm.valid> Validar código </button>
+    </div>
+</div>

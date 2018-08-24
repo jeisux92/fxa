@@ -1,0 +1,1395 @@
+{
+	"breadCrumb": 3,
+	"title": "Solicitud única de crédito persona natural",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"ApplicationData": {
+					"type": "object",
+					"title": "",
+					"properties": {
+						"Beneficiary": {
+							"type": "string",
+							"title": "Beneficiario del crédito",
+							"default": "0",
+							"placeholder": "Afiliado",
+							"floatPlaceholder": "always",
+							"oneOf": [
+								{
+									"title": "Afiliado",
+									"const": "0"
+								},
+								{
+									"title": "Compañero(a) Permanente ",
+									"const": "1"
+								},
+								{
+									"title": "Cónyuge",
+									"const": "2"
+								},
+								{
+									"title": "Hijo(a)",
+									"const": "3"
+								},
+								{
+									"title": "Hermano(a)",
+									"const": "4"
+								},
+								{
+									"title": "Sobrino(a)",
+									"const": "5"
+								},
+								{
+									"title": "Nieto(a)",
+									"const": "6"
+								}
+							]
+						},
+						"NameFull": {
+							"type": "string",
+							"title": "Nombres",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"Names": {
+							"type": "string",
+							"title": "Nombres",
+							"placeholder": "Juan David",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"LastName": {
+							"type": "string",
+							"title": "Apellidos",
+							"placeholder": "Ramirez Peña",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"Email": {
+							"type": "string",
+							"widget": "input-equals",
+							"title": "Correo electrónico",
+							"placeholder": "juanramirez@correo.com",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 50,
+							"pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"validateEqual": "",
+								"pattern": "Direccion de correo incorrecta"
+							}
+						},
+						"DocumentType": {
+							"type": "string",
+							"title": "Tipo de documento de identidad",
+							"htmlClass": "double-line",
+							"default": "CC",
+							"placeholder": "CEDULA DE CIUDADANIA",
+							"floatPlaceholder": "always",
+							"oneOf": [
+								{
+									"title": "CEDULA DE CIUDADANIA",
+									"const": "CC"
+								},
+								{
+									"title": "TARJETA DE IDENTIDAD",
+									"const": "TI"
+								},
+								{
+									"title": "NIT PERSONA NATURAL",
+									"const": "NIP"
+								},
+								{
+									"title": "NIT",
+									"const": "NIT"
+								},
+								{
+									"title": "CEDULA DE EXTRANJERIA",
+									"const": "CE"
+								},
+								{
+									"title": "CARNE DIPLOMATICO",
+									"const": "CD"
+								},
+								{
+									"title": "SOCIEDAD EXTRANJERA",
+									"const": "SE"
+								}
+							]
+						},
+						"DocNumber": {
+							"type": "string",
+							"title": "Número de documento de identidad",
+							"htmlClass": "double-line",
+							"minLength": 6,
+							"maxLength": 11,
+							"placeholder": "111111111",
+							"floatPlaceholder": "always",
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"CellPhone": {
+							"type": "string",
+							"title": "Número de Celular",
+							"placeholder": "3000000000",
+							"floatPlaceholder": "always",
+							"minLength": 10,
+							"maxLength": 10,
+							"pattern": "^3[\\d]{9}$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} números.",
+								"maxLength": "Debe tener máximo {{maximumLength}} números.",
+								"pattern": "Tu número de celular debe comenzar por 3 y contener solo números"
+							}
+						},
+						"EducationalEntity": {
+							"type": "string",
+							"title": "Nombre institución educativa",
+							"placeholder": "Universidad del valle",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 60,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"Headquarters": {
+							"type": "string",
+							"title": "Sede",
+							"placeholder": "Cali",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 60,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"ProgramName": {
+							"type": "string",
+							"title": "Nombre del programa",
+							"placeholder": "Ingenieria electrónica",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 70,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"PeriodNumber": {
+							"type": "string",
+							"title": "Número de periodos a financiar",
+							"htmlClass": "double-line",
+							"placeholder": "2",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 2,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 14",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"RequestedValue": {
+							"type": "string",
+							"title": "Valor solicitado",
+							"widget": "number-format",
+							"placeholder": "1.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 10,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 99999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"Location": {
+							"type": "object",
+							"title": "Lugar de utilización",
+							"properties": {
+								"Country": {
+									"type": "string",
+									"title": "Pais",
+									"placeholder": "Colombia",
+									"floatPlaceholder": "always",
+									"default": "1",
+									"oneOf": [
+										{
+											"title": "Colombia",
+											"const": "1"
+										},
+										{
+											"title": "País extranjero",
+											"const": "2"
+										}
+									]
+								},
+								"Department": {
+									"type": "string",
+									"title": "Departamento",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"isParent": true,
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=1&filter=countryId&id=1"
+								},
+								"City": {
+									"type": "string",
+									"title": "Ciudad ",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"widget": "select-url",
+									"dependent": "Department",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=2&filter=departmentId&id="
+								}
+							},
+							"dependencies": {
+								"Country": {
+									"anyOf": [
+										{
+											"properties": {
+												"Country": {
+													"enum": [
+														"1"
+													]
+												}
+											},
+											"required": [
+												"Department",
+												"City"
+											]
+										},
+										{
+											"properties": {
+												"Country": {
+													"enum": [
+														"2"
+													]
+												}
+											}
+										}
+									]
+								}
+							},
+							"required": [
+								"Country"
+							]
+						},
+						"Periodicity": {
+							"type": "string",
+							"title": "Periodicidad del programa",
+							"placeholder": "Mensual",
+							"floatPlaceholder": "always",
+							"default": "mensual",
+							"oneOf": [
+								{
+									"title": "Mensual",
+									"const": "mensual"
+								},
+								{
+									"title": "Bimestral",
+									"const": "bimestral"
+								},
+								{
+									"title": "Trimestral",
+									"const": "trimestral"
+								},
+								{
+									"title": "Cuatrimestral",
+									"const": "cuatrimestral"
+								},
+								{
+									"title": "Semestral",
+									"const": "semestral"
+								},
+								{
+									"title": "Anual",
+									"const": "anual"
+								}
+							]
+						},
+						"RequestType": {
+							"type": "string",
+							"placeholder": "Individual: Un afiliado FNA",
+							"floatPlaceholder": "always",
+							"default": "I",
+							"title": "Tipo de Solicitud",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Individual: Un afiliado FNA",
+									"const": "I"
+								},
+								{
+									"title": "Conjunta: Dos afiliador FNA",
+									"const": "C"
+								}
+							]
+						},
+						"DebtorType": {
+							"type": "string",
+							"title": " ",
+							"oneOf": [
+								{
+									"title": "casos 1 y 3",
+									"const": "D"
+								},
+								{
+									"title": "caso 2",
+									"const": "C"
+								}
+							]
+						},
+						"TypeOfTraining": {
+							"type": "string",
+							"title": "Tipo de formación",
+							"default": "B",
+							"placeholder": "Bilingüismo",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Bilingüismo",
+									"const": "B"
+								},
+								{
+									"title": "Educación Continuada",
+									"const": "E"
+								}
+							]
+						},
+						"LevelEducation": {
+							"type": "string",
+							"title": "Formación en:",
+							"placeholder": "Pregrado",
+							"default": "1",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Pregrado",
+									"const": "1"
+								},
+								{
+									"title": "Posgrado",
+									"const": "2"
+								}
+							]
+						},
+						"AcademicLevelPregrado": {
+							"type": "string",
+							"title": "Nivel académico",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Técnica Profesional",
+									"const": "0"
+								},
+								{
+									"title": "Tecnólogica",
+									"const": "1"
+								},
+								{
+									"title": "Universitaria",
+									"const": "2"
+								},
+								{
+									"title": "Especialización Técnica",
+									"const": "3"
+								},
+								{
+									"title": "Especialización Tecnológica",
+									"const": "4"
+								}
+							]
+						},
+						"AcademicLevelPosgrado": {
+							"type": "string",
+							"title": "Nivel académico",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Especialización",
+									"const": "5"
+								},
+								{
+									"title": "Maestría",
+									"const": "6"
+								},
+								{
+									"title": "Doctorado",
+									"const": "7"
+								},
+								{
+									"title": "Posdoctorado",
+									"const": "8"
+								}
+							]
+						},
+						"GradeOptions": {
+							"type": "string",
+							"title": "Opciones de grado",
+							"placeholder": "Pregrado",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"default": "1",
+							"oneOf": [
+								{
+									"title": "Pregrado",
+									"const": "1"
+								},
+								{
+									"title": "Diplomado",
+									"const": "2"
+								},
+								{
+									"title": "Pasantías",
+									"const": "3"
+								},
+								{
+									"title": "Investigación",
+									"const": "4"
+								}
+							]
+						},
+						"CreditLine": {
+							"type": "string",
+							"oneOf": [
+								{
+									"title": "Pregrado 0%",
+									"const": "PREGRAD_0"
+								},
+								{
+									"title": "Pregrado 20%",
+									"const": "PREG_20"
+								},
+								{
+									"title": "Pregrado 40%",
+									"const": "PREG_40"
+								},
+								{
+									"title": "Pregrado 60%",
+									"const": "PREG_60"
+								},
+								{
+									"title": "Pregrado 100%",
+									"const": "PREG_100"
+								},
+								{
+									"title": "Posgrado País 40%",
+									"const": "PSPAIS_40"
+								},
+								{
+									"title": "Posgrado País 100%",
+									"const": "PSPAIS100"
+								},
+								{
+									"title": "Posgrado Exterior 0%",
+									"const": "PSEXT_0"
+								},
+								{
+									"title": "Posgrado Exterior 20%",
+									"const": "PSEXT_20"
+								},
+								{
+									"title": "Bilinguismo en el Exterior 0%",
+									"const": "BILEXT_0"
+								},
+								{
+									"title": "Bilinguismo en el Exterior 20%",
+									"const": "BILEXT20"
+								},
+								{
+									"title": "Educación para el Trabajo 100%",
+									"const": "FORTRAB"
+								}
+							]
+						},
+						"Program": {
+							"type": "string",
+							"title": "Programa",
+							"placeholder": "Pregrado",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Pregrado",
+									"const": "Pregrado"
+								},
+								{
+									"title": "Posgrado Colombia",
+									"const": "Posgrado Colombia"
+								},
+								{
+									"title": "Posgrado exterior",
+									"const": "Posgrado exterior"
+								},
+								{
+									"title": "Bilingüismo en el exterior",
+									"const": "Bilinguismo en el exterior"
+								},
+								{
+									"title": "Formación para el trabajo y desarrollo humano",
+									"const": "Educacion para el trabajo"
+								}
+							]
+						},
+						"Modality": {
+							"type": "string"
+						},
+						"PregradoM": {
+							"type": "string",
+							"title": "Modalidad de pago",
+							"oneOf": [
+								{
+									"title": "0 %",
+									"const": "PREGRAD_0"
+								},
+								{
+									"title": "20%",
+									"const": "PREG_20"
+								},
+								{
+									"title": "40%",
+									"const": "PREG_40"
+								},
+								{
+									"title": "60%",
+									"const": "PREG_60"
+								},
+								{
+									"title": "100%",
+									"const": "PREG_100"
+								}
+							]
+						},
+						"PosgradoColombia": {
+							"type": "string",
+							"title": "Modalidad de pago",
+							"oneOf": [
+								{
+									"title": "40%",
+									"const": "PSPAIS_40"
+								},
+								{
+									"title": "100%",
+									"const": "PSPAIS100"
+								}
+							]
+						},
+						"PosgradoForeign": {
+							"type": "string",
+							"title": "Modalidad de pago",
+							"oneOf": [
+								{
+									"title": "0 %",
+									"const": "PSEXT_0"
+								},
+								{
+									"title": "20%",
+									"const": "PSEXT_20"
+								}
+							]
+						},
+						"ForeignBilingualism": {
+							"type": "string",
+							"title": "Modalidad de pago",
+							"oneOf": [
+								{
+									"title": "0 %",
+									"const": "BILEXT_0"
+								},
+								{
+									"title": "20%",
+									"const": "BILEXT20"
+								}
+							]
+						},
+						"FTDH": {
+							"type": "string",
+							"title": "Modalidad de pago",
+							"oneOf": [
+								{
+									"title": "100%",
+									"const": "FORTRAB"
+								}
+							]
+						},
+						"Accompaniment": {
+							"type": "boolean",
+							"title": "Estudiante con acompañamiento",
+							"default": false
+						},
+						"TypeGuarantee": {
+							"type": "string",
+							"title": "Tipo de garantía",
+							"oneOf": [
+								{
+									"title": "Pignoración de cesantías",
+									"const": "1"
+								},
+								{
+									"title": "Codeudor",
+									"const": "2"
+								},
+								{
+									"title": "Hipoteca con el FNA",
+									"const": "3"
+								},
+								{
+									"title": "Aval",
+									"const": "4"
+								}
+							]
+						},
+						"CodeudorData": {
+							"type": "object",
+							"title": "Expedido en: ",
+							"properties": {
+								"Name": {
+									"type": "string",
+									"title": "Nombres",
+									"minLength": 2,
+									"maxLength": 50,
+									"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo letras"
+									}
+								},
+								"DocumentType": {
+									"type": "string",
+									"title": "Tipo de documento",
+									"description": "de identidad",
+									"oneOf": [
+										{
+											"title": "Cédula de Ciudadanía",
+											"const": "CC"
+										},
+										{
+											"title": "Cédula de Extranjería",
+											"const": "CE"
+										},
+										{
+											"title": "Tarjeta de identidad",
+											"const": "TI"
+										}
+									]
+								},
+								"DocNumber": {
+									"type": "string",
+									"title": "Número de documento",
+									"description": "de identidad",
+									"minLength": 6,
+									"maxLength": 11,
+									"pattern": "^[0-9]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo números"
+									}
+								}
+							}
+						},
+						"RegistrationData": {
+							"type": "object",
+							"title": "Expedido en: ",
+							"properties": {
+								"Enrollment": {
+									"type": "string",
+									"title": "Número de matricula",
+									"description": "de identidad",
+									"minLength": 6,
+									"maxLength": 11,
+									"pattern": "^[0-9]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo números"
+									}
+								},
+								"ValueCommerce": {
+									"type": "string",
+									"title": "Valor Comercial",
+									"widget": "number-format",
+									"minLength": 6,
+									"maxLength": 9,
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"minimum": "el valor mínimo debe ser 1",
+										"maximum": "el valor mínimo debe ser 999999999",
+										"pattern": "Este campo debe contener solo números"
+									}
+								},
+								"Mortgage": {
+									"type": "boolean",
+									"title": "¿Tiene hipoteca?",
+									"default": false
+								}
+							}
+						}
+					},
+					"dependencies": {
+						"Beneficiary": {
+							"anyOf": [
+								{
+									"properties": {
+										"Beneficiary": {
+											"enum": [
+												"1",
+												"2",
+												"3",
+												"4",
+												"5",
+												"6"
+											]
+										}
+									},
+									"required": [
+										"Names",
+										"LastName"
+									]
+								},
+								{
+									"properties": {
+										"Beneficiary": {
+											"enum": [
+												"0"
+											]
+										}
+									}
+								}
+							]
+						},
+						"LevelEducation": {
+							"anyOf": [
+								{
+									"properties": {
+										"LevelEducation": {
+											"enum": [
+												"1"
+											]
+										}
+									},
+									"required": [
+										"AcademicLevelPregrado"
+									]
+								},
+								{
+									"properties": {
+										"LevelEducation": {
+											"enum": [
+												"2"
+											]
+										}
+									},
+									"required": [
+										"AcademicLevelPosgrado"
+									]
+								}
+							]
+						},
+						"Program": {
+							"anyOf": [
+								{
+									"properties": {
+										"Program": {
+											"enum": [
+												"Pregrado"
+											]
+										}
+									},
+									"required": [
+										"PregradoM"
+									]
+								},
+								{
+									"properties": {
+										"Program": {
+											"enum": [
+												"Posgrado Colombia"
+											]
+										}
+									},
+									"required": [
+										"PosgradoColombia"
+									]
+								},
+								{
+									"properties": {
+										"Program": {
+											"enum": [
+												"Posgrado exterior"
+											]
+										}
+									},
+									"required": [
+										"PosgradoForeign"
+									]
+								},
+								{
+									"properties": {
+										"Program": {
+											"enum": [
+												"Bilinguismo en el exterior"
+											]
+										}
+									},
+									"required": [
+										"ForeignBilingualism"
+									]
+								},
+								{
+									"properties": {
+										"Program": {
+											"enum": [
+												"Educacion para el trabajo"
+											]
+										}
+									},
+									"required": [
+										"FTDH"
+									]
+								}
+							]
+						},
+						"TypeGuarantee": {
+							"anyOf": [
+								{
+									"properties": {
+										"TypeGuarantee": {
+											"enum": [
+												"2"
+											]
+										}
+									},
+									"required": [
+										"CodeudorData"
+									]
+								},
+								{
+									"properties": {
+										"TypeGuarantee": {
+											"enum": [
+												"3"
+											]
+										}
+									},
+									"required": [
+										"RegistrationData"
+									]
+								},
+								{
+									"properties": {
+										"TypeGuarantee": {
+											"enum": [
+												"1",
+												"4"
+											]
+										}
+									}
+								}
+							]
+						}
+					},
+					"required": [
+						"Beneficiary",
+						"Email",
+						"DocumentType",
+						"DocNumber",
+						"CellPhone",
+						"EducationalEntity",
+						"Headquarters",
+						"ProgramName",
+						"PeriodNumber",
+						"RequestedValue",
+						"RequestType",
+						"Location",
+						"Periodicity",
+						"TypeOfTraining",
+						"LevelEducation",
+						"GradeOptions",
+						"Program",
+						"Accompaniment"
+					]
+				}
+			},
+			"required": [
+				"ApplicationData"
+			]
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "1. Información personal <div class=\"container-div-second first\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "3. Referencias <div class=\"container-div-second third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "4. Información financiera <div class=\"container-div-second fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "5. Datos de la solicitud <div class=\"container-div-second fifth \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs",
+				"items": [
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "ApplicationData.Beneficiary",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.Names",
+								"condition": {
+									"functionBody": "try {if( model.ApplicationData.Beneficiary != '0' ) { return true;} else {return false;} } catch(e){ return false}"
+								},
+								"required": true,
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.LastName",
+								"condition": {
+									"functionBody": "try {if( model.ApplicationData.Beneficiary != '0' ) { return true;} else {return false;} } catch(e){ return false}"
+								},
+								"required": true,
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "ApplicationData.Email",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.DocumentType",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.DocNumber",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.CellPhone",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Datos de la entidad educativa <strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "ApplicationData.EducationalEntity",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.Headquarters",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<section>Ubicación<strong> </strong> </section>",
+						"labelHtmlClass": "subtitle-form"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "ApplicationData.Location.Country",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "ApplicationData.Location.Department",
+								"condition": {
+									"functionBody": "try {if(model.ApplicationData.Location.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "ApplicationData.Location.City",
+								"condition": {
+									"functionBody": "try {if(model.ApplicationData.Location.Country == '1') { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "ApplicationData.TypeOfTraining",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.LevelEducation",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.AcademicLevelPregrado",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if( model.ApplicationData.LevelEducation == '1' ) {model.ApplicationData.AcademicLevelPosgrado = ' '; return true;} else {return false;} } catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"key": "ApplicationData.AcademicLevelPosgrado",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if( model.ApplicationData.LevelEducation == '2' ) {model.ApplicationData.AcademicLevelPregrado = ' '; return true;} else {return false;} } catch(e){ return false}"
+								},
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "ApplicationData.Periodicity",
+								"flex": "1 1 25%",
+								"Required": true
+							},
+							{
+								"key": "ApplicationData.GradeOptions",
+								"flex": "1 1 25%",
+								"Required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "ApplicationData.ProgramName",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.PeriodNumber",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.RequestedValue",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "ApplicationData.RequestType",
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<label class='subtitle'>Nota: en los siguientes espacios marque el tipo de programa para educación y la modalidad de pago que desea. </label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "ApplicationData.Accompaniment",
+								"type": "radios-inline",
+								"titleMap": [
+									{
+										"name": "Sí",
+										"value": true
+									},
+									{
+										"name": "No",
+										"value": false
+									}
+								],
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "ApplicationData.Program",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%",
+								"items": [
+									{
+										"key": "ApplicationData.PregradoM",
+										"type": "radios-inline",
+										"condition": {
+											"functionBody": "try {if(model.ApplicationData.Program == 'Pregrado') {model.ApplicationData.CreditLine = model.ApplicationData.PregradoM ; return true;} else {return false}} catch(e){ return false}"
+										},
+										"required": true
+									},
+									{
+										"key": "ApplicationData.PosgradoColombia",
+										"type": "radios-inline",
+										"condition": {
+											"functionBody": "try {if(model.ApplicationData.Program == 'Posgrado Colombia') {model.ApplicationData.CreditLine = model.ApplicationData.PosgradoColombia ; return true;} else {return false}} catch(e){ return false}"
+										},
+										"required": true
+									},
+									{
+										"key": "ApplicationData.PosgradoForeign",
+										"type": "radios-inline",
+										"condition": {
+											"functionBody": "try {if(model.ApplicationData.Program == 'Posgrado exterior') {model.ApplicationData.CreditLine = model.ApplicationData.PosgradoForeign ; return true;} else {return false}} catch(e){ return false}"
+										},
+										"required": true
+									},
+									{
+										"key": "ApplicationData.ForeignBilingualism",
+										"type": "radios-inline",
+										"condition": {
+											"functionBody": "try {if(model.ApplicationData.Program == 'Bilinguismo en el exterior') {model.ApplicationData.CreditLine = model.ApplicationData.ForeignBilingualism ; return true;} else {return false}} catch(e){ return false}"
+										},
+										"required": true
+									},
+									{
+										"key": "ApplicationData.FTDH",
+										"type": "radios-inline",
+										"condition": {
+											"functionBody": "try {if(model.ApplicationData.Program == 'Educacion para el trabajo') {model.ApplicationData.CreditLine = model.ApplicationData.FTDH ; return true;} else {return false}} catch(e){ return false}"
+										},
+										"required": true
+									}
+								]
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"widget": "message",
+						"message": "<label class='subtitle'>Nota:  Prueba obligatoria para los estudiantes de pregrado que ingresen del I A IV semestre, con modalidad 0-100 ó 20-80. El acompañamiento se realiza durante toda la carrera. </label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "ApplicationData.NameFull",
+								"flex": "1 1 25%",
+								"condition": {
+									"functionBody": "try {if(model.ApplicationData.Names != '' ) {model.ApplicationData.NameFull = model.ApplicationData.Names + ' ' + model.ApplicationData.LastName ; return false;} else {model.PersonalInformation.Names = model.PersonalInformation.FirstName  + ' ' + model.PersonalInformation.SecondName; return false}} catch(e){ return false}"
+								}
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "ApplicationData.DebtorType",
+								"flex": "3 3 2%",
+								"condition": {
+									"functionBody": "try {if(model.ApplicationData.RequestType == 'I' ) {model.ApplicationData.DebtorType = 'D'; return false;} else {model.ApplicationData.DebtorType = 'C';return false;}} catch(e){ return false}"
+								}
+							}
+						]
+					},
+					{
+						"type": "actions",
+						"htmlClass": "buttons",
+						"items": [
+							{
+								"type": "submit",
+								"style": "btn-info",
+								"title": "Guardar",
+								"flex": "3 3 100%"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "div",
+				"title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "7. Autorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"flex": "3 3 100%",
+						"disabled": "true",
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {
+			"ApplicationData": {
+				"PeriodNumber": "Global.ApplicantDetails.PeriodToFinanceAD",
+				"RequestedValue": "Global.ApplicantDetails.RequestedValue"
+			}
+		}
+	}
+}

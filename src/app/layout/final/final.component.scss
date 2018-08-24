@@ -1,0 +1,61 @@
+@import '~assets/colors-palettes';
+article {
+    margin-top: 5%;
+    >section {
+        img {
+            height: 570px;
+        }
+    }
+    hgroup {
+        width: 70%;
+        float: left;
+        h1 {
+            margin-bottom: 4%;
+            margin-top: 0;
+            color: $bar-pass-color;
+            font-size: 3.4em;
+        }
+        h2 {
+            color: $text-color;
+            font-weight: bolder;
+        }
+    }
+    section:last-child {
+   
+        p {
+            color: $text-color;
+            text-align: justify;
+        }
+        button {
+            margin-left: 18px;
+            width: 127px;
+        }
+        div:first-child {
+            div:last-child {
+                float: left;
+                img {
+                    padding-left: 25px;
+                    height: 100px;
+                    width: 100px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            a {
+                background-color: $secondary-color;
+            }
+        }
+    }
+    fna-bread-crumb {
+        float: none;
+    }
+    .bread-crumb-container {
+        clear: both;
+        height: auto;
+        font-size: 0.84em;
+    }
+}

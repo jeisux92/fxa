@@ -1,0 +1,110 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+$primary-color: mat-color($custom-theme-primary);
+.modal-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: scale(1.0);
+    background-color: rgba(0, 0, 0, 0.5);
+    .modal {
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $title-color;
+        width: 900px;
+        height: 95%;
+        >p {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            border-radius: 74px;
+            width: 12px;
+            border: 2px solid $primary-color;
+            line-height: 12px;
+            text-align: justify;
+            font-weight: bold;
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+    span {
+        display: block;
+    }
+    .container-modal {
+        margin: 0 auto;
+        text-align: center;
+        width: 88%;
+        padding: 0;
+        height: 84%;
+        margin-top: 0;
+        >span {
+            color: $primary-color;
+        }
+        h1 {
+            height: 7%;
+            padding-top: 2%;
+            &.first-title {
+                color: $primary-color;
+            }
+        }
+        .container-text {
+            //Scroll
+            &::-webkit-scrollbar {
+                width: 0.5em;
+            }
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: darkgrey;
+                outline: 1px solid slategrey;
+            }
+            padding-top: 15px;
+            text-align: justify;
+            height: 36em;
+            height: 85%;
+            overflow-y: scroll;
+            color: $file-color;
+            padding-left: 10%;
+            padding-right: 10%;
+            button {
+                font-size: 14px;
+                height: 32px;
+                max-width: 90%;
+                label:last-child {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width: 100%;
+                    text-overflow: ellipsis;
+                    display: block;
+                }
+            }
+        }
+    }
+    .container-button {
+        height: 10%;
+        .center-block {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            padding-top: 15px;
+            button {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.modal-hidden {
+    display: none;
+}

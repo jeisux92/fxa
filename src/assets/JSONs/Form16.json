@@ -1,0 +1,294 @@
+{
+    "breadCrumb": 2,
+    "title": "Simulador de crédito",
+    "subtitle": "En esta sección podrás ver, editar y evaluar tu solicitud de crédito mediante un simulador.",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Verifica que los datos que ingresas en el resumen de crédito, son los correctos antes de realizar la solicitud.",
+            "Puedes editar los valores del resumen para lograr diferentes escenarios."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Simulador": {
+                    "title": "El proceso de afilicación ha finalizado",
+                    "type": "object",
+                    "subtitle": "Te pedimos volver a intentarlo siguiendo los consejos que te indicamos a continuación",
+                    "widget": "simulator",
+                    "properties": {
+                        "RequestType": {
+                            "type": "string",
+                            "title": " ",
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "DebtorType": {
+                            "type": "string",
+                            "title": " ",
+                            "minLength": 1,
+                            "maxLength": 1,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "Finalidad": {
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Pregrado 0%",
+                                    "const": "1"
+                                },
+                                {
+                                    "title": "Pregrado 20%",
+                                    "const": "2"
+                                },
+                                {
+                                    "title": "Pregrado 40%",
+                                    "const": "3"
+                                },
+                                {
+                                    "title": "Pregrado 60%",
+                                    "const": "4"
+                                },
+                                {
+                                    "title": "Pregrado 100%",
+                                    "const": "5"
+                                },
+                                {
+                                    "title": "Posgrado País 40%",
+                                    "const": "6"
+                                },
+                                {
+                                    "title": "Posgrado País 100%",
+                                    "const": "7"
+                                },
+                                {
+                                    "title": "Posgrado Exterior 0%",
+                                    "const": "8"
+                                },
+                                {
+                                    "title": "Posgrado Exterior 20%",
+                                    "const": "9"
+                                },
+                                {
+                                    "title": "Bilinguismo en el Exterior 0%",
+                                    "const": "10"
+                                },
+                                {
+                                    "title": "Bilinguismo en el Exterior 20%",
+                                    "const": "11"
+                                },
+                                {
+                                    "title": "Educación para el Trabajo 100%",
+                                    "const": "12"
+                                }
+                            ]
+                        },
+                        "TipoSolicitud": {
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Individual:Un afiliado FNA",
+                                    "const": "1"
+                                },
+                                {
+                                    "title": "Conjunto:Dos afiliados FNA",
+                                    "const": "2"
+                                },
+                                {
+                                    "title": "Individual con conyugue no afiliado",
+                                    "const": "3"
+                                }
+                            ]
+                        },
+                        "MontoMaximo": {
+                            "type": "string"
+                        },
+                        "Periocidad": {
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Anual",
+                                    "const": "12"
+                                },
+                                {
+                                    "title": "Bimestral",
+                                    "const": "2"
+                                },
+                                {
+                                    "title": "Mensual",
+                                    "const": "1"
+                                },
+                                {
+                                    "title": "Quatrimestral",
+                                    "const": "4"
+                                },
+                                {
+                                    "title": "Trimestral",
+                                    "const": "3"
+                                },
+                                {
+                                    "title": "Semestral",
+                                    "const": "6"
+                                }
+                            ]
+                        },
+                        "NPeriodos": {
+                            "type": "string"
+                        },
+                        "TasaEA": {
+                            "type": "string"
+                        },
+                        "TasaM": {
+                            "type": "string"
+                        },
+                        "Affiliates": {
+                            "type": "object",
+                            "properties": {
+                                "ProspectaResponse": {
+                                    "type": "string"
+                                },
+                                "Applicant": {
+                                    "type": "number"
+                                },
+                                "IsMain": {
+                                    "type": "boolean"
+                                },
+                                "TotalExpenseA": {
+                                    "type": "string"
+                                },
+                                "TotalIncomeA": {
+                                    "type": "string"
+                                },
+                                "IdentificationA": {
+                                    "type": "string"
+                                },
+                                "SecondLastNameA": {
+                                    "type": "string"
+                                },
+                                "LastNameA": {
+                                    "type": "string"
+                                },
+                                "FirstNameA": {
+                                    "type": "string"
+                                },
+                                "CreditTaker": {
+                                    "type": "string"
+                                },
+                                "TotalExpenseB": {
+                                    "type": "string"
+                                },
+                                "TotalIncomeB": {
+                                    "type": "string"
+                                },
+                                "IdentificationB": {
+                                    "type": "string"
+                                },
+                                "SecondLastNameB": {
+                                    "type": "string"
+                                },
+                                "LastNameB": {
+                                    "type": "string"
+                                },
+                                "FirstNameB": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "MontoMaximo",
+                        "TipoSolicitud",
+                        "Periocidad",
+                        "NPeriodos"
+                    ]
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Simulador",
+                "items": [
+                    {
+                        "key": "Simulador.Finalidad"
+                    },
+                    {
+                        "key": "Simulador.TipoSolicitud"
+                    },
+                    {
+                        "key": "Simulador.MontoMaximo"
+                    },
+                    {
+                        "key": "Simulador.Periocidad"
+                    },
+                    {
+                        "key": "Simulador.NPeriodos"
+                    },
+                    {
+                        "key": "Simulador.TasaEA"
+                    },
+                    {
+                        "key": "Simulador.TasaM"
+                    }
+                ]
+            },
+            {
+                "type": "flex",
+                "flex-direction": "row",
+                "htmlClass": "center-content",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "condition": false
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "Simulador": {
+                "TasaEA": 14.75,
+                "TasaM": 1.15,
+                "Periocidad": "12",
+                "TipoSolicitud": "1",
+                "Finalidad": "1",
+                "Affiliates": {
+                    "ProspectaResponse": "Elegible",
+                    "Applicant": 1,
+                    "IsMain": true,
+                    "CreditTaker": "Global.ApplicantDetails.CreditTaker",
+                    "TotalExpenseB": "Global.ApplicantDetails.TotalExpenseAD",
+                    "TotalIncomeB": "Global.ApplicantDetails.TotalIncomeAD",
+                    "IdentificationB": "Global.ApplicantDetails.DocNumberAD",
+                    "SecondLastNameB": "Global.ApplicantDetails.SecondLastNameAD",
+                    "LastNameB": "Global.ApplicantDetails.FirstLastNameAD",
+                    "FirstNameB": "Global.ApplicantDetails.FirstNameAD",
+                    "TotalExpenseA": "Global.ApplicantDetails.TotalExpenseT",
+                    "TotalIncomeA": "Global.ApplicantDetails.TotalIncomeT",
+                    "IdentificationA": "Global.ApplicantDetails.DocNumberT",
+                    "SecondLastNameA": "Global.ApplicantDetails.SecondLastNameT",
+                    "LastNameA": "Global.ApplicantDetails.FirstLastNameT",
+                    "FirstNameA": "Global.ApplicantDetails.FirstNameT"
+                }
+            }
+        }
+    }
+}

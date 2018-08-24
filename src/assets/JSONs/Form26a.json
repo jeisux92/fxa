@@ -1,0 +1,236 @@
+{
+    "breadCrumb": 1,
+    "title": "Datos básicos del tomador de crédito",
+    "subtitle": "Para continuar con el proceso debes verificar que tus datos estén corectos, o en caso de que no hayan sido diligenciados por el solicitante debes ingresarlos.</strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estos campos aparecerán prediligenciados si el solicitante ya los ingresó previamente."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+        "single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Codeudor": {
+                    "type": "object",
+                    "properties": {
+                        "FirstNameCD": {
+                            "type": "string",
+                            "title": "Primer nombre",
+                            "placeholder": "Andrés",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondNameCD": {
+                            "type": "string",
+                            "title": "Segundo nombre",
+                            "placeholder": "Jesús",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "FirstLastNameCD": {
+                            "type": "string",
+                            "title": "Primer apellido",
+                            "placeholder": "Romero",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondLastNameCD": {
+                            "type": "string",
+                            "title": "Segundo apellido",
+                            "placeholder": "Suárez",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "DocumentTypeCD": {
+                            "type": "string",
+                            "title": "Tipo de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "CEDULA DE CIUDADANIA",
+                            "floatPlaceholder": "always",
+                            "oneOf": [
+                                {
+                                    "title": "CEDULA DE CIUDADANIA",
+                                    "const": "CC"
+                                },
+                                {
+                                    "title": "TARJETA DE IDENTIDAD",
+                                    "const": "TI"
+                                },
+                                {
+                                    "title": "NIT PERSONA NATURAL",
+                                    "const": "NIP"
+                                },
+                                {
+                                    "title": "NIT",
+                                    "const": "NIT"
+                                },
+                                {
+                                    "title": "CEDULA DE EXTRANJERIA",
+                                    "const": "CE"
+                                },
+                                {
+                                    "title": "CARNE DIPLOMATICO",
+                                    "const": "CD"
+                                },
+                                {
+                                    "title": "SOCIEDAD EXTRANJERA",
+                                    "const": "SE"
+                                }
+                            ]
+                        },
+                        "DateOfExpeditionCD": {
+                            "type": "string",
+                            "widget": "date-picker",
+                            "title": "Fecha de expedición del documento de identidad",
+                            "htmlClass": "double-line",
+                            "floatPlaceholder": "always",
+                            "placeholder": "23/07/2013",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true,
+                                "yearsBefore": 110
+                            }
+                        },
+                        "DocNumberCD": {
+                            "type": "string",
+                            "title": "Número de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "1111111111",
+                            "floatPlaceholder": "always",
+                            "minLength": 6,
+                            "maxLength": 11,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        }
+                    },
+                    "required": [
+                        "FirstNameCD",
+                        "FirstLastNameCD",
+                        "DocumentTypeCD",
+                        "DocNumberCD",
+                        "DateOfExpeditionCD"
+                    ]
+                }
+            },
+            "required": [
+                "Codeudor"
+            ]
+        },
+        "layout": [
+            {
+                "type": "div",
+                "htmlClass": "radio-button-reverse",
+                "items": [
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "Codeudor.FirstNameCD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "Codeudor.SecondNameCD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "Codeudor.FirstLastNameCD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "Codeudor.SecondLastNameCD",
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-direction": "row",
+                        "items": [
+                            {
+                                "key": "Codeudor.DocumentTypeCD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "Codeudor.DocNumberCD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "Codeudor.DateOfExpeditionCD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "flex",
+                "flex-flow": "row",
+                "htmlClass": "center-content",
+                "items": [
+                    {
+                        "type": "actions",
+                        "htmlClass": "buttons",
+                        "items": [
+                            {
+                                "type": "submit",
+                                "style": "btn-info",
+                                "title": "Validar",
+                                "htmlClass": "btn-submit"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "data": {}
+    }
+}

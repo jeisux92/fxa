@@ -1,0 +1,32 @@
+<mat-form-field [floatPlaceholder]="options?.floatPlaceholder || (options?.notitle ? 'never' : 'auto')">
+  <mat-label [textContent]="options?.title" *ngIf="options?.title"></mat-label>
+
+  <input 
+        [placeholder]="options?.placeholder ? options?.placeholder : ''"
+        matInput [required]="Required" 
+        pattern="[0-9]*" 
+        [formControl]=formControl/>
+  <mat-icon matSuffix fontSet="fa" fontIcon="fa-question-circle" color=red (click)="showMe($event)"></mat-icon>
+
+  <div class="message" unselectable="on" (mouseleave)="showMesssage && showMe($event)" [ngStyle]="{'display':showMesssage?'block':'none','transform':'translate(' + coordinate.x + 'px,' + coordinate.y + 'px)'}"
+    (click)="showMesssage && showMe($event) ">
+    <label [innerText]="HelpMessage"></label>
+  </div>
+
+  <mat-error *ngIf="formControl.hasError('maxLength')">
+    <span>{{ maxLength }}</span>
+  </mat-error>
+
+  <mat-error *ngIf="formControl.hasError('minLength')">
+    <span>{{ minLength }}</span>
+  </mat-error>
+
+  <mat-error *ngIf="formControl.hasError('pattern')">
+    <span> {{ numberValidation.pattern }}</span>
+  </mat-error>
+
+  <mat-error *ngIf="formControl.hasError('required')">
+    <span> {{ numberValidation.required }}</span>
+  </mat-error>
+
+</mat-form-field>

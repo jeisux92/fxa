@@ -1,0 +1,68 @@
+<div fxFlexLayout="row" fxLayoutAlign="space-around stretch">
+  <div class="personal-information" *ngIf=PersonalInfo fxFlex=50>
+    <div>
+      <div>
+        <p>Bienvenido,
+          <strong>{{PersonalInfo.Name}}</strong>
+        </p>
+        <p>
+          <strong class="text" [textContent]=PersonalInfo.TypeDocument></strong>
+          <span [textContent]=PersonalInfo.Document></span>
+        </p>
+        <p>
+          <strong class="text">Trámite:</strong>
+          <span [textContent]=PersonalInfo.Procedure></span>
+        </p>
+      </div>
+      <div>
+        <p>
+          Valor préstamo:
+        </p>
+        <p>
+          <span [textContent]="PersonalInfo.Mount | currency:'COP':'symbol-narrow'"></span>
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>Fecha de expedición del documento:</p>
+        <p>
+          <span [textContent]=PersonalInfo.DateOfExpedition></span>
+        </p>
+      </div>
+      <div>
+        <p>Número de celular:</p>
+        <p>
+          <span [textContent]=PersonalInfo.CellPhone></span>
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>Lugar de expedición del documento:</p>
+        <p>
+          <span [textContent]=PersonalInfo.PlaceOfExpedition></span>
+        </p>
+      </div>
+      <div>
+        <p>Correo electrónico:</p>
+        <p>
+          <span [textContent]=PersonalInfo.Email></span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="50">
+    <h2>¡Gracias por confiar en el FNA!</h2>
+    <p class="text">Ya te falta poco para terminar. Cumpliste con tu parte en el proceso de solicitud, solo faltan los siguientes pasos:</p>
+    <ul>
+      <li *ngFor="let step of steps" [textContent]=step>
+      </li>
+    </ul>
+    <p>Cuando se cumpla cada uno de estos pasos, te lelgará un correo electrónico con los de detalles de cada uno</p>
+  </div>
+</div>
+<br>
+<div class="button-centered">
+  <a mat-raised-button class="btn-exit" color=primary href="https://www.fna.gov.co/" target="_self">Salir</a>
+</div>

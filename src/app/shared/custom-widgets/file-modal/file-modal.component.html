@@ -1,0 +1,55 @@
+<div class="container">
+  <section>
+    <img src="assets/Group 3.png" alt="" *ngIf="!fileName">
+    <img src="assets/Group 4.png" alt="" *ngIf="fileName">
+  </section>
+  <section class="last-section">
+    <div>
+      <img src="assets/file.png" alt="">
+      <p [matTooltip]="title.length>53?title:''">
+        {{title.length<50? title:title.substring(0,40)+ '...'}}</p>
+
+
+    </div>
+    <button mat-raised-button type="button" [ngClass]="{ 'has-document' : fileName,'has-not-document': !fileName }" (click)="active=true">{{fileName?'Ver documento':'Cargar documento'}}</button>
+  </section>
+</div>
+
+<div [ngClass]="{'modal-hidden' : !active, 'modal-container' : active }">
+  <div class="modal">
+    <span (click)="closeModalDelete()">
+      <i class="far fa-window-close"></i>
+    </span>
+    <div class="container-input-file">
+      <h2 class="first-title">Selecciona tu documento</h2>
+      <div class="container-title">
+        <span class="subtitle-file">Selecciona desde tu computadora y agrega el documento que desea adjuntar</span>
+        <div *ngIf="fileName" [ngClass]="{'error':!error,'success':error}">
+          <div class="file-button">
+            <button mat-raised-button disabled type="button">
+              <label class="x" (click)="deleteFile()">
+                <i class="fas fa-times-circle"></i>
+              </label>
+              <label for="">
+                {{fileName}}
+              </label>
+            </button>
+          </div>
+          <div *ngIf="!error">
+            <span>Formato de archivo incorrecto</span>
+            <span>El archivo solo puede ser .pdf, .jpg o .png</span>
+          </div>
+        </div>
+      </div>
+      <div class="container-inputs">
+        <input type="file" (change)="change($event.target.files[0])" [(ngModel)]=fileIn />
+        <button mat-raised-button [ngClass]="{'document-up':fileName,'no-document':!fileName}" (click)="clickFile($event)" type="button">
+          <span>Seleccionar documentos</span>
+        </button>
+        <input type="text" [value]="fileContent" hidden>
+        <button mat-raised-button [disabled]="!error && fileName" type="button" [ngClass]="{'submit':error}" (click)="closeModal()">Cargar</button>
+
+      </div>
+    </div>
+  </div>
+</div>

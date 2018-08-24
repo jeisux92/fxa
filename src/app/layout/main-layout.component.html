@@ -1,0 +1,23 @@
+<fna-header [info]=info></fna-header>
+<div class="bread-crumb-container" *ngIf="!final">
+    <fna-bread-crumb [step]=step *ngIf="!step"></fna-bread-crumb>
+</div>
+<fna-title-state [title]=title [subtitle]=subtitle [retake]=retake></fna-title-state>
+<div fxLayout="row" fxLayoutAlign fxlayout.sm="column" fxlayout.xs="column" class="container validation-center" *ngIf="!final" [ngClass]="{'validation-center':!card}">
+    <div fxFlex=20 fxFlexOffset="10" *ngIf="card">
+        <fna-info [card]=card></fna-info>
+    </div>
+    <div fxFlex=70 [ngClass]="{'politics-validation':card}">
+        <div fxLayout="row" fxLayoutAlign=center>
+            <div fxFlex=80>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <fna-begin></fna-begin> -->
+<fna-final *ngIf="final"></fna-final>
+<fna-footer></fna-footer>
+<div class="loading-container">
+    <mat-spinner id="spinner"></mat-spinner>
+</div>

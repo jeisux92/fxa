@@ -1,0 +1,746 @@
+{
+	"breadCrumb": 3,
+	"title": "Solicitud única de crédito persona natural",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"FinancialInformationPN": {
+					"type": "object",
+					"title": "",
+					"properties": {
+						"OriginOfIncome": {
+							"type": "string",
+							"title": "Origen de Recursos",
+							"default": "1",
+							"placeholder": "1. Empleado",
+							"floatPlaceholder": "always",
+							"oneOf": [
+								{
+									"title": "1. Empleado",
+									"const": "1"
+								},
+								{
+									"title": "2. Independientes - Ingreso total de 0 a 2 SMLMV",
+									"const": "2"
+								},
+								{
+									"title": "3. Independientes - Ingreso total superior a 2 SMLMV ",
+									"const": "3"
+								},
+								{
+									"title": "4. Prestación de servicios entidades públicas ",
+									"const": "4"
+								},
+								{
+									"title": "5. Prestación de servicios entidades privadas Contrato mensual hasta 2 SMLMV ",
+									"const": "5"
+								},
+								{
+									"title": "6. Prestación de servicios entidades privadas Contrato mensual superior a 2 SMLMV ",
+									"const": "6"
+								},
+								{
+									"title": "7. Pensionado ",
+									"const": "7"
+								},
+								{
+									"title": "8. Arrendamientos de inmuebles ",
+									"const": "8"
+								}
+							],
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							}
+						},
+						"MonthlyIncome": {
+							"type": "string",
+							"title": "Ingresos mensuales",
+							"widget": "number-format",
+							"placeholder": "1.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 9,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"OtherIncome": {
+							"type": "string",
+							"title": "Otros ingresos",
+							"widget": "number-format",
+							"placeholder": "500.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 9,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"MonthlyExpenses": {
+							"type": "string",
+							"title": "Egresos mensuales",
+							"widget": "number-format",
+							"placeholder": "600.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 9,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"TotalAssets": {
+							"type": "string",
+							"title": "Total activos",
+							"widget": "number-format",
+							"placeholder": "9.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 9,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"TotalLiabilities": {
+							"type": "string",
+							"title": "Total pasivos",
+							"widget": "number-format",
+							"placeholder": "2.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 1,
+							"maxLength": 9,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1",
+								"maximum": "el valor mínimo debe ser 999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"OtherIncomeDetail": {
+							"type": "string",
+							"title": "Detalle de los otros ingresos:",
+							"minLength": 1,
+							"maxLength": 99,
+							"placeholder": "Ventas",
+							"floatPlaceholder": "always",
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"CoinExt": {
+							"type": "boolean",
+							"title": "¿Realiza operaciones en moneda extranjera?",
+							"default": false,
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							}
+						},
+						"OperationType": {
+							"type": "string",
+							"title": "Tipo de operación:",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"default": "EXP",
+							"placeholder": "Exportación",
+							"floatPlaceholder": "always",
+							"oneOf": [
+								{
+									"title": "Exportación",
+									"const": "EXP"
+								},
+								{
+									"title": "Pago de servicios",
+									"const": "PAGSER"
+								},
+								{
+									"title": "Importación",
+									"const": "IMP"
+								},
+								{
+									"title": "Préstamo en M.E.",
+									"const": "PRESME"
+								},
+								{
+									"title": "Otro",
+									"const": "OTRO"
+								}
+							]
+						},
+						"WhichTO": {
+							"type": "string",
+							"title": "¿Cuál?",
+							"placeholder": "Alimentos",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 60,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"ProductType": {
+							"type": "string",
+							"title": "Producto Financiero",
+							"placeholder": "Cuenta corriente",
+							"default": "1",
+							"floatPlaceholder": "always",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"oneOf": [
+								{
+									"title": "Cuenta corriente",
+									"const": "1"
+								},
+								{
+									"title": "Cuenta de ahorros",
+									"const": "2"
+								},
+								{
+									"title": "CDT o póliza",
+									"const": "3"
+								},
+								{
+									"title": "Inversión",
+									"const": "4"
+								},
+								{
+									"title": "Préstamo",
+									"const": "5"
+								},
+								{
+									"title": "Tarjeta de crédito",
+									"const": "6"
+								},
+								{
+									"title": "Giros",
+									"const": "7"
+								},
+								{
+									"title": "Fideicomiso",
+									"const": "8"
+								},
+								{
+									"title": "Otros",
+									"const": "9"
+								}
+							]
+						},
+						"Bank": {
+							"type": "string",
+							"title": "Banco",
+							"placeholder": "Banrepublica",
+							"floatPlaceholder": "always",
+							"minLength": 2,
+							"maxLength": 60,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"AccountNumber": {
+							"type": "string",
+							"title": "Número de cuenta/Producto",
+							"placeholder": "1234567890",
+							"floatPlaceholder": "always",
+							"minimum": 1000000,
+							"maximum": 999999999999,
+							"minLength": 7,
+							"maxLength": 12,
+							"pattern": "^[0-9]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 1000000",
+								"maximum": "el valor mínimo debe ser 999999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"CoinType": {
+							"type": "string",
+							"title": "Moneda",
+							"validationMessages": {
+								"required": "Este campo es requerido."
+							},
+							"widget": "select-url",
+							"url": "https://releaseasesor.banlinea.com:9092/api/data?list=8"
+						},
+						"Rode": {
+							"type": "string",
+							"title": "Monto",
+							"widget": "number-format",
+							"placeholder": "6.000.000",
+							"floatPlaceholder": "always",
+							"minLength": 6,
+							"maxLength": 10,
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"minimum": "el valor mínimo debe ser 100000",
+								"maximum": "el valor mínimo debe ser 9999999999",
+								"pattern": "Este campo debe contener solo números"
+							}
+						},
+						"PlaceCoin": {
+							"type": "object",
+							"title": "del domicilio: ",
+							"properties": {
+								"CountryCoin": {
+									"type": "string",
+									"title": "País",
+									"isParent": true,
+									"widget": "select-url",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=8",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									}
+								},
+								"CityCoin": {
+									"type": "string",
+									"title": "Ciudad ",
+									"validationMessages": {
+										"required": "Este campo es requerido."
+									},
+									"widget": "select-url",
+									"dependent": "CountryCoin",
+									"url": "https://releaseasesor.banlinea.com:9092/api/data?list=9&filter=countryId&id="
+								}
+							},
+							"required": [
+								"CountryCoin",
+								"CityCoin"
+							]
+						}
+					},
+					"dependencies": {
+						"OtherIncome": [
+							"OtherIncomeDetail"
+						],
+						"CoinExt": {
+							"anyOf": [
+								{
+									"properties": {
+										"CoinExt": {
+											"enum": [
+												true
+											]
+										}
+									},
+									"required": [
+										"OperationType",
+										"ProductType",
+										"Bank",
+										"AccountNumber",
+										"CoinType",
+										"Rode",
+										"PlaceCoin"
+									]
+								},
+								{
+									"properties": {
+										"CoinExt": {
+											"enum": [
+												false
+											]
+										}
+									}
+								}
+							]
+						},
+						"OperationType": {
+							"anyOf": [
+								{
+									"properties": {
+										"OperationType": {
+											"enum": [
+												"OTRO"
+											]
+										}
+									},
+									"required": [
+										"WhichTO"
+									]
+								},
+								{
+									"properties": {
+										"OperationType": {
+											"enum": [
+												"EXP",
+												"IMP",
+												"PAGSER",
+												"PRESME"
+											]
+										}
+									}
+								}
+							]
+						}
+					},
+					"required": [
+						"OriginOfIncome",
+						"MonthlyIncome",
+						"MonthlyExpenses",
+						"TotalAssets",
+						"TotalLiabilities",
+						"CoinExt"
+					]
+				}
+			},
+			"required": [
+				"FinancialInformationPN"
+			]
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "1. Información personal <div class=\"container-div-second second\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "3. Referencias <div class=\"container-div-second third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "4. Información financiera <div class=\"container-div-second fourth \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<label class='subtitle'>En todos los casos, los Colombianos residentes en el exterior deben diligenciar los campos de valores solicitados en pesos colombianos. En los campos de operaciones en moneda extranjera, diligenciar con la información del país de residencia.</label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "FinancialInformationPN.OriginOfIncome",
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"items": [
+							{
+								"key": "FinancialInformationPN.MonthlyIncome",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "FinancialInformationPN.MonthlyExpenses",
+								"flex": "3 3 25%"
+							},
+							{
+								"key": "FinancialInformationPN.OtherIncome",
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "FinancialInformationPN.OtherIncomeDetail",
+								"type": "textarea",
+								"condition": {
+									"functionBody": "try {if(model.FinancialInformationPN.OtherIncome.length > 0) {return true;} else {return false}} catch(e){ return false}"
+								},
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row",
+						"items": [
+							{
+								"key": "FinancialInformationPN.TotalAssets",
+								"flex": "1 1 25%"
+							},
+							{
+								"key": "FinancialInformationPN.TotalLiabilities",
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "FinancialInformationPN.CoinExt",
+								"type": "radios-inline",
+								"titleMap": [
+									{
+										"name": "Sí",
+										"value": true
+									},
+									{
+										"name": "No",
+										"value": false
+									}
+								],
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if( model.FinancialInformationPN.CoinExt == true ) { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "FinancialInformationPN.OperationType",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "FinancialInformationPN.WhichTO",
+								"flex": "3 3 25%",
+								"condition": {
+									"functionBody": "try {if( model.FinancialInformationPN.OperationType == 'OTRO' ) { return true;} else {return false;}} catch(e){ return false}"
+								},
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if( model.FinancialInformationPN.CoinExt == true ) { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "FinancialInformationPN.ProductType",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							},
+							{
+								"flex": "3 3 25%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if( model.FinancialInformationPN.CoinExt == true ) { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "FinancialInformationPN.Bank",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "FinancialInformationPN.AccountNumber",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "FinancialInformationPN.CoinType",
+								"flex": "3 3 25%",
+								"required": true
+							},
+							{
+								"key": "FinancialInformationPN.Rode",
+								"flex": "3 3 25%",
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"condition": {
+							"functionBody": "try {if( model.FinancialInformationPN.CoinExt == true ) { return true;} else {return false;}} catch(e){ return false}"
+						},
+						"items": [
+							{
+								"key": "FinancialInformationPN.PlaceCoin.CountryCoin",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"key": "FinancialInformationPN.PlaceCoin.CityCoin",
+								"flex": "1 1 25%",
+								"required": true
+							},
+							{
+								"flex": "1 1 25%"
+							},
+							{
+								"flex": "1 1 25%"
+							}
+						]
+					},
+					{
+						"type": "actions",
+						"htmlClass": "buttons",
+						"items": [
+							{
+								"type": "submit",
+								"style": "btn-info",
+								"title": "Guardar",
+								"flex": "3 3 100%"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "div",
+				"title": "5. Datos de la solicitud <div class=\"container-div-second fifth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "div",
+				"title": "7. Autorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"flex": "3 3 100%",
+						"disabled": "true",
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {
+			"FinancialInformationPN": {
+				"MonthlyIncome": "Global.FinancialInformation.MonthlyIncome",
+				"OtherIncome": "Global.FinancialInformation.OtherIncome",
+				"MonthlyExpenses": "Global.FinancialInformation.MonthlyExpenses",
+				"TotalAssets": "Global.FinancialInformation.TotalAssets",
+				"TotalLiabilities": "Global.FinancialInformation.TotalLiabilities",
+				"CoinExt": "Global.FinancialInformation.CoinExt"
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+{
+	"breadCrumb": 2,
+	"title": "Validación de código SMS",
+	"subtitle": "Para validar tu identidad ingresa el código único que hemos enviado a tu celular",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Debes tener tu teléfono celular a la mano para poder ingresar el código.",
+			"El código de validación es único y secreto, no lo compartas.",
+			"Si el código no llega, haz clic en reenviar código.",
+			"Prepárate para recibir un correo de validación después de esta sección."
+		]
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"RequestCode": {
+					"type": "object",
+					"title": "Código de seguridad",
+					"properties": {
+						"Code": {
+							"type": "string",
+							"widget": "verification",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minimum": "Este campo debe tener mas de 0",
+								"maximum": "Este campo debe tener menos de 9",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo números"
+							}
+						}
+					},
+					"required": [
+						"Code"
+					]
+				}
+			},
+			"required": [
+				"RequestCode"
+			]
+		},
+		"layout": [
+			{
+				"widget": "message",
+				"message": "<section>Código de seguridad</section>",
+				"labelHtmlClass": "title-form"
+			},
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"htmlClass": "center-content",
+				"items": [
+					{
+						"htmlClass": "error",
+						"key": "RequestCode.Code",
+						"flex": "3 3 25%"
+					}
+				]
+			},
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"condition": false
+					}
+				]
+			}
+		]
+	}
+}

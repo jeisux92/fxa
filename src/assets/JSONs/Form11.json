@@ -1,0 +1,833 @@
+{
+    "breadCrumb": 1,
+    "title": "Inicia tu solicitud de crédito",
+    "subtitle": "Si ya iniciaste la solitud y quieres retomarla, <strong>haz click en retomar solicitud</strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Ten presente que para acceder al crédito, debes estar afiliado al FNA por la modalidad de Cesantías.",
+            "Necesitarás tres personas que te referencien y que puedan confirmar por mensaje de texto o por correo electrónico",
+            "El tomador deberá estar afiliado al FNA. Si no lo está, más adelante se le presentará el formulario para su afiliación.",
+            "Debes tener un codeudor con capacidad para confirmar por mensaje de texto o correo electrónico."
+        ]
+    },
+    "retake": true,
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "ApplicantDetails": {
+                    "type": "object",
+                    "properties": {
+                        "CreditTaker": {
+                            "type": "string",
+                            "default": "si",
+                            "title": "¿Serás el tomador del crédito?",
+                            "oneOf": [
+                                {
+                                    "title": "Sí",
+                                    "const": "si"
+                                },
+                                {
+                                    "title": "No",
+                                    "const": "no"
+                                }
+                            ]
+                        },
+                        "FirstNameAD": {
+                            "type": "string",
+                            "title": "Primer nombre",
+                            "placeholder": "Andrés",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras."
+                            }
+                        },
+                        "SecondNameAD": {
+                            "type": "string",
+                            "title": "Segundo nombre",
+                            "placeholder": "Jesús",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "FirstLastNameAD": {
+                            "type": "string",
+                            "title": "Primer apellido",
+                            "placeholder": "Pérez",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondLastNameAD": {
+                            "type": "string",
+                            "title": "Segundo apellido",
+                            "placeholder": "Lozano",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "DocumentTypeAD": {
+                            "type": "string",
+                            "title": "Tipo de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "CEDULA DE CIUDADANIA",
+                            "floatPlaceholder": "always",
+                            "oneOf": [
+                                {
+                                    "title": "CEDULA DE CIUDADANIA",
+                                    "const": "CC"
+                                },
+                                {
+                                    "title": "TARJETA DE IDENTIDAD",
+                                    "const": "TI"
+                                },
+                                {
+                                    "title": "NIT PERSONA NATURAL",
+                                    "const": "NIP"
+                                },
+                                {
+                                    "title": "NIT",
+                                    "const": "NIT"
+                                },
+                                {
+                                    "title": "CEDULA DE EXTRANJERIA",
+                                    "const": "CE"
+                                },
+                                {
+                                    "title": "CARNE DIPLOMATICO",
+                                    "const": "CD"
+                                },
+                                {
+                                    "title": "SOCIEDAD EXTRANJERA",
+                                    "const": "SE"
+                                }
+                            ],
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "DocNumberAD": {
+                            "type": "string",
+                            "title": "Número de documento de identidad",
+                            "htmlClass": "double-line",
+                            "minLength": 6,
+                            "placeholder": "1010202303",
+                            "maxLength": 11,
+                            "floatPlaceholder": "always",
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "DateOfExpeditionAD": {
+                            "type": "string",
+                            "widget": "date-picker",
+                            "title": "Fecha de expedición del documento de identidad",
+                            "htmlClass": "double-line",
+                            "floatPlaceholder": "always",
+                            "placeholder": "23/07/2013",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true,
+                                "yearsBefore": 110
+                            }
+                        },
+                        "EmailAD": {
+                            "type": "string",
+                            "widget": "input-equals",
+                            "title": "Correo electrónico",
+                            "placeholder": "p.lozano@gmail.com",
+                            "floatPlaceholder": "always",
+                            "description": "del solicitante",
+                            "minLength": 6,
+                            "maxLength": 50,
+                            "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "validateEqual": "",
+                                "pattern": "Direccion de correo incorrecta"
+                            }
+                        },
+                        "CellPhoneAD": {
+                            "type": "string",
+                            "title": "Número de celular",
+                            "minLength": 10,
+                            "maxLength": 10,
+                            "placeholder": "3203213212",
+                            "floatPlaceholder": "always",
+                            "pattern": "^3[\\d]{9}$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} números.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} números.",
+                                "pattern": "Tu número de celular debe comenzar por 3 y contener solo números"
+                            }
+                        },
+                        "EducationalProgramAD": {
+                            "type": "string",
+                            "title": "Programa educativo",
+                            "minLength": 2,
+                            "maxLength": 70,
+                            "placeholder": "Licenciatura",
+                            "floatPlaceholder": "always",
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "FinancialValueAD": {
+                            "type": "string",
+                            "title": "Valor a financiar",
+                            "widget": "number-format",
+                            "placeholder": "200.000.00",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 10,
+                            "required": true,
+                            "pattern": "^[0-9]*",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números",
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "PeriodToFinanceAD": {
+                            "type": "string",
+                            "title": "Períodos a financiar",
+                            "placeholder": "5",
+                            "floatPlaceholder": "always",
+                            "minimum": 1,
+                            "maximum": 999,
+                            "minLength": 1,
+                            "maxLength": 3,
+                            "helpMessage": "Número de períodos educativos que deseas financiar con el crédito",
+                            "widget": "input-info",
+                            "required": true,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números",
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "TotalIncomeAD": {
+                            "type": "string",
+                            "title": "Total de ingresos",
+                            "widget": "number-format",
+                            "placeholder": "500.000.00",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 10,
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números",
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "TotalExpenseAD": {
+                            "type": "string",
+                            "title": "Total de egresos",
+                            "widget": "number-format",
+                            "placeholder": "100.000.00",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 10,
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números",
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "FirstNameT": {
+                            "type": "string",
+                            "title": "Primer nombre",
+                            "placeholder": "Julián",
+                            "floatPlaceholder": "always",
+                            "minLength": 2,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondNameT": {
+                            "type": "string",
+                            "title": "Segundo nombre",
+                            "placeholder": "David",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "FirstLastNameT": {
+                            "type": "string",
+                            "title": "Primer apellido",
+                            "placeholder": "Gómez",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "SecondLastNameT": {
+                            "type": "string",
+                            "title": "Segundo apellido",
+                            "placeholder": "Caicedo",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 50,
+                            "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo letras"
+                            }
+                        },
+                        "DocumentTypeT": {
+                            "type": "string",
+                            "title": "Tipo de documento de identidad",
+                            "htmlClass": "double-line",
+                            "placeholder": "CEDULA DE CIUDADANIA",
+                            "floatPlaceholder": "always",
+                            "oneOf": [
+                                {
+                                    "title": "CEDULA DE CIUDADANIA",
+                                    "const": "CC"
+                                },
+                                {
+                                    "title": "TARJETA DE IDENTIDAD",
+                                    "const": "TI"
+                                },
+                                {
+                                    "title": "NIT PERSONA NATURAL",
+                                    "const": "NIP"
+                                },
+                                {
+                                    "title": "NIT",
+                                    "const": "NIT"
+                                },
+                                {
+                                    "title": "CEDULA DE EXTRANJERIA",
+                                    "const": "CE"
+                                },
+                                {
+                                    "title": "CARNE DIPLOMATICO",
+                                    "const": "CD"
+                                },
+                                {
+                                    "title": "SOCIEDAD EXTRANJERA",
+                                    "const": "SE"
+                                }
+                            ],
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "DocNumberT": {
+                            "type": "string",
+                            "title": "Número de documento",
+                            "description": "de identidad",
+                            "floatPlaceholder": "always",
+                            "placeholder": "1222333444",
+                            "minLength": 6,
+                            "maxLength": 11,
+                            "pattern": "^[0-9]*$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números"
+                            }
+                        },
+                        "ExpeditionDateT": {
+                            "type": "string",
+                            "format": "date",
+                            "widget": "date-picker",
+                            "floatPlaceholder": "always",
+                            "placeholder": "23/07/2013",
+                            "title": "Fecha de expedición",
+                            "htmlClass": "double-line",
+                            "description": "del documento de identidad",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "format": "Formato invalido",
+                                "minimum": "La fecha minima debe ser 2014-01-01"
+                            },
+                            "maxDateOpt": {
+                                "today": true,
+                                "yearsBefore": 110
+                            }
+                        },
+                        "CellPhoneT": {
+                            "type": "string",
+                            "title": "Número de celular",
+                            "description": "del tomador",
+                            "floatPlaceholder": "always",
+                            "placeholder": "3155556565",
+                            "minLength": 10,
+                            "maxLength": 10,
+                            "pattern": "^3[\\d]{9}$",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} números.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} números.",
+                                "pattern": "Tu número de celular debe comenzar por 3 y contener solo números"
+                            }
+                        },
+                        "EmailT": {
+                            "type": "string",
+                            "widget": "input-equals",
+                            "title": "Correo electrónico del tomador",
+                            "htmlClass": "double-line",
+                            "placeholder": "correo1@gmail.com",
+                            "floatPlaceholder": "always",
+                            "minLength": 6,
+                            "maxLength": 50,
+                            "pattern": "(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+[a-zA-Z0-9-.]$)",
+                            "validationMessages": {
+                                "required": "Este campo es requerido.",
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "validateEqual": "",
+                                "pattern": "Direccion de correo incorrecta"
+                            }
+                        },
+                        "ParentezcoT": {
+                            "title": "Parentezco",
+                            "floatPlaceholder": "always",
+                            "type": "string",
+                            "oneOf": [
+                                {
+                                    "title": "Afiliado",
+                                    "const": "0"
+                                },
+                                {
+                                    "title": "Compañero(a) permanente",
+                                    "const": "1"
+                                },
+                                {
+                                    "title": "Conyugue",
+                                    "const": "2"
+                                },
+                                {
+                                    "title": "Hijo(a)",
+                                    "const": "3"
+                                },
+                                {
+                                    "title": "Hermano(a)",
+                                    "const": "4"
+                                },
+                                {
+                                    "title": "Sobrino(a)",
+                                    "const": "5"
+                                },
+                                {
+                                    "title": "Nieto(a)",
+                                    "const": "6"
+                                }
+                            ],
+                            "validationMessages": {
+                                "required": "Este campo es requerido."
+                            },
+                            "default": "3"
+                        },
+                        "TotalIncomeT": {
+                            "type": "string",
+                            "title": "Total de ingresos",
+                            "widget": "number-format",
+                            "placeholder": "500.000.00",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 10,
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números",
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "TotalExpenseT": {
+                            "type": "string",
+                            "title": "Total de egresos",
+                            "widget": "number-format",
+                            "placeholder": "100.000.00",
+                            "floatPlaceholder": "always",
+                            "minLength": 1,
+                            "maxLength": 10,
+                            "validationMessages": {
+                                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                                "pattern": "Este campo debe contener solo números",
+                                "required": "Este campo es requerido."
+                            }
+                        },
+                        "FullName": {
+                            "type": "string"
+                        }
+                    },
+                    "dependencies": {
+                        "CreditTaker": {
+                            "anyOf": [
+                                {
+                                    "properties": {
+                                        "CreditTaker": {
+                                            "enum": [
+                                                "no"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "TotalIncomeT",
+                                        "TotalExpenseT",
+                                        "FirstNameT",
+                                        "FirstLastNameT",
+                                        "DocumentTypeT",
+                                        "CellPhoneT",
+                                        "EmailT",
+                                        "DocNumberT",
+                                        "ExpeditionDateT",
+                                        "ParentezcoT"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "CreditTaker": {
+                                            "enum": [
+                                                "si"
+                                            ]
+                                        }
+                                    },
+                                    "required": []
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "FirstNameAD",
+                        "FirstLastNameAD",
+                        "DocumentTypeAD",
+                        "DocNumberAD",
+                        "EmailAD",
+                        "DateOfExpeditionAD",
+                        "CellPhoneAD",
+                        "EducationalProgramAD",
+                        "FinancialValueAD",
+                        "PeriodToFinanceAD",
+                        "TotalIncomeAD",
+                        "TotalExpenseAD"
+                    ]
+                }
+            }
+        },
+        "layout": [
+            {
+                "type": "div",
+                "htmlClass": "radio-button-reverse separated",
+                "items": [
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "widget": "message",
+                                "message": "<strong>Datos del solicitante</strong>",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.CreditTaker",
+                                "type": "radios-inline",
+                                "flex": "1 1 75%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.FirstNameAD",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.SecondNameAD",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.FirstLastNameAD",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.SecondLastNameAD",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.DocumentTypeAD",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.DocNumberAD",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.DateOfExpeditionAD",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.EmailAD",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.CellPhoneAD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.EducationalProgramAD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.FinancialValueAD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.PeriodToFinanceAD",
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.TotalIncomeAD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.TotalExpenseAD",
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            },
+                            {
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "div",
+                "htmlClass": "radio-button-reverse",
+                "condition": {
+                    "functionBody": "try{if (model.ApplicantDetails.CreditTaker == 'no') { return true; } else { return false; }}catch(e){return false}"
+                },
+                "items": [
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "widget": "message",
+                                "message": "<section class='title f-24 medium'><strong>Datos del tomador</strong> </section>",
+                                "flex": "1 1 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.FirstNameT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.SecondNameT",
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "key": "ApplicantDetails.FirstLastNameT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.SecondLastNameT",
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.DocumentTypeT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.DocNumberT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.ExpeditionDateT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.CellPhoneT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.EmailT",
+                                "flex": "3 3 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.TotalIncomeT",
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "key": "ApplicantDetails.TotalExpenseT",
+                                "flex": "1 1 25%",
+                                "required": true
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "flex",
+                        "flex-flow": "row",
+                        "items": [
+                            {
+                                "key": "ApplicantDetails.ParentezcoT",
+                                "type": "radios-inline",
+                                "flex": "3 3 50%",
+                                "required": true,
+                                "default": "0"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            },
+                            {
+                                "flex": "3 3 25%"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "flex",
+                "flex-flow": "row",
+                "items": [
+                    {
+                        "key": "ApplicantDetails.FullName",
+                        "condition": {
+                            "functionBody": "try {if(model.ApplicantDetails.CreditTaker == 'si') {model.ApplicantDetails.FullName = model.ApplicantDetails.FirstNameAD +' '+ model.ApplicantDetails.FirstLastNameAD ; return false;} else {model.ApplicantDetails.FullName = model.ApplicantDetails.FirstNameT +' '+ model.ApplicantDetails.FirstLastNameT ; return false}} catch(e){ return false}"
+                        },
+                        "flex": "3 3 2%"
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "items": [
+                    {
+                        "type": "submit",
+                        "title": "Solicitar",
+                        "style": "btn-info",
+                        "flex": "3 3 100%",
+                        "disabled": false,
+                        "htmlClass": "btn-submit"
+                    }
+                ]
+            }
+        ],
+        "data": {
+            "ApplicantDetails": {
+                "CreditTaker": "si",
+                "ParentezcoT": "0"
+            }
+        }
+    }
+}

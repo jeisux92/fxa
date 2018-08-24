@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="container-title">
+    <span *ngIf="!fileName">Elige el archivo que deseas adjuntar</span>
+    <div *ngIf="fileName" [ngClass]="{'error':!error,'success':error}">
+      <span *ngIf=!error>El formato del archivo no es compatible con la plataforma</span>
+      <span *ngIf=error>El formato del archivo es correcto.</span>
+      <span *ngIf=!error>Por favor adjunta un archivo en algundo de los formatos compatibles: .png .pdf .jpg</span>
+      <span *ngIf=error>Haz clic en continuar para seguir tu proceso de afiliación.</span>
+      <div class="file-button">
+        <button mat-raised-button disabled>
+          <label class="x" (click)="deleteFile()">
+            <i class="fas fa-times-circle"></i>
+          </label>
+          <label for="">
+            {{fileName}}
+          </label>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-inputs">
+    <button mat-raised-button color="primary" [class.selected]="!!fileContent" (click)="clickFile($event)" type="button">
+      <span>{{title}}</span>
+      <input class="file-input" type="file" (change)="change($event.target.files[0])" [(ngModel)]="fileIn">
+    </button>
+    <input type="text" [value]="fileContent"  hidden>
+    <button mat-raised-button color="primary" type="submit" [disabled]="(!fileName || !error)">Continuar</button>
+  </div>
+</div>

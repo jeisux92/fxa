@@ -1,0 +1,30 @@
+@import 'assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+
+.swal2-icon.swal2-error {
+    border-color: $error-color !important;
+}
+
+.swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+    background-color: $error-color !important;
+}
+
+swal2-confirm swal2-styled {
+    border-left-color: $primary-color !important;
+    border-right-color: $primary-color !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+    background-color: $primary-color !important;
+    height: 36px !important;
+    font-size: 14px !important;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 2px;
+}
+
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+}

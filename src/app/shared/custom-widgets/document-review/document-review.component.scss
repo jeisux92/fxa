@@ -1,0 +1,126 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+
+    .description{
+        text-align: center;
+        color: $text-color;
+        font-size: 1.5em;
+        font-weight: 100;
+    }
+
+    .documents{
+        display: flex;
+        margin:0 auto;
+        width: 90%;
+        justify-content: space-around; 
+
+        .box{
+            width: 30%;
+            max-height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            
+
+            img {
+                float: right;
+                position: absolute;
+                left: 60px;
+                top: -15px;
+            }
+
+            .box-document{
+                width: 75px;
+                height: 100px;
+                background: $border-disabled;
+                margin: 0 auto;
+                margin-top: 35px;
+                -webkit-box-shadow: -15px -10px 5px 0px rgba(246,246,246,1);
+                -moz-box-shadow: -15px -10px 5px 0px rgba(246,246,246,1);
+                box-shadow: -15px -10px 5px 0px rgba(246,246,246,1);
+                position: relative;
+            }
+
+            p{
+                text-align: center;
+                font-size: 1em;
+                font-weight: 100;
+                color: $text-color;
+                margin: 8px 0;
+            }
+
+            button{
+                display: flex;
+                justify-content: center;
+                color: $primary-color;
+                font-size: 1em;
+                font-weight: 100;
+                background: transparent;
+
+            }
+        }   
+    }
+}
+
+button{
+    clear:both;
+    display: flex;
+    justify-content: center;
+}
+
+div.button-centered {
+    clear:both;
+    max-width: max-content;
+    margin: 0 auto;
+}
+
+.modal-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: scale(1.0);
+    background-color: rgba(0, 0, 0, 0.5);
+    .modal {
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $title-color;
+      max-width: fit-content;
+      height: 95%;
+      label{
+          pointer-events: inherit;
+          cursor: pointer;
+      }
+      iframe{
+          margin: 30px auto;
+          display: block;
+          height:95%;
+      }
+      label.x {
+        right: 15px;
+        font-size: 15px;
+        top: 5px;
+        position: absolute;
+        width: 10px;
+        line-height: 10px;
+      }
+    }
+  }
+
+.modal-hidden {
+    display: none;
+  }
+  

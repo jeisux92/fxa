@@ -1,0 +1,58 @@
+{
+    "breadCrumb": 2,
+    "title": "Preguntas de seguridad",
+    "subtitle": "Parece que la información no coincide, sigue las instrucciones para continuar con el proceso <strong></strong>",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estas son preguntas secretas de las cuales solo tú sabes la respuesta.",
+            "Las 4 respuestas deben ser correctas para poder continuar la solicitud.",
+            "No puedes escoger más de una respuesta por pregunta.",
+            "El botón de Validar solo se activará cuando las cuatro preguntas sean respondidas."
+        ]
+    },
+    "info": {
+        "nameUser": "Global.ApplicantDetails.FullName",
+		"single": "Simpleid"
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "Las respuestas no coinciden.",
+                    "subtitle": "No te preocupes, puedes volver a intentarlo siguiendo los consejos que te indicamos a continuación:",
+                    "widget": "result-message"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": true,
+                "items": [
+                    {
+                        "type": "Tienes dos oportunidades más para realizar correctamente la validación. "
+                    },
+                    {
+                        "type": "En caso de no lograrlo en tres intentos, deberás esperar 24 horas. "
+                    },
+                    {
+                        "type": "Revisa bien la información que ingresas antes de hacer clic en continuar. "
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "style": "btn-info",
+                        "title": "Intentar de nuevo"
+                    }
+                ]
+            }
+        ]
+    }
+}

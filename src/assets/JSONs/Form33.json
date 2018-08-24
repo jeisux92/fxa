@@ -1,0 +1,566 @@
+{
+	"breadCrumb": 3,
+	"title": "Carga tus documentos",
+	"subtitle": "Carga tus documentos",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Debes cargar todos los documentos solicitados para continuar el proceso.",
+			"Revisa bien que ningún documento tenga hojas repetidas.",
+			"En caso de que haya algún error en la carga de tus documentos, se te informará al final del proceso para su corrección.",
+			"Los formatos permitidos son:.png, .jpg y .pdf"
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Origin": {
+					"type": "string",
+					"title": " ",
+					"oneOf": [
+						{
+							"title": "1. Empleado",
+							"const": "1"
+						},
+						{
+							"title": "2. Independientes - Ingreso total de 0 a 2 SMLMV",
+							"const": "2"
+						},
+						{
+							"title": "3. Independientes - Ingreso total superior a 2 SMLMV ",
+							"const": "3"
+						},
+						{
+							"title": "4. Prestación de servicios entidades públicas ",
+							"const": "4"
+						},
+						{
+							"title": "5. Prestación de servicios entidades privadas Contrato mensual hasta 2 SMLMV ",
+							"const": "5"
+						},
+						{
+							"title": "6. Prestación de servicios entidades privadas Contrato mensual superior a 2 SMLMV ",
+							"const": "6"
+						},
+						{
+							"title": "7. Pensionado ",
+							"const": "7"
+						},
+						{
+							"title": "8. Arrendamientos de inmuebles ",
+							"const": "8"
+						}
+					]
+				},
+				"File1": {
+					"title": "Formlario de solicitud única de crédito totalmente diligenciado.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File2": {
+					"title": "Fotocopia del documento de identidad.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File3": {
+					"title": "Certificado de Ingresos y Retenciones del último año y fotocopia de la Declaración de Renta ó Carta de No declarante según aplique.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File4": {
+					"title": "Certificación laboral  no superior a 60 días. ",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File5": {
+					"title": "Desprendibles de pago/egreso,pensión de los últimos tres meses.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File6": {
+					"title": "Certificación de la asignación mensual del cargo en propiedad para los afiliados que se encuentren en encargo.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File7": {
+					"title": "Comunicación del afiliado donde indique detalladamente la actividad que desarrolla y el ingreso mensual.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File8": {
+					"title": "Rut o Cámara de Comercio para quienes tengan establecimientos de comercio formalmente constituidos.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File9": {
+					"title": "Extractos bancarios a nombre del solicitante, de los últimos tres meses a la fecha de radicación del crédito donde se reflejen los ingresos ó Documentos soporte de la actividad desarrollada como independiente (ver GCR-IT-104).",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File10": {
+					"title": "Contrato de prestación de servicios vigente.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File11": {
+					"title": "Extractos bancarios a nombre del solicitante, de los últimos tres meses a la fecha de radicación del crédito si en ellos se reflejan los ingresos.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File12": {
+					"title": "Contrato de arrendamiento - Anexar oficio del afiliado indicando número del folio de matrícula inmobiliaria de inmueble(s) arrendado (s).",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File13": {
+					"title": "Carta de instrucciones firmada y autenticada por el afiliado (Codeudor).",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File14": {
+					"title": "Pagaré en blanco, firmado, sin autenticar.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File15": {
+					"title": "Formato de pignoración de cesantías diligenciado, firmado sin autenticar (si aplica).",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File16": {
+					"title": "Fotocopia de la orden de matrícula.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				},
+				"File17": {
+					"title": "Formato Datos para Giro.",
+					"widget": "file-modal",
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"validationMessages": {
+						"required": "Este campo es requerido."
+					}
+				}
+			},
+			"dependencies": {
+				"Origin": {
+					"anyOf": [
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"1"
+									]
+								}
+							},
+							"required": [
+								"File4",
+								"File5",
+								"File6"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"2"
+									]
+								}
+							},
+							"required": [
+								"File7",
+								"File8"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"3"
+									]
+								}
+							},
+							"required": [
+								"File8",
+								"File9"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"4"
+									]
+								}
+							},
+							"required": [
+								"File10",
+								"File11"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"5"
+									]
+								}
+							},
+							"required": [
+								"File5",
+								"File10"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"6"
+									]
+								}
+							},
+							"required": [
+								"File10",
+								"File11"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"7"
+									]
+								}
+							},
+							"required": [
+								"File5"
+							]
+						},
+						{
+							"properties": {
+								"Origin": {
+									"enum": [
+										"8"
+									]
+								}
+							},
+							"required": [
+								"File12"
+							]
+						}
+					]
+				}
+			},
+			"required": [
+				"Origin",
+				"File1",
+				"File2",
+				"File3",
+				"File13",
+				"File14",
+				"File15",
+				"File16",
+				"File17"
+			]
+		},
+		"layout": [
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"items": [
+					{
+						"items": [
+							{
+								"key": "File1"
+							},
+							{
+								"key": "File2"
+							},
+							{
+								"key": "File3"
+							},
+							{
+								"key": "File13"
+							},
+							{
+								"key": "File14"
+							}
+						],
+						"flex": "1 1 50%"
+					},
+					{
+						"items": [
+							{
+								"key": "File15"
+							},
+							{
+								"key": "File16"
+							},
+							{
+								"key": "File17"
+							},
+							{
+								"key": "File4",
+								"condition": {
+									"functionBody": "try { if(model.Origin == '1') { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File5",
+								"condition": {
+									"functionBody": "try { if (model.Origin == '1' || model.Origin == '5' || model.Origin == '7' ) { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File6",
+								"condition": {
+									"functionBody": "try { if ( model.Origin == '1') { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File7",
+								"condition": {
+									"functionBody": "try { if ( model.Origin =='2') { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File8",
+								"condition": {
+									"functionBody": "try { if ( model.Origin == '2' || model.Origin == '3') { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File9",
+								"condition": {
+									"functionBody": "try { if (model.Origin == '3')  { return true; } else { return false; }} catch(e) { return false }"
+								}
+							},
+							{
+								"key": "File10",
+								"condition": {
+									"functionBody": "try { if( model.Origin == '4' || model.Origin == '5' || model.Origin == '6' ) { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File11",
+								"condition": {
+									"functionBody": "try { if ( model.Origin == '4' || model.Origin == '6' ) { return true; } else { return false; }} catch(e) { return false}"
+								}
+							},
+							{
+								"key": "File12",
+								"condition": {
+									"functionBody": "try { if ( model.Origin == '8' ) { return true; } else { return false; }} catch(e) { return false}"
+								}
+							}
+						],
+						"flex": "1 1 50%"
+					}
+				]
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {
+			"Origin": "3"
+		}
+	}
+}

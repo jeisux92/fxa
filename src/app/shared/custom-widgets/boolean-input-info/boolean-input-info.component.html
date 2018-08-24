@@ -1,0 +1,17 @@
+<div class="mat-form-field">
+  <mat-label [innerText]="Title">
+  </mat-label>
+  <div class="content-radios">
+    <mat-radio-group [formControl]=formControl [required]=Required (change)="change($event)" [(ngModel)]="boolean" value="false">
+      <mat-radio-button [value]="true">Sí</mat-radio-button>
+      <mat-radio-button [value]="false">No</mat-radio-button>
+
+    </mat-radio-group>
+    <mat-icon matSuffix fontSet="fa" fontIcon="fa-question-circle" color=red (click)="showMe($event)"></mat-icon>
+  </div>
+
+  <div class="message" unselectable="on" (mouseleave)="showMesssage && showMe($event)" [ngStyle]="{'display':showMesssage?'block':'none','transform':'translate(' + coordinate.x + 'px,' + coordinate.y + 'px)'}"
+    (click)="showMesssage && showMe($event) ">
+    <label [innerText]="HelpMessage"></label>
+  </div>
+</div>

@@ -1,0 +1,295 @@
+{
+	"breadCrumb": 3,
+	"title": "Formulario único de solicitud de afiliación",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Authorizations": {
+					"type": "object",
+					"title": "",
+					"properties": {
+						"HalfEmail": {
+							"type": "string",
+							"title": "Primer nombre",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"HalfCellPhone": {
+							"type": "string",
+							"title": "Primer nombre",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"HalfEMCP": {
+							"type": "string",
+							"title": "Primer nombre",
+							"minLength": 2,
+							"maxLength": 50,
+							"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+							"validationMessages": {
+								"required": "Este campo es requerido.",
+								"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+								"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+								"pattern": "Este campo debe contener solo letras"
+							}
+						},
+						"Email": {
+							"title": "Correo electrónico:",
+							"type": "boolean",
+							"default": false
+						},
+						"CellPhone": {
+							"title": "Celular:",
+							"type": "boolean",
+							"default": false
+						},
+						"ShippingType": {
+							"type": "string",
+							"enum": [
+								"Físico",
+								"Correo electrónico"
+							],
+							"default": "Físico"
+						},
+						"TypeOfPhysicalShipment": {
+							"title": " ",
+							"type": "string",
+							"oneOf": [
+								{
+									"title": "Sitio de trabajo",
+									"const": "sitio de trabajo"
+								},
+								{
+									"title": "Domicilio",
+									"const": "domicilio"
+								}
+							],
+							"default": "sitio de trabajo"
+						}
+					},
+					"dependencies": {
+						"ShippingType": {
+							"anyOf": [
+								{
+									"properties": {
+										"ShippingType": {
+											"enum": [
+												"Físico"
+											]
+										}
+									},
+									"required": [
+										"TypeOfPhysicalShipment"
+									]
+								},
+								{
+									"properties": {
+										"Taxes": {
+											"enum": [
+												"No"
+											]
+										}
+									}
+								}
+							]
+						}
+					},
+					"required": [
+						"Email",
+						"CellPhone",
+						"ShippingType"
+					]
+				}
+			},
+			"required": [
+				"Authorizations"
+			]
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-one\">1. Información personal </div> <div class=\"container-div first \"><div class=\"bar\"></div><div class=\"icon opened\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-two\">2. Información laboral</div> <div class=\"container-div second\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-three\">3. Información Financiera (Pesos Colombianos)</div> <div class=\"container-div third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-four\">4. Si es apoderado</div> <div class=\"container-div fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "<div class=\"title-form-six\">5. Declaraciones y autorizaciones</div> <div class=\"container-div sixth\"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+				"htmlClass": "panel align-inputs",
+				"items": [
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"htmlClass": "title-content",
+						"items": [
+							{
+								"type": "help",
+								"helpvalue": "<section class='content'><strong>Autorizo al FNA a enviar mensajes con contenido institucional, informativo y comercial a través de: </strong></section>",
+								"flex": "3 3 50%"
+							},
+							{
+								"type": "help",
+								"helpvalue": "<section class='content'><strong>Desea que el FNA envíe extractos de su cuenta de Ahorro voluntario, cesantías y reporte anual de costos  a través de: </strong></section>",
+								"flex": "3 3 50%"
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"htmlClass": "title-content radio-button-reverse",
+						"items": [
+							{
+								"type": "flex",
+								"flex-flow": "row",
+								"flex": "3 3 50%",
+								"items": [
+									{
+										"key": "Authorizations.Email",
+										"type": "radios-inline",
+										"titleMap": [
+											{
+												"name": "Sí",
+												"value": true
+											},
+											{
+												"name": "No",
+												"value": false
+											}
+										],
+										"flex": "3 3 25%"
+									},
+									{
+										"key": "Authorizations.CellPhone",
+										"type": "radios-inline",
+										"titleMap": [
+											{
+												"name": "Sí",
+												"value": true
+											},
+											{
+												"name": "No",
+												"value": false
+											}
+										],
+										"flex": "3 3 25%"
+									}
+								]
+							},
+							{
+								"type": "flex",
+								"flex-flow": "row",
+								"flex": "3 3 50%",
+								"items": [
+									{
+										"key": "Authorizations.ShippingType",
+										"flex": "3 3 50%",
+										"type": "radios-inline",
+										"notitle": true
+									},
+									{
+										"key": "Authorizations.TypeOfPhysicalShipment",
+										"flex": "3 3 25%",
+										"type": "radios-inline",
+										"condition": {
+											"functionBody": "return model.Authorizations.ShippingType == 'Físico'"
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"htmlClass": "title-content radio-button-reverse",
+						"items": []
+					},
+					{
+						"type": "flex",
+						"flex-flow": "row",
+						"htmlClass": "center-content",
+						"items": [
+							{
+								"type": "actions",
+								"htmlClass": "buttons",
+								"items": [
+									{
+										"type": "submit",
+										"style": "btn-info",
+										"title": "Guardar",
+										"htmlClass": "btn-submit"
+									}
+								]
+							},
+							{
+								"type": "actions",
+								"htmlClass": "buttons",
+								"items": [
+									{
+										"type": "submit",
+										"style": "btn-info",
+										"title": "Continuar",
+										"htmlClass": "btn-submit"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		],
+		"data": {}
+	}
+}

@@ -1,0 +1,11 @@
+<div class="widget">
+  <label>{{options.Text}}</label>
+  <br>
+  <mat-radio-group  [(ngModel)]="question" (change)="change()">
+    <mat-radio-button *ngFor="let answer of replace" [value]="answer">
+      {{answer.title}}
+    </mat-radio-button>
+    <br>
+  </mat-radio-group>
+  <br>
+</div>

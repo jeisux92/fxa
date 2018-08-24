@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700';
+
+@import 'assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+body {
+    margin: 0;
+    padding: 0;
+    font-family: SourceSansPro-Bold,'Open Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+.form-flex-row {
+    justify-content: flex-start;
+}
+
+.form-flex-item {
+    margin-right: 14px !important;
+    margin-bottom: 20px;
+}
+
+.form-flex-row strong,
+.subtitle-form strong {
+    color: $primary-color;
+}
+
+
+
+.mat-radio-label {
+    flex-direction: row-reverse;
+}
+
+.radio-button-reverse .mat-radio-label-content {
+    padding-left: 0 !important;
+}
+
+.mat-radio-container {
+    margin-left: 5px;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.widget {
+    mat-radio-group {
+        padding-top: 28px;
+        display: block;
+    }
+    .mat-radio-container {
+        padding-right: 25px;
+        order: 2;
+    }
+    .mat-radio-label-content {
+        padding-left: 0% !important;
+    }
+}
+
+.center-content {
+    justify-content: center;
+    display: flex;
+}
+
+
+
+.transform-number input {
+    width: 108px !important;
+    height: 130px !important;
+    border: 2px $text-color solid !important;
+    border-radius: 23px !important;
+    font-size: 129px !important;
+    text-align: center !important;
+    background-color: #f3f1f1 !important;
+    color: $primary-color !important;
+}
+
+.transform-number .mat-form-field-underline,
+.transform-number span {
+    display: none;
+}
+
+.transform-number .form-flex-item {
+    max-width: 120px;
+}
+
+.title-form section {
+    text-align: center;
+    color: $primary-color !important;
+    font-weight: bolder;
+}
+
+.security-questions material-radios-widget>div {
+    width: 242px;
+}
+
+.security-questions>flex-layout-root-widget {
+    justify-content: space-between;
+}
+
+.security-questions mat-radio-group {
+    flex-wrap: wrap;
+}
+
+.security-questions mat-radio-button {
+    width: 45%
+}
+
+.security-questions ng-star-inserted mat-radio-button:last-child {
+    width: 100%;
+}
+
+.security-questions .mat-radio-label {
+    flex-direction: row;
+    justify-content: space-between;
+}
+    
+.security-questions .form-flex-item {
+    width: inherit;
+    max-width: inherit;
+}
+
+.security-questions.full-width .form-flex-item:last-child mat-radio-button {
+    width: 100%;
+}
+
+.split {
+    margin: 51px 0;
+}
+
+material-datepicker-widget mat-form-field {
+    line-height: 1.35 !important;
+}

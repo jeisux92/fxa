@@ -1,0 +1,1321 @@
+{
+  "breadCrumb": 3,
+  "title": "Formulario único de solicitud de afiliación",
+  "subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+  "card": {
+    "title": "Recuerda que:",
+    "items": [
+      "Despliega cada uno de los formularios para ingresar la información correspondiente.",
+      "Verifica todos los datos ingresados antes de continuar.",
+      "Tu información es privada y está totalmente a salvo con nosotros.",
+      "En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+    ]
+  },
+  "info": {
+    "nameUser": "Global.PersonalInformation.FullName",
+    "single": "Simpleid"
+  },
+  "form": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "FinancialInformation": {
+          "type": "object",
+          "title": "",
+          "properties": {
+            "MonthlyIncome": {
+              "type": "string",
+              "title": "Ingresos mensuales",
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "minLength": 6,
+              "maxLength": 9,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 250000",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "OtherIncome": {
+              "type": "string",
+              "title": "Otros ingresos",
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "minLength": 6,
+              "maxLength": 9,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 250000",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "MonthlyExpenses": {
+              "type": "string",
+              "title": "Egresos mensuales",
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "minLength": 6,
+              "maxLength": 9,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 250000",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "TotalAssets": {
+              "type": "string",
+              "title": "Total activos",
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "minLength": 6,
+              "maxLength": 9,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 250000",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "TotalLiabilities": {
+              "type": "string",
+              "title": "Total pasivos",
+              "minLength": 6,
+              "maxLength": 9,
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 250000",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "OtherIncomeDetail": {
+              "type": "string",
+              "title": "Detalle de otros ingresos:",
+              "placeholder": "Arriendos, venta de revistas",
+              "floatPlaceholder": "always",
+              "minLength": 2,
+              "maxLength": 70,
+              "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "pattern": "Este campo debe contener solo letras"
+              }
+            },
+            "TotalHeritage": {
+              "type": "string",
+              "title": "Total patrimonio bruto",
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "minLength": 6,
+              "maxLength": 9,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 250000",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "HeritageDate": {
+              "type": "string",
+              "widget": "date-picker",
+              "title": "Fecha de vinculación",
+              "placeholder": "9/9/1999",
+              "floatPlaceholder": "always",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "format": "Formato invalido",
+                "minimum": "La fecha minima debe ser 2014-01-01"
+              },
+              "maxDateOpt": {
+                "today": true
+              }
+            },
+            "Retentions": {
+              "type": "string",
+              "title": "¿Es sujeto de retenciones?",
+              "default": "N",
+              "oneOf": [
+                {
+                  "title": "Sí",
+                  "const": "S"
+                },
+                {
+                  "title": "No",
+                  "const": "N"
+                }
+              ]
+            },
+            "Superbancaria": {
+              "type": "string",
+              "title": "¿Está reportado a la superbancaria?",
+              "htmlClass": "double-line",
+              "default": "N",
+              "oneOf": [
+                {
+                  "title": "Sí",
+                  "const": "S"
+                },
+                {
+                  "title": "No",
+                  "const": "N"
+                }
+              ]
+            },
+            "GreatContributor": {
+              "type": "string",
+              "title": "¿Está clasificado como gran contribuyente?",
+              "htmlClass": "double-line",
+              "default": "N",
+              "oneOf": [
+                {
+                  "title": "Sí",
+                  "const": "S"
+                },
+                {
+                  "title": "No",
+                  "const": "N"
+                }
+              ]
+            },
+            "CentralRisk": {
+              "type": "boolean",
+              "title": "¿Se encuentra reportado en centrales de riesgo?",
+              "default": false
+            },
+            "TypeOfContributor": {
+              "type": "string",
+              "title": "Tipo de aportante",
+              "floatPlaceholder": "always",
+              "default": "1",
+              "oneOf": [
+                {
+                  "title": "Aportantes mas de 20 suc.",
+                  "const": "1"
+                },
+                {
+                  "title": "Grandes aportantes",
+                  "const": "2"
+                },
+                {
+                  "title": "Pequeños aportantes",
+                  "const": "3"
+                }
+              ]
+            },
+            "Comments": {
+              "type": "string",
+              "title": "Comentarios",
+              "floatPlaceholder": "always",
+              "description": "Observaciones de la información financiera",
+              "minLength": 1,
+              "maxLength": 450,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+              }
+            },
+            "PendingData": {
+              "type": "string",
+              "title": "Datos pendientes:",
+              "default": "N",
+              "oneOf": [
+                {
+                  "title": "Sí",
+                  "const": "S"
+                },
+                {
+                  "title": "No",
+                  "const": "N"
+                }
+              ]
+            },
+            "CoinExt": {
+              "type": "boolean",
+              "title": "¿Realiza operaciones en moneda extranjera?",
+              "default": false,
+              "validationMessages": {
+                "required": "Este campo es requerido."
+              }
+            },
+            "OperationDescription": {
+              "type": "string",
+              "title": "Descripción de las actividades realizadas en moneda extranjera",
+              "htmlClass": "double-line",
+              "placeholder": "Venta de software",
+              "floatPlaceholder": "always",
+              "minLength": 1,
+              "maxLength": 450,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+              }
+            },
+            "TypeOperation": {
+              "type": "string",
+              "title": "Tipo de operación:",
+              "floatPlaceholder": "always",
+              "default": "EXP",
+              "validationMessages": {
+                "required": "Este campo es requerido."
+              },
+              "oneOf": [
+                {
+                  "title": "Exportación",
+                  "const": "EXP"
+                },
+                {
+                  "title": "Pago de servicios",
+                  "const": "PAGSER"
+                },
+                {
+                  "title": "Importación",
+                  "const": "IMP"
+                },
+                {
+                  "title": "Préstamo en M.E.",
+                  "const": "PRESME"
+                },
+                {
+                  "title": "Otro",
+                  "const": "OTRO"
+                }
+              ]
+            },
+            "WhichTO": {
+              "type": "string",
+              "title": "¿Cuál?",
+              "floatPlaceholder": "always",
+              "minLength": 1,
+              "maxLength": 60,
+              "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "pattern": "Este campo debe contener solo letras"
+              }
+            },
+            "ProductType": {
+              "type": "string",
+              "title": "Producto financiero",
+              "floatPlaceholder": "always",
+              "default": "1",
+              "validationMessages": {
+                "required": "Este campo es requerido."
+              },
+              "oneOf": [
+                {
+                  "title": "Cuenta corriente",
+                  "const": "1"
+                },
+                {
+                  "title": "Cuenta de ahorros",
+                  "const": "2"
+                },
+                {
+                  "title": "CDT o póliza",
+                  "const": "3"
+                },
+                {
+                  "title": "Inversión",
+                  "const": "4"
+                },
+                {
+                  "title": "Préstamo",
+                  "const": "5"
+                },
+                {
+                  "title": "Tarjeta de crédito",
+                  "const": "6"
+                },
+                {
+                  "title": "Giros",
+                  "const": "7"
+                },
+                {
+                  "title": "Fideicomiso",
+                  "const": "8"
+                },
+                {
+                  "title": "Otros",
+                  "const": "9"
+                }
+              ]
+            },
+            "WhichPT": {
+              "type": "string",
+              "title": "¿Cuál?",
+              "floatPlaceholder": "always",
+              "minLength": 2,
+              "maxLength": 60,
+              "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "pattern": "Este campo debe contener solo letras"
+              }
+            },
+            "Bank": {
+              "type": "string",
+              "title": "Banco",
+              "placeholder": "Banco de la república",
+              "floatPlaceholder": "always",
+              "minLength": 2,
+              "maxLength": 60,
+              "pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "pattern": "Este campo debe contener solo letras"
+              }
+            },
+            "AccountNumber": {
+              "type": "string",
+              "title": "Número de cuenta/Producto",
+              "minimum": 1,
+              "maximum": 99999999999,
+              "placeholder": "99999999999",
+              "floatPlaceholder": "always",
+              "minLength": 8,
+              "maxLength": 11,
+              "pattern": "^[0-9]*$",
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 1",
+                "maximum": "el valor mínimo debe ser 999000000",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "CoinType": {
+              "type": "string",
+              "title": "Moneda",
+              "floatPlaceholder": "always",
+              "validationMessages": {
+                "required": "Este campo es requerido."
+              },
+              "default": "400",
+              "oneOf": [
+                {
+                  "title": "AFGANI",
+                  "const": "400"
+                },
+                {
+                  "title": "BIRR",
+                  "const": "401"
+                },
+                {
+                  "title": "BOLIVIANO",
+                  "const": "402"
+                },
+                {
+                  "title": "CEDI",
+                  "const": "403"
+                },
+                {
+                  "title": "COLON",
+                  "const": "404"
+                },
+                {
+                  "title": "COLON COSTARRICENSE",
+                  "const": "405"
+                },
+                {
+                  "title": "CONVERTIBLE",
+                  "const": "406"
+                },
+                {
+                  "title": "CORONA CHECA",
+                  "const": "407"
+                },
+                {
+                  "title": "CORONA ESLOVACA",
+                  "const": "408"
+                },
+                {
+                  "title": "CORONA ESTONIA",
+                  "const": "409"
+                },
+                {
+                  "title": "CORONA ISLANDESA",
+                  "const": "410"
+                },
+                {
+                  "title": "DALASI",
+                  "const": "411"
+                },
+                {
+                  "title": "DINAR ARGELINO",
+                  "const": "412"
+                },
+                {
+                  "title": "DINAR BAHRENI",
+                  "const": "413"
+                },
+                {
+                  "title": "DINAR IRAQUI",
+                  "const": "414"
+                },
+                {
+                  "title": "DIRHAM",
+                  "const": "415"
+                },
+                {
+                  "title": "DOLAR AUSTRALIANO",
+                  "const": "416"
+                },
+                {
+                  "title": "DOLAR CANADIENSE",
+                  "const": "417"
+                },
+                {
+                  "title": "DOLAR DE BARBADOS",
+                  "const": "418"
+                },
+                {
+                  "title": "DOLAR DE BELICE",
+                  "const": "419"
+                },
+                {
+                  "title": "DOLAR DE BERMUDAS",
+                  "const": "420"
+                },
+                {
+                  "title": "DOLAR DE BRUNEI,",
+                  "const": "421"
+                },
+                {
+                  "title": "DOLAR DE GUAYANA",
+                  "const": "422"
+                },
+                {
+                  "title": "DOLAR DE LA ISLA CAIMAN",
+                  "const": "423"
+                },
+                {
+                  "title": "DOLAR DE LAS BAHAMAS",
+                  "const": "424"
+                },
+                {
+                  "title": "DOLAR DE LAS ISLAS SALOMON",
+                  "const": "425"
+                },
+                {
+                  "title": "DOLAR DEHONGKONG",
+                  "const": "426"
+                },
+                {
+                  "title": "DOLAR DEL CARIBE ORIENTAL",
+                  "const": "427"
+                },
+                {
+                  "title": "DOLAR EEUU",
+                  "const": "428"
+                },
+                {
+                  "title": "DOLAR ESTADOUNIDENSE",
+                  "const": "429"
+                },
+                {
+                  "title": "DOLAR NEOZELANDES",
+                  "const": "430"
+                },
+                {
+                  "title": "DOLAR SINGAPURENSE",
+                  "const": "431"
+                },
+                {
+                  "title": "DOLARES DE LAS ISLAS FIJI",
+                  "const": "432"
+                },
+                {
+                  "title": "DRAM",
+                  "const": "433"
+                },
+                {
+                  "title": "ESCUDO DE CABO VERDE",
+                  "const": "434"
+                },
+                {
+                  "title": "EURO",
+                  "const": "435"
+                },
+                {
+                  "title": "FLORIN ANTILLANO",
+                  "const": "436"
+                },
+                {
+                  "title": "FLORIN DE ARUBA",
+                  "const": "437"
+                },
+                {
+                  "title": "FORINT",
+                  "const": "438"
+                },
+                {
+                  "title": "FRANCO",
+                  "const": "439"
+                },
+                {
+                  "title": "FRANCO COMORANO",
+                  "const": "440"
+                },
+                {
+                  "title": "FRANCO DE BURUNDI",
+                  "const": "441"
+                },
+                {
+                  "title": "FRANCO GUINEO",
+                  "const": "442"
+                },
+                {
+                  "title": "GOURDE, GURDA",
+                  "const": "443"
+                },
+                {
+                  "title": "KUNA",
+                  "const": "444"
+                },
+                {
+                  "title": "KWANZA",
+                  "const": "445"
+                },
+                {
+                  "title": "KYAT",
+                  "const": "446"
+                },
+                {
+                  "title": "LARI",
+                  "const": "447"
+                },
+                {
+                  "title": "LEK",
+                  "const": "448"
+                },
+                {
+                  "title": "LEMPIRA",
+                  "const": "449"
+                },
+                {
+                  "title": "LEV",
+                  "const": "450"
+                },
+                {
+                  "title": "LIBRA DE GIBRALTAR",
+                  "const": "451"
+                },
+                {
+                  "title": "LIBRA EGIPCIA",
+                  "const": "452"
+                },
+                {
+                  "title": "LIBRA ESTERLINA",
+                  "const": "453"
+                },
+                {
+                  "title": "MANAT AZERI",
+                  "const": "454"
+                },
+                {
+                  "title": "MARCO BOSNIO",
+                  "const": "455"
+                },
+                {
+                  "title": "NAKFA",
+                  "const": "456"
+                },
+                {
+                  "title": "NGULTRUM",
+                  "const": "457"
+                },
+                {
+                  "title": "PESO ARGENTINO",
+                  "const": "458"
+                },
+                {
+                  "title": "PESO CHILENO",
+                  "const": "459"
+                },
+                {
+                  "title": "PESO CUBANO",
+                  "const": "460"
+                },
+                {
+                  "title": "PESO FILIPINO",
+                  "const": "461"
+                },
+                {
+                  "title": "PESO MEXICANO",
+                  "const": "477"
+                },
+                {
+                  "title": "PULA",
+                  "const": "462"
+                },
+                {
+                  "title": "QUETZAL",
+                  "const": "463"
+                },
+                {
+                  "title": "REAL",
+                  "const": "464"
+                },
+                {
+                  "title": "RIAL (O RIYAL) SAUDI",
+                  "const": "465"
+                },
+                {
+                  "title": "RIAL IRANI",
+                  "const": "466"
+                },
+                {
+                  "title": "RIEL",
+                  "const": "467"
+                },
+                {
+                  "title": "RUBLO BIELORRUSO",
+                  "const": "468"
+                },
+                {
+                  "title": "RUPIA INDIA",
+                  "const": "469"
+                },
+                {
+                  "title": "RUPIA INDONESIA",
+                  "const": "470"
+                },
+                {
+                  "title": "SHEQUEL",
+                  "const": "471"
+                },
+                {
+                  "title": "SHEQUEL  (PLURAL SHEQALIM)",
+                  "const": "472"
+                },
+                {
+                  "title": "TAKA",
+                  "const": "473"
+                },
+                {
+                  "title": "WON MORCOREANO",
+                  "const": "474"
+                },
+                {
+                  "title": "WON SURCOREANO",
+                  "const": "475"
+                },
+                {
+                  "title": "YUAN RENMINBI",
+                  "const": "476"
+                }
+              ]
+            },
+            "Rode": {
+              "type": "string",
+              "title": "Monto",
+              "widget": "number-format",
+              "placeholder": "1.111.111",
+              "floatPlaceholder": "always",
+              "minLength": 3,
+              "maxLength": 10,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+                "minimum": "el valor mínimo debe ser 100",
+                "maximum": "el valor mínimo debe ser 9999999999999",
+                "pattern": "Este campo debe contener solo números"
+              }
+            },
+            "PlaceOperationExt": {
+              "type": "object",
+              "title": "Lugar de trabajo:",
+              "properties": {
+                "Country": {
+                  "type": "string",
+                  "title": "País",
+                  "widget": "select-url",
+                  "url": "https://releaseasesor.banlinea.com:9092/api/data?list=3",
+                  "validationMessages": {
+                    "required": "Este campo es requerido."
+                  }
+                },
+                "City": {
+                  "type": "string",
+                  "title": "Ciudad ",
+                  "validationMessages": {
+                    "required": "Este campo es requerido."
+                  },
+                  "widget": "select-url",
+                  "url": "https://releaseasesor.banlinea.com:9092/api/data?list=2"
+                }
+              }
+            },
+            "OriginResources": {
+              "type": "string",
+              "title": "Descripción de origen de recursos declarados",
+              "htmlClass": "double-line",
+              "minLength": 1,
+              "floatPlaceholder": "always",
+              "maxLength": 450,
+              "validationMessages": {
+                "required": "Este campo es requerido.",
+                "minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+                "maxLength": "Debe tener máximo {{maximumLength}} caracteres."
+              }
+            }
+          },
+          "dependencies": {
+            "OtherIncome": [
+              "OtherIncomeDetail"
+            ],
+            "PendingData": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "PendingData": {
+                      "enum": [
+                        "S"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "Comments"
+                  ]
+                },
+                {
+                  "properties": {
+                    "PendingData": {
+                      "enum": [
+                        "N"
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "CoinExt": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "CoinExt": {
+                      "enum": [
+                        true
+                      ]
+                    }
+                  },
+                  "required": [
+                    "OperationDescription",
+                    "TypeOperation",
+                    "ProductType",
+                    "Bank",
+                    "AccountNumber",
+                    "CoinType",
+                    "Rode",
+                    "PlaceOperationExt"
+                  ]
+                },
+                {
+                  "properties": {
+                    "CoinExt": {
+                      "enum": [
+                        false
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "TypeOperation": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "TypeOperation": {
+                      "enum": [
+                        "OTRO"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "WhichTO"
+                  ]
+                },
+                {
+                  "properties": {
+                    "TypeOperation": {
+                      "enum": [
+                        "EXP",
+                        "IMP",
+                        "PAGSER",
+                        "PRESME"
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "ProductType": {
+              "anyOf": [
+                {
+                  "properties": {
+                    "ProductType": {
+                      "enum": [
+                        "9"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "WhichPT"
+                  ]
+                },
+                {
+                  "properties": {
+                    "ProductType": {
+                      "enum": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "MonthlyIncome",
+            "HeritageDate",
+            "MonthlyExpenses",
+            "Superbancaria",
+            "TypeOfContributor",
+            "GreatContributor",
+            "CentralRisk",
+            "TotalAssets",
+            "TotalLiabilities",
+            "CoinExt",
+            "Retentions",
+            "OriginResources"
+          ]
+        }
+      },
+      "required": [
+        "FinancialInformation"
+      ]
+    },
+    "layout": [
+      {
+        "type": "div",
+        "title": "<div class=\"title-form-one\">1. Información personal </div> <div class=\"container-div first \"><div class=\"bar\"></div><div class=\"icon opened\">+</div></div>",
+        "display": "flex",
+        "flex-flow": "row wrap",
+        "htmlClass": "panel align-inputs active"
+      },
+      {
+        "type": "div",
+        "title": "<div class=\"title-form-two\">2. Información laboral</div> <div class=\"container-div second\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+        "display": "flex",
+        "flex-flow": "row wrap",
+        "htmlClass": "panel align-inputs active"
+      },
+      {
+        "type": "div",
+        "title": "<div class=\"title-form-three\">3. Información Financiera (Pesos Colombianos)</div> <div class=\"container-div third\"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+        "display": "flex",
+        "flex-flow": "row wrap",
+        "htmlClass": "panel align-inputs",
+        "items": [
+          {
+            "type": "flex",
+            "flex-flow": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.MonthlyIncome",
+                "flex": "1 1 25%"
+              },
+              {
+                "key": "FinancialInformation.OtherIncome",
+                "flex": "1 1 25%"
+              },
+              {
+                "key": "FinancialInformation.OtherIncomeDetail",
+                "flex": "1 1 25%",
+                "condition": {
+                  "functionBody": "try{return model.FinancialInformation.OtherIncome > 0}catch(e){return false;} "
+                },
+                "required": true
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.MonthlyExpenses",
+                "flex": "3 3 25%"
+              },
+              {
+                "key": "FinancialInformation.TotalAssets",
+                "flex": "3 3 25%"
+              },
+              {
+                "key": "FinancialInformation.TotalLiabilities",
+                "flex": "3 3 25%"
+              },
+              {
+                "key": "FinancialInformation.TotalHeritage",
+                "flex": "3 3 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.HeritageDate",
+                "flex": "1 1 25%"
+              },
+              {
+                "key": "FinancialInformation.TypeOfContributor",
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.Retentions",
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.Superbancaria",
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.GreatContributor",
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.PendingData",
+                "flex": "1 1 25%",
+                "required": true
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-flow": "row",
+            "condition": {
+              "functionBody": "try{if(model.FinancialInformation.PendingData == 'S'){return true;} else {return false;} }catch(e){return false;}"
+            },
+            "items": [
+              {
+                "key": "FinancialInformation.Comments",
+                "type": "textarea",
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.CentralRisk",
+                "type": "radios-inline",
+                "titleMap": [
+                  {
+                    "name": "Sí",
+                    "value": true
+                  },
+                  {
+                    "name": "No",
+                    "value": false
+                  }
+                ],
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.CoinExt",
+                "type": "radios-inline",
+                "titleMap": [
+                  {
+                    "name": "Sí",
+                    "value": true
+                  },
+                  {
+                    "name": "No",
+                    "value": false
+                  }
+                ],
+                "flex": "3 3 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.OperationDescription",
+                "condition": {
+                  "functionBody": "try{if(model.FinancialInformation.CoinExt == true){return true;} else {return false;} }catch(e){return false;}"
+                },
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "condition": {
+              "functionBody": "try{if(model.FinancialInformation.CoinExt == true){return true;} else {return false;} }catch(e){return false;}"
+            },
+            "items": [
+              {
+                "key": "FinancialInformation.TypeOperation",
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.WhichTO",
+                "condition": {
+                  "functionBody": "try {if( model.FinancialInformation.TypeOperation == 'OTRO' ) { return true;} else {model.FinancialInformation.WhichTO ='';}} catch(e){ return false}"
+                },
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-direction": "row",
+            "condition": {
+              "functionBody": "try{if(model.FinancialInformation.CoinExt == true){return true;} else {return false;} }catch(e){return false;}"
+            },
+            "items": [
+              {
+                "key": "FinancialInformation.ProductType",
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.WhichPT",
+                "condition": {
+                  "functionBody": "try {if( model.FinancialInformation.ProductType === '9' ) { return true;} else {model.FinancialInformation.WhichTO ='';}} catch(e){ return false}"
+                },
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-flow": "row",
+            "condition": {
+              "functionBody": "try{if(model.FinancialInformation.CoinExt == true){return true;} else {return false;} }catch(e){return false;}"
+            },
+            "items": [
+              {
+                "key": "FinancialInformation.Bank",
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.AccountNumber",
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.CoinType",
+                "flex": "3 3 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.Rode",
+                "flex": "3 3 25%",
+                "required": true
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-flow": "row",
+            "condition": {
+              "functionBody": "try{if(model.FinancialInformation.CoinExt == true){return true;} else {return false;} }catch(e){return false;}"
+            },
+            "items": [
+              {
+                "key": "FinancialInformation.PlaceOperationExt.Country",
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "key": "FinancialInformation.PlaceOperationExt.City",
+                "flex": "1 1 25%",
+                "required": true
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "flex",
+            "flex-flow": "row",
+            "items": [
+              {
+                "key": "FinancialInformation.OriginResources",
+                "type": "textarea",
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              },
+              {
+                "flex": "1 1 25%"
+              }
+            ]
+          },
+          {
+            "type": "actions",
+            "htmlClass": "buttons",
+            "items": [
+              {
+                "type": "submit",
+                "style": "btn-info",
+                "title": "Guardar",
+                "flex": "3 3 100%",
+                "htmlClass": "btn-submit"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "div",
+        "title": "<div class=\"title-form-four\">4. Si es apoderado</div> <div class=\"container-div fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+        "display": "flex",
+        "flex-flow": "row wrap",
+        "htmlClass": "panel align-inputs"
+      },
+      {
+        "type": "div",
+        "title": "<div class=\"title-form-six\">5. Declaraciones y autorizaciones</div> <div class=\"container-div sixth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+        "display": "flex",
+        "flex-flow": "row wrap",
+        "htmlClass": "panel align-inputs"
+      },
+      {
+        "type": "actions",
+        "htmlClass": "buttons",
+        "items": [
+          {
+            "type": "submit",
+            "style": "btn-info",
+            "title": "Continuar",
+            "flex": "3 3 100%",
+            "disabled": "true",
+            "htmlClass": "btn-submit"
+          }
+        ]
+      }
+    ],
+    "data": {}
+  }
+}

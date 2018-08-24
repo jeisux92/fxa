@@ -1,0 +1,59 @@
+{
+	"breadCrumb": 5,
+	"title": "Resumen de pagaré",
+	"subtitle": "Para continuar el proceso, revisa bien los archivos y haz clic en continuar",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Haz clic en Ver Documento para conocer el contenido de los mismos antes de firmar.",
+			"Estos son documentos confidenciales.",
+			"La firma digital equivale a una firma física.",
+			"Para firmar los documentos enviaremos un código de seguridad a tu celular."
+		]
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Documents": {
+					"type": "object",
+					"information": "Es importante que conozcas el contenido de la carta de instrucciones y el pagaré antes de realizar la firma. Puedes firmar estos documentos de forma electrónica haciendo clic en el botón Firmar.",
+					"description": "Esta acción equivale a una firma física. (Ley 527 del 1997 y Decreto 1747 del 2000)",
+					"widget": "document-review",
+					"oneOf": [
+						{
+							"name": "Instrucciones",
+							"description": "Carta de instrucciones para diligenciar el pagaré",
+							"urlPdf": "https://drive.google.com/viewerng/viewer?embedded=true&url=https://banlineacdnstorage01.blob.core.windows.net/banlinea-products/FNA/Docs/gcr-fo-062%20pagar%20v0040%5B2%5D.pdf"
+						}
+					]
+				}
+			}
+		},
+		"layout": [
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"htmlClass": "center-content",
+				"items": [
+					{
+						"htmlClass": "error",
+						"key": "Documents",
+						"flex": "3 3 25%"
+					}
+				]
+			},
+			{
+				"type": "flex",
+				"flex-flow": "row",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"condition": false
+					}
+				]
+			}
+		]
+	}
+}

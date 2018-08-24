@@ -1,0 +1,114 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+$primary-color: mat-color($custom-theme-primary);
+h3 {
+    color: $primary-color;
+}
+
+p {
+    color: $text-color;
+}
+
+table {
+    font-size: 0.85em;
+    text-align: center;
+    color: $text-color;
+    border-collapse: collapse;
+    thead th:nth-child(2n+1),
+    tbody tr td:nth-child(2n+1) {
+        background-color: $info-background-color;
+    }
+    tbody>tr td {
+        font-weight: bolder;
+    }
+    tbody {
+        select,
+        input {
+            text-align: center;
+            font-size: 0.95em;
+            height: 60px;
+            border: 1px solid $text-color;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    }
+    thead th,
+    tbody td {
+        border-top: 1px solid $table-border;
+        border-bottom: 1px solid $table-border;
+    }
+}
+
+.table-responsive div:first-child {
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+.button-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    button {
+        &.active {
+            background-color: $primary-color;
+            color: $title-color;
+        }
+        &.no-active {
+            background-color: $title-color;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+        }
+    }
+}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+    li {
+        margin-right: 0%;
+        label {
+            font-weight: bold;
+            color: $text-color;
+            font-size: 0.8em;
+        }
+        span {
+            color: $text-color;
+            font-size: 0.8em;
+            margin-left: 2%;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+.split-ul {
+    float: left;
+    width: 40%;
+}
+
+.ul-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 769px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+}
+
+div.button-centered {
+    max-width: max-content;
+    margin: 0 auto;
+    button:first-child {
+        background-color: $secondary-color;
+    }
+}

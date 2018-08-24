@@ -1,0 +1,252 @@
+{
+	"breadCrumb": 3,
+	"title": "Solicitud única de crédito persona natural",
+	"subtitle": "Para continuar con el proceso debes completar los siguientes formularios",
+	"card": {
+		"title": "Recuerda que:",
+		"items": [
+			"Despliega cada uno de los formularios para ingresar la información correspondiente.",
+			"Verifica todos los datos ingresados antes de continuar.",
+			"Tu información es privada y está totalmente a salvo con nosotros.",
+			"En caso de no poder completar los formularios, podrás retomar el proceso desde el punto en el que quedaste."
+		]
+	},
+	"info": {
+		"nameUser": "Global.PersonalInformation.FullName",
+		"single": "Simpleid"
+	},
+	"form": {
+		"schema": {
+			"type": "object",
+			"properties": {
+				"OriginResources": {
+					"type": "object",
+					"title": " ",
+					"properties": {
+						"Resources": {
+							"type": "object",
+							"title": " ",
+							"properties": {
+								"Affiliate": {
+									"type": "string",
+									"title": "Afiliado",
+									"floatPlaceholder": "always",
+									"minLength": 2,
+									"maxLength": 400,
+									"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo letras"
+									}
+								},
+								"Debtor": {
+									"type": "string",
+									"title": "Deudor solidario 1",
+									"floatPlaceholder": "always",
+									"minLength": 2,
+									"maxLength": 400,
+									"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo letras"
+									}
+								}
+							},
+							"required": [
+								"Affiliate",
+								"Debtor"
+							]
+						},
+						"Assets": {
+							"type": "object",
+							"title": " ",
+							"properties": {
+								"Affiliate": {
+									"type": "string",
+									"title": "Afiliado",
+									"floatPlaceholder": "always",
+									"minLength": 2,
+									"maxLength": 400,
+									"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo letras"
+									}
+								},
+								"Debtor": {
+									"type": "string",
+									"title": "Deudor solidario 1",
+									"floatPlaceholder": "always",
+									"minLength": 2,
+									"maxLength": 400,
+									"pattern": "^[a-zA-Z ñÑáÁéÉíÍóÓúÚ]*$",
+									"validationMessages": {
+										"required": "Este campo es requerido.",
+										"minLength": "Debe tener mínimo {{minimumLength}} caracteres.",
+										"maxLength": "Debe tener máximo {{maximumLength}} caracteres.",
+										"pattern": "Este campo debe contener solo letras"
+									}
+								}
+							},
+							"required": [
+								"Affiliate",
+								"Debtor"
+							]
+						}
+					},
+					"required": [
+						"Resources",
+						"Assets"
+					]
+				}
+			},
+			"required": [
+				"OriginResources"
+			]
+		},
+		"layout": [
+			{
+				"type": "div",
+				"title": "1. Información personal <div class=\"container-div-second first\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "2. Garantías <div class=\"container-div-second second \"><div class=\"bar\"></div><div class=\"icon\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "3. Referencias <div class=\"container-div-second third\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "4. Información financiera <div class=\"container-div-second fourth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "5. Datos de la solicitud <div class=\"container-div-second fifth\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active"
+			},
+			{
+				"type": "div",
+				"title": "6. Declaración origen de recursos y de información <div class=\"container-div-second sixth \"><div class=\"bar\"></div><div class=\"icon opened\">-</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs active",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<label class='subtitle'>Obrando de mi(nuestro) nombre propio de manera voluntaria y dando certeza de que todo lo aquí consignado es cierto, realizo(mos) la siguiente declaración de origen de recursos y de información:</span>"
+					},
+					{
+						"type": "help",
+						"helpvalue": "<span class='subtitle'>1. Declaramos que los bienenes y recursos que poseemos y hemos informado en la presente solicitud, así como aquellos recursos que utilizaremos para el crédito no provienen de ninguna actividad ilícita de las contempladas en el código penal colombiano.</label>"
+					},
+					{
+						"type": "help",
+						"helpvalue": "<span class='subtitle'>2. Los recursos que utilizaremos en el pago del crédito, provienen de las siguientes fuentes (detalle de la ocupación, oficio, profesión, negocio, entre otros):</label>"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "OriginResources.Resources.Affiliate",
+								"flex": "3 3 50%",
+								"required": true
+							},
+							{
+								"key": "OriginResources.Resources.Debtor",
+								"flex": "3 3 50%",
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "help",
+						"helpvalue": "<span class='subtitle'>3. Los activos cuantificados en este formulario provienen de:</label>",
+						"flex": "3 3 100%"
+					},
+					{
+						"type": "flex",
+						"flex-direction": "row wrap",
+						"items": [
+							{
+								"key": "OriginResources.Assets.Affiliate",
+								"flex": "3 3 50%",
+								"required": true
+							},
+							{
+								"key": "OriginResources.Assets.Debtor",
+								"flex": "3 3 50%",
+								"required": true
+							}
+						]
+					},
+					{
+						"type": "help",
+						"helpvalue": "<span class='subtitle'>4. No admitiremos que terceros cancelen mi (nuestro) crédito o paguen cuotas del mismo con fondos provenientes de actividades ilícitas</label>",
+						"flex": "3 3 100%"
+					},
+					{
+						"type": "help",
+						"helpvalue": "<span class='subtitle'>5. En caso de ser aprobada la presente solicitud, me comprometo a actualizar la información al FNA o una vez se produzcan cambios, y a remitirlos en los formularios y/o procedimientos que el FNA ponga a mi disposición para ello..</label>",
+						"flex": "3 3 100%"
+					},
+					{
+						"type": "actions",
+						"htmlClass": "buttons",
+						"items": [
+							{
+								"type": "submit",
+								"style": "btn-info",
+								"title": "Guardar"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "div",
+				"title": "7. Autorización consulta y reporte a centrales de riesgo <div class=\"container-div-second seventh\"><div class=\"bar\"></div><div class=\"icon\">+</div></div>",
+				"display": "flex",
+				"flex-flow": "row wrap",
+				"htmlClass": "panel align-inputs"
+			},
+			{
+				"type": "actions",
+				"htmlClass": "buttons",
+				"items": [
+					{
+						"type": "submit",
+						"style": "btn-info",
+						"title": "Continuar",
+						"flex": "3 3 100%",
+						"disabled": "true",
+						"htmlClass": "btn-submit"
+					}
+				]
+			}
+		],
+		"data": {}
+	}
+}

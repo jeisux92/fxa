@@ -1,0 +1,29 @@
+<section *ngIf="type">
+  <header class="header">
+    <div>
+      <h1 class="error"> {{title}}</h1>
+      <p [textContent]="subtitle"></p>
+    </div>
+    <img src="assets/Page 2.png" alt="type message">
+  </header>
+  <footer class="footer">
+    <ul *ngFor="let item of errorList">
+      <li [innerHtml]=item.type></li>
+    </ul>
+  </footer>
+</section>
+
+<section *ngIf="!type">
+  <header class="header">
+    <div>
+      <h1 class="success">{{title}}</h1>
+      <p [textContent]="subtitle" *ngIf="type"></p>
+      <h2 [textContent]="subtitle" *ngIf="!type"></h2>
+    </div>
+    <img src="assets/Page 1.png" alt="type message">
+  </header>
+  <footer class="footer">
+    <p *ngFor="let item of errorList" [innerHtml]=item.type></p>
+  </footer>
+</section>
+<a *ngIf="exit" mat-raised-button class="btn-exit" color=primary [href]="url" target="_self" [textContent]="buttonTitle"></a>

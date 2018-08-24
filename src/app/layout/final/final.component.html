@@ -1,0 +1,31 @@
+<article fxLayout="row">
+  <section fxFlex="40" fxFlexOffset="10">
+    <img src="assets/girl.png" alt="girl success">
+  </section>
+  <section fxFlex=40>
+    <div>
+      <hgroup>
+        <h1>¡FELICIDADES!</h1>
+        <h2>Tu solicitud está siendo procesada, en 48 horas te llegará un correo con el resultado. Se le ha enviado un correo
+          electrónico al tomador del crédito ya que de ahora en adelante es el quien debe continuar el proceso.</h2>
+      </hgroup>
+      <div>
+        <img src="assets/Page 1.png" alt="success">
+      </div>
+    </div>
+    <div class="bread-crumb-container">
+      <fna-bread-crumb [step]="6"></fna-bread-crumb>
+    </div>
+    <p>
+      Hemos enviado un mensaje de texto a tus referencias. Desde este momento, tienen
+      <strong> un período de 48 horas</strong> para confirmar por mensaje de texto o correo electrónico para que su solicitud pueda
+      ser terminada.
+      <br>
+      <br> Te avisaremos a través de un correo electrónico cuando ambas referencias confirmen.
+    </p>
+    <div class="button-container">
+      <a mat-raised-button color=primary href="https://www.fna.gov.co/" target="_self">Salir</a>
+      <button mat-raised-button color=primary type="button"> Ver estado</button>
+    </div>
+  </section>
+</article>

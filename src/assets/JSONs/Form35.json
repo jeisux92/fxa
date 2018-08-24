@@ -1,0 +1,50 @@
+{
+    "breadCrumb": 3,
+    "title": "Preguntas de seguridad del codeudor de crédito",
+    "subtitle": "Para continuar con el proceso debes intentar de nuevo el procedimiento",
+    "card": {
+        "title": "Recuerda que:",
+        "items": [
+            "Estas son preguntas secretas de las cuales solo tú sabes la respuesta.",
+            "Las 4 respuestas deben ser correctas para poder continuar la solicitud.",
+            "No puedes escoger más de una respuesta por pregunta.",
+            "El botón de Validar solo se activará cuando las cuatro preguntas sean respondidas."
+        ]
+    },
+    "form": {
+        "schema": {
+            "type": "object",
+            "properties": {
+                "Message": {
+                    "title": "¡Gracias",
+                    "subtitle": "Daniela Alejandra García",
+                    "widget": "result-message",
+                    "exit": true,
+                    "url": "https://www.fna.gov.co/",
+                    "buttonExit": "Finalizar"
+                }
+            }
+        },
+        "layout": [
+            {
+                "key": "Message",
+                "error": false,
+                "items": [
+                    {
+                        "type": "Ya fuiste validado(a) como referencia para el proceso de crédito solicitado con el Fondo Nacional del Ahorro"
+                    }
+                ]
+            },
+            {
+                "type": "actions",
+                "htmlClass": "buttons",
+                "items": [
+                    {
+                        "type": "submit",
+                        "condition": false
+                    }
+                ]
+            }
+        ]
+    }
+}

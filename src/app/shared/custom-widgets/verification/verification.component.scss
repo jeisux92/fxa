@@ -1,0 +1,19 @@
+@import '~assets/colors-palettes';
+@import '~@angular/material/theming';
+@import 'src/fna-app-theme.scss';
+
+$primary-color: mat-color($custom-theme-primary);
+
+.button-validator {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 34px;
+    &>button.mat-raised-button:first-child {
+        background-color: $secondary-color;
+    }
+}
+.transform-number {
+    input::placeholder {
+        color: $primary-color;
+    }
+}
